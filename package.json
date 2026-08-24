@@ -6,8 +6,12 @@
 	"scripts": {
 		"ingest": "tsx src/ingest.ts",
 		"generate": "tsx src/index.ts",
+		"build": "npm run generate",
 		"open": "open \"$(ls -t reports/*.docx | head -n 1)\"",
 		"pull-formats": "tsx src/pull-formats.ts",
+		"registry": "tsx src/registry.ts",
+		"audit:registry": "tsx src/registry.ts --check",
+		"prebuild": "npm run registry",
 		"test": "vitest run",
 		"typecheck": "tsc --noEmit",
 		"lint": "biome check src test"

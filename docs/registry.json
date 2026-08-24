@@ -1,0 +1,513 @@
+{
+	"dataFlow": {
+		"description": "Official SWU admin card-list API -> src/ingest.ts (boundary-parsed via api-schema.ts) -> data/snapshots/v<tag>/per-set/*.json + meta.json + vendored formats.json -> src/index.ts (boundary-parsed via schema.ts) -> src/transform.ts + src/template.ts (pure transform) -> src/render.ts (docx materialization) -> reports/premier-labels-avery5167-v<tag>.docx + reports/premier-labels-avery5167-v<tag>.replay.json. formats.json is vendored verbatim from slicer-dev (src/pull-formats.ts); its canonical home is /Users/graham/Projects/slicer2/slicer-dev/formats.json.",
+		"stages": [
+			{
+				"id": "ingest.fetch",
+				"description": "src/ingest.ts fetches https://admin.starwarsunlimited.com/api/card-list, paginated, 3-way concurrent with retry; parsed at the boundary by api-schema.ts (ApiPageResponseSchema)."
+			},
+			{
+				"id": "ingest.write-snapshot",
+				"description": "src/ingest.ts filters to canonical printings, maps to the pinned Card shape (schema.ts), sorts stably, and writes data/snapshots/v<tag>/per-set/<CODE>.json + meta.json + formats.json."
+			},
+			{
+				"id": "generate.load-snapshot",
+				"description": "src/index.ts reads a pinned snapshot directory, parses each per-set file at the boundary with schema.ts (CardArraySchema), and selects sets via formats.premier.sets intersected with files present on disk."
+			},
+			{
+				"id": "generate.transform",
+				"description": "src/transform.ts dedupes across sets (dedupeCards), groups by aspect then set (groupByAspectThenSet); src/template.ts resolves the configured per-line template into renderer-agnostic run specs."
+			},
+			{
+				"id": "generate.render",
+				"description": "src/render.ts materializes the Avery 5167 label grid as a docx Document; src/index.ts packs it to reports/premier-labels-avery5167-v<tag>.docx and writes the {inputHash, codeCommit, outputHash} replay record alongside it."
+			}
+		]
+	},
+	"entries": [
+		{
+			"file": "src/api-schema.ts",
+			"exportName": "ApiCard",
+			"displayName": "API Card Schema",
+			"strategicPurpose": "One entry in the `data[]` array of a card-list page response.",
+			"tacticalObjective": "`{id, attributes}` — the Strapi entry envelope.",
+			"kind": "type",
+			"canonicalRef": "ApiCardSchema"
+		},
+		{
+			"file": "src/api-schema.ts",
+			"exportName": "ApiCardSchema",
+			"displayName": "API Card Schema",
+			"strategicPurpose": "One entry in the `data[]` array of a card-list page response.",
+			"tacticalObjective": "`{id, attributes}` — the Strapi entry envelope.",
+			"kind": "schema"
+		},
+		{
+			"file": "src/api-schema.ts",
+			"exportName": "ApiPageResponse",
+			"displayName": "API Page Response Schema",
+			"strategicPurpose": "Guards one fetched page of the paginated card-list endpoint.",
+			"tacticalObjective": "`{data: ApiCard[], meta: {pagination: {page, pageSize,\npageCount, total}}}`; loose on other meta fields.",
+			"kind": "type",
+			"canonicalRef": "ApiPageResponseSchema"
+		},
+		{
+			"file": "src/api-schema.ts",
+			"exportName": "ApiPageResponseSchema",
+			"displayName": "API Page Response Schema",
+			"strategicPurpose": "Guards one fetched page of the paginated card-list endpoint.",
+			"tacticalObjective": "`{data: ApiCard[], meta: {pagination: {page, pageSize,\npageCount, total}}}`; loose on other meta fields.",
+			"kind": "schema"
+		},
+		{
+			"file": "src/api-schema.ts",
+			"exportName": "CardAttributes",
+			"displayName": "Card Attributes Schema",
+			"strategicPurpose": "The Strapi `attributes` payload for one card-list entry.\n`reprintOf`/`variantOf` presence (not their content) drives canonicalization\nper slicer-dev CLAUDE.md: \"the canonical printing has both as NULL.\"",
+			"tacticalObjective": "Loose object; only the fields ingest.ts reads are named.",
+			"kind": "type",
+			"canonicalRef": "CardAttributesSchema"
+		},
+		{
+			"file": "src/api-schema.ts",
+			"exportName": "CardAttributesSchema",
+			"displayName": "Card Attributes Schema",
+			"strategicPurpose": "The Strapi `attributes` payload for one card-list entry.\n`reprintOf`/`variantOf` presence (not their content) drives canonicalization\nper slicer-dev CLAUDE.md: \"the canonical printing has both as NULL.\"",
+			"tacticalObjective": "Loose object; only the fields ingest.ts reads are named.",
+			"kind": "schema"
+		},
+		{
+			"file": "src/config.ts",
+			"exportName": "DEFAULT_CONFIG",
+			"displayName": "Default Premier Label Layout Config",
+			"strategicPurpose": "The one shipped instance of {@link LabelLayoutConfig} that\nindex.ts and render.ts actually consume — every layout knob's default value\nlives here, in one place, rather than scattered as inline fallbacks.",
+			"tacticalObjective": "The v3/v4 default: centered alignment, -2 half-point icon\nbaseline shift, release-order sets, and the three-line title/subtitle/stats\ntemplate documented in docs/template-language.md.",
+			"kind": "const"
+		},
+		{
+			"file": "src/config.ts",
+			"exportName": "LabelLayoutConfig",
+			"displayName": "Premier Label Layout Config",
+			"strategicPurpose": "Externalizes every v2 layout knob (alignment, icon baseline\nshift, hanging indent, set ordering, per-line font sizes and auto-shrink\nthresholds) into one typed, documented config object instead of scattering\nmagic numbers across render.ts/transform.ts/index.ts. A future layout tweak\n(e.g. flipping setOrder to alphabetical) becomes a one-field edit here.",
+			"tacticalObjective": "Defines {@link LabelLayoutConfig} and the single\nDEFAULT_CONFIG instance consumed by index.ts and render.ts.",
+			"kind": "type"
+		},
+		{
+			"file": "src/index.ts",
+			"exportName": "parseSnapshotArg",
+			"displayName": "Parse Snapshot CLI Arg",
+			"strategicPurpose": "`npm run generate -- --snapshot v<TAG>` must be able to target\nany ingested snapshot, not just the pinned migration-proof one, without a code\nchange — the snapshot directory name is data, not a constant.",
+			"tacticalObjective": "Reads `--snapshot <value>` from argv; defaults to 'v2026-08-23'\n(the pinned migration-proof snapshot) when absent.",
+			"kind": "function"
+		},
+		{
+			"file": "src/ingest.ts",
+			"exportName": "bucketByExpansion",
+			"displayName": "Bucket Cards By Expansion",
+			"strategicPurpose": "One output file per expansion code, per the repo layout\n(data/snapshots/v<TAG>/per-set/<CODE>.json) — every expansion the API returns,\nnot only the six the original pinned snapshot happened to cover.",
+			"tacticalObjective": "Map keyed by `expansion_code`, insertion order irrelevant\n(caller sorts before bucketing so each bucket is already stably ordered).",
+			"kind": "function"
+		},
+		{
+			"file": "src/ingest.ts",
+			"exportName": "buildPageUrl",
+			"displayName": "Build Card-List Page URL",
+			"strategicPurpose": "Requests exactly the relation fields this pipeline consumes —\nno art fields (artFront/artBack/artThumbnail), since label generation needs no\nimages. type2, traits, arenas, and keywords are also omitted: unused by the\nPremier-label output shape.",
+			"tacticalObjective": "Strapi-style `pagination[page]` / `pagination[pageSize]` /\n`populate[N]` query string.",
+			"kind": "function"
+		},
+		{
+			"file": "src/ingest.ts",
+			"exportName": "deriveTagFromUpdatedAt",
+			"displayName": "Derive Snapshot Tag From Data",
+			"strategicPurpose": "Determinism doctrine: the snapshot tag must be a function of\nthe ingested data, not of wall-clock time at ingest time — two ingests of\nidentical upstream data on different days must produce the same tag (and\ntherefore byte-identical output) unless the data itself changed.",
+			"tacticalObjective": "Max of every card's `updatedAt` ISO-8601 string, compared\nlexicographically (valid for this fixed-width format — no Date construction\nneeded), sliced to its `YYYY-MM-DD` prefix. Throws on an empty input rather\nthan silently deriving `undefined`.",
+			"kind": "function"
+		},
+		{
+			"file": "src/ingest.ts",
+			"exportName": "fetchPage",
+			"displayName": "Fetch One Page With Retry",
+			"strategicPurpose": "The admin API is fragile (per slicer2 sync.ts and this repo's\nown observation); a transient 5xx or network error must retry with backoff\nrather than aborting the whole ingest.",
+			"tacticalObjective": "Up to RETRY_ATTEMPTS attempts, RETRY_DELAY_MS * attempt linear\nbackoff, mirroring retrieve-cards/src/sync.ts's fetchPage exactly. Parses the\nresponse at the boundary with ApiPageResponseSchema before returning.",
+			"kind": "function"
+		},
+		{
+			"file": "src/ingest.ts",
+			"exportName": "isCanonicalPrinting",
+			"displayName": "Is Canonical Printing",
+			"strategicPurpose": "Excludes only foil/alternate-art VARIANTS (`variantOf` set) —\nnot `reprintOf`. Empirically verified against the live API (2026-08-24, cards\n\"Repair\" id 85/19846 and \"Wampa\" id 255/27844): when a Standard/Shadows/Twilight\ncard is reprinted into a later set to survive Premier rotation, the reprint row\nhas `reprintOf` pointing at the original and `variantOf` null — it is the\ncorrect printing to ship on THAT set's labels, not a duplicate to drop. Per\nslicer-dev CLAUDE.md, \"the 'canonical' printing has both as NULL\" identifies\none card's single master identity across its whole print history (a DB-identity\nconcern); it is not the rule for \"which printing represents set X on a label\nsheet.\" Every genuine cross-set duplicate (the SOR original vs. its JTL/LOF/...\nreprint) is still collapsed to one label by transform.ts's `dedupeCards`, keyed\non title|subtitle|type_name over `PREMIER_FILE_SET_PRECEDENCE` order — that is\nthe correct place to resolve \"which set's printing wins,\" not this filter.",
+			"tacticalObjective": "True when `variantOf.data` is null, regardless of `reprintOf`.",
+			"kind": "function"
+		},
+		{
+			"file": "src/ingest.ts",
+			"exportName": "mapApiCardToSnapshotCard",
+			"displayName": "Map API Card To Snapshot Shape",
+			"strategicPurpose": "Boundary-to-boundary translation: the Strapi relation-wrapped\nAPI shape (api-schema.ts) in, the pinned-snapshot Card shape (schema.ts) out —\nexactly the 12 fields the generator (transform.ts/render.ts) reads, dropping\nevery upstream field the generator does not consume (art URLs, styled HTML,\ntraits, keywords, arenas, ...).",
+			"tacticalObjective": "`aspects[]` preserves the API's own relation order (already\nthe ordered-unique set per aspectDuplicates being a same-aspect double-cost\nflag, not a distinct value — verified empirically: no pinned-snapshot card has\na repeated aspect entry). Returns the Card plus the raw `updatedAt` string\n(consumed by tag derivation, dropped before the file is written).",
+			"kind": "function"
+		},
+		{
+			"file": "src/ingest.ts",
+			"exportName": "parseTagArg",
+			"displayName": "Parse Tag Override CLI Arg",
+			"strategicPurpose": "Lets an operator pin a specific snapshot tag (e.g. to redo a\nfailed ingest under the same tag, or to label a manual test run distinctly\nfrom the data-derived tag) without editing code.",
+			"tacticalObjective": "Reads `--tag <value>` from argv; returns null when absent so\nthe caller falls back to data-derived tag.",
+			"kind": "function"
+		},
+		{
+			"file": "src/ingest.ts",
+			"exportName": "sortCardsStably",
+			"displayName": "Sort Cards Stably",
+			"strategicPurpose": "Per-set files must be byte-identical across runs when the\nupstream data is unchanged, regardless of the order pages happened to arrive\nin under concurrent fetch. Fixed sort key eliminates fetch-order as a source of\nnondeterminism.",
+			"tacticalObjective": "Primary key: card number ascending (absent card numbers sort\nlast via `Number.POSITIVE_INFINITY`). Ties break on raw title, then raw\nsubtitle, both compared by codepoint (`<`/`>`) — never `.localeCompare()`.",
+			"kind": "function"
+		},
+		{
+			"file": "src/progress.ts",
+			"exportName": "ProgressHandle",
+			"displayName": "Progress Handle",
+			"strategicPurpose": "The caller-facing handle returned by {@link progress} — the\nonly two operations a long-running job needs against its own progress file.",
+			"tacticalObjective": "`tick` writes an in-flight {@link ProgressSnapshot} (subject\nto the `everyN` throttle); `done` writes a final snapshot with `eta_s: 0`.",
+			"kind": "type"
+		},
+		{
+			"file": "src/progress.ts",
+			"exportName": "ProgressOptions",
+			"displayName": "Progress Job Options",
+			"strategicPurpose": "Caller-supplied shape for one {@link progress} job: the total\nunit count a percentage/ETA can be computed against, plus an optional write\nthrottle for tight loops.",
+			"tacticalObjective": "`total` is the expected done-count at completion; `everyN`\n(default 1) throttles `tick()` writes to every Nth call.",
+			"kind": "type"
+		},
+		{
+			"file": "src/progress.ts",
+			"exportName": "ProgressSnapshot",
+			"displayName": "Progress Snapshot",
+			"strategicPurpose": "The exact JSON shape written to `reports/.progress/<job>.json`\nand appended to `<job>.jsonl` — the pollable-progress contract external\nwatchers (and this project's own doctrine) rely on.",
+			"tacticalObjective": "`ts`/`done`/`total`/`pct`/`rate_per_s`/`eta_s` are always\npresent; `[key: string]: unknown` admits the caller's per-tick `extra` fields\n(e.g. `{ fetched }`) without a schema change here.",
+			"kind": "type"
+		},
+		{
+			"file": "src/progress.ts",
+			"exportName": "progress",
+			"displayName": "Start A Progress Job",
+			"strategicPurpose": "One call per long-running job name; every `tick()` after this\noverwrites the latest-snapshot file and appends to the history file, so a\n`cat reports/.progress/<job>.json` never blocks the running job.",
+			"tacticalObjective": "Returns `{tick, done}`. `tick` is throttled to `everyN` calls\n(default 1 = every call) to bound write volume on tight loops.",
+			"kind": "function"
+		},
+		{
+			"file": "src/registry.ts",
+			"exportName": "RegistryEntry",
+			"displayName": "Registry Entry",
+			"strategicPurpose": "One row of the compiled manifest — the unit a human or agent\nreading docs/registry.json actually consumes to answer \"why does this producer\nexist and what does it do at its boundary,\" per the schema-registry doctrine.",
+			"tacticalObjective": "`{file, exportName, displayName, strategicPurpose,\ntacticalObjective, kind}` plus an optional `canonicalRef` set only when this\nexport's tags were inherited (never fabricated) from a structurally-linked\nsibling export.",
+			"kind": "type"
+		},
+		{
+			"file": "src/registry.ts",
+			"exportName": "RegistryEntryKind",
+			"displayName": "Registry Entry Kind",
+			"strategicPurpose": "Classifies each annotated producer so the manifest reads as a\ncontract catalog (Data Contract Specification vocabulary) rather than an\nundifferentiated dump — a reader scanning for \"which of these guard a foreign-\ndata boundary\" filters on `kind === 'schema'` without opening every entry.",
+			"tacticalObjective": "One of the six artifact-type buckets this project's producers\nfall into: `schema` (a Zod boundary schema), `function` (a pure transform/IO\nstep), `const` (a pinned data table/config), `type` (a derived or standalone\ntype export). `db-row` / `file-artifact` / `event` / `subprocess-handoff` /\n`column-blob` are reserved kinds this project's data-flow section documents at\nthe pipeline level (this repo has no DB, event bus, or subprocess IPC — every\nproducer here is a schema/function/const/type export).",
+			"kind": "type"
+		},
+		{
+			"file": "src/registry.ts",
+			"exportName": "RegistryManifest",
+			"displayName": "Registry Manifest",
+			"strategicPurpose": "The complete, deterministic, agent-readable roll-up this\nwhole architecture exists to produce — one JSON file giving full end-to-end\ndata-flow visibility (inputs/emissions to outputs/ingestions) plus an honest\ngap list, never silently dropping an un-annotated producer.",
+			"tacticalObjective": "`{dataFlow, entries, coverage}` — returned by\n{@link compileRegistry} and serialized verbatim (stable key order, no\ntimestamps) to docs/registry.json.",
+			"kind": "type"
+		},
+		{
+			"file": "src/registry.ts",
+			"exportName": "compileRegistry",
+			"displayName": "Compile Schema/Artifact Registry",
+			"strategicPurpose": "The single deterministic entry point that turns co-located\nTSDoc tags across every src/*.ts producer into one agent-readable, end-to-end\ndata-flow manifest — the roll-up this repo's registry discipline exists to\nproduce. Called both by the `registry` npm script (to write docs/registry.json)\nand by test/registry.test.ts (to detect staleness/drift without a subprocess).",
+			"tacticalObjective": "Parses every src/*.ts file with the TS Compiler API (never\nexecutes source), extracts `@displayName`/`@strategicPurpose`/`@tacticalObjective`\nfrom every exported function/const/schema/type, resolves type-only exports\nstructurally derived from an annotated sibling (`z.infer<typeof X>`,\n`(typeof X)[number]`) as canonical-ref-covered, and returns one sorted,\ntimestamp-free {@link RegistryManifest}.",
+			"kind": "function"
+		},
+		{
+			"file": "src/render.ts",
+			"exportName": "buildDocument",
+			"displayName": "Build Premier Labels DOCX Document",
+			"strategicPurpose": "Assembles one Document with one section per non-empty aspect\ngroup, each section a fresh Avery 5167 sheet, per spec.",
+			"tacticalObjective": "Iterates the grouped/sorted cards in ASPECT_GROUP_ORDER,\nbuilds one section per group with the label table as its first child and a\nminimal trailing paragraph so docx's forced final paragraph never adds a\nphantom page.",
+			"kind": "function"
+		},
+		{
+			"file": "src/render.ts",
+			"exportName": "buildLabelTable",
+			"displayName": "Build One Aspect-Group Label Table",
+			"strategicPurpose": "Renders the 4-col x N-row Avery 5167 grid for one aspect group.\nThe table is the section's first child so row 1 sits exactly at the top margin,\nper spec — no pageBreakBefore paragraphs, which would push it down.",
+			"tacticalObjective": "Fixed-layout borderless table, columnWidths from\nAVERY_5167_GEOMETRY, zero indent/cell-margin-top/bottom, one row per 4 labels.",
+			"kind": "function"
+		},
+		{
+			"file": "src/render.ts",
+			"exportName": "loadRarityAssets",
+			"displayName": "Rasterize Rarity Icon Assets",
+			"strategicPurpose": "Loads each of the five rarity SVGs once and rasterizes one PNG\nfallback per rarity via sharp, so the DOCX embeds five SVG buffers and five PNG\nbuffers total — not one pair per label — keeping the document small.",
+			"tacticalObjective": "Reads assets/rarities/{rarity}.svg, parses each SVG's viewBox to\npreserve aspect ratio, and rasterizes a PNG fallback at ICON_HEIGHT_PX height.",
+			"kind": "function"
+		},
+		{
+			"file": "src/schema.ts",
+			"exportName": "Card",
+			"displayName": "Premier Card Boundary Schema",
+			"strategicPurpose": "Guards the untrusted foreign-data seam between the pinned\nretrieve-cards JSON snapshot (data/snapshots/v<TAG>/per-set/*.json)\nand the Premier-format label transform. An unreviewed shape here is a silent-rot\nvector: a renamed field or a new rarity/aspect value must fail loudly rather than\nbe coerced or defaulted away.",
+			"tacticalObjective": "Parses one card record with `z.looseObject` (extra upstream\nfields pass through untouched) while `rarity` and each `aspects[]` entry are\nclosed enums — an unknown rarity or aspect throws instead of defaulting.",
+			"kind": "type",
+			"canonicalRef": "CardSchema"
+		},
+		{
+			"file": "src/schema.ts",
+			"exportName": "CardArraySchema",
+			"displayName": "Per-Set Card Array Schema",
+			"strategicPurpose": "Same boundary as {@link CardSchema}, applied to the array shape\neach per-set snapshot file actually is on disk.",
+			"tacticalObjective": "Array-of-CardSchema; parse failures name the offending index.",
+			"kind": "schema"
+		},
+		{
+			"file": "src/schema.ts",
+			"exportName": "CardSchema",
+			"displayName": "Premier Card Boundary Schema",
+			"strategicPurpose": "Guards the untrusted foreign-data seam between the pinned\nretrieve-cards JSON snapshot (data/snapshots/v<TAG>/per-set/*.json)\nand the Premier-format label transform. An unreviewed shape here is a silent-rot\nvector: a renamed field or a new rarity/aspect value must fail loudly rather than\nbe coerced or defaulted away.",
+			"tacticalObjective": "Parses one card record with `z.looseObject` (extra upstream\nfields pass through untouched) while `rarity` and each `aspects[]` entry are\nclosed enums — an unknown rarity or aspect throws instead of defaulting.",
+			"kind": "schema"
+		},
+		{
+			"file": "src/schema.ts",
+			"exportName": "FormatsManifest",
+			"displayName": "Premier Formats Manifest Schema",
+			"strategicPurpose": "Guards the foreign-data seam against the pinned formats.json,\nwhich names which set codes are legal in the Premier format today.",
+			"tacticalObjective": "Parses only the `formats.premier.sets` path this transform\nactually consumes; extra top-level format entries pass through untouched.",
+			"kind": "type",
+			"canonicalRef": "FormatsManifestSchema"
+		},
+		{
+			"file": "src/schema.ts",
+			"exportName": "FormatsManifestSchema",
+			"displayName": "Premier Formats Manifest Schema",
+			"strategicPurpose": "Guards the foreign-data seam against the pinned formats.json,\nwhich names which set codes are legal in the Premier format today.",
+			"tacticalObjective": "Parses only the `formats.premier.sets` path this transform\nactually consumes; extra top-level format entries pass through untouched.",
+			"kind": "schema"
+		},
+		{
+			"file": "src/template.ts",
+			"exportName": "ParsedLine",
+			"displayName": "Parsed Template Line",
+			"strategicPurpose": "Precomputed shape of one `config.template` entry: `sides` has one\nelement when the line's text contains no top-level ` - `, two when it does (the\nfirst ` - ` only — precedence rule). Each side is an array of `|`-separated segments.",
+			"tacticalObjective": "Consumed by {@link resolveLine}; produced by {@link parseTemplateLine}.",
+			"kind": "type"
+		},
+		{
+			"file": "src/template.ts",
+			"exportName": "TemplateRunSpec",
+			"displayName": "Template Run Spec",
+			"strategicPurpose": "Renderer-agnostic content unit resolved from one variable or kept\nliteral — render.ts converts each to a real docx `TextRun`/`ImageRun`. Keeping this\nabstract lets template.ts stay a pure, docx-free module that unit tests exercise\nwithout constructing a single docx object.",
+			"tacticalObjective": "`'text'` carries the exact run text plus optional character style\nand per-card size override; `'image'` is a marker the renderer substitutes with the\nrarity icon (baseline shift + `rarityIcon` style — unchanged mechanism from v3).",
+			"kind": "type"
+		},
+		{
+			"file": "src/template.ts",
+			"exportName": "TemplateSegment",
+			"displayName": "Template Segment",
+			"strategicPurpose": "One dash-side of a template line, split further into\n`|`-separated segments of tokens — the intermediate unit {@link resolveSide}collapses independently before the sibling-join and dash-join rules apply.",
+			"tacticalObjective": "Alias for `TemplateToken[]`; produced by {@link parseTemplateLine},\nconsumed by {@link resolveLine} via {@link ParsedLine.sides}.",
+			"kind": "type"
+		},
+		{
+			"file": "src/template.ts",
+			"exportName": "TemplateToken",
+			"displayName": "Template Token",
+			"strategicPurpose": "A template line's `text` is tokenized once (at startup, via\n{@link parseTemplateLine}) into an ordered list of literal runs and `{variable}`\nreferences, so per-card rendering never re-parses text and unknown variables fail\nfast before a single label is built.",
+			"tacticalObjective": "Discriminated union consumed by {@link resolveLine}.",
+			"kind": "type"
+		},
+		{
+			"file": "src/template.ts",
+			"exportName": "VARIABLE_CATALOG",
+			"displayName": "Template Variable Catalog",
+			"strategicPurpose": "The single source of truth for every `{variable}` a template line\nmay reference. {@link parseTemplateLine} validates every token against this catalog\nat parse time — an unrecognized variable throws immediately, naming itself, rather\nthan rendering blank. Extending the label language (a new field, a new derived\nvalue) is a one-entry addition here, never a change to the collapsing engine.",
+			"tacticalObjective": "Keyed by variable name (without braces); see {@link VariableDef}for the per-variable resolve/absorption contract. Docs: docs/template-language.md.",
+			"kind": "const"
+		},
+		{
+			"file": "src/template.ts",
+			"exportName": "parseTemplateLine",
+			"displayName": "Parse Template Line",
+			"strategicPurpose": "Compiles one `config.template` entry's raw `text` into the\n{@link ParsedLine} shape {@link resolveLine} consumes, applying the joiner\nprecedence (first ` - `, then `|` within each side) once, up front — never\nper-card. Throws immediately (fail fast) on an unrecognized `{variable}`, naming\nit, rather than letting it render blank.",
+			"tacticalObjective": "Pure, no Card/config dependency — safe to call once per generate.",
+			"kind": "function"
+		},
+		{
+			"file": "src/template.ts",
+			"exportName": "resolveLine",
+			"displayName": "Resolve Template Line",
+			"strategicPurpose": "Renders one parsed template line for one card into an ordered\nlist of {@link TemplateRunSpec}, or `null` when every segment collapsed empty (the\nparagraph is then omitted entirely — this is how the Subtitle line vanishes for\nsubtitle-less cards). Implements the full collapsing contract: per-segment\nemptiness, per-literal keep/drop, sibling `|`-join, and dash-side `-`-join only\nwhen both sides are non-empty. See docs/template-language.md for worked examples.",
+			"tacticalObjective": "Pure — no docx dependency. render.ts converts the returned specs\nto real `TextRun`/`ImageRun` instances.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "ASPECT_GROUP_ORDER",
+			"displayName": "Aspect Group Order",
+			"strategicPurpose": "Fixes the fresh-sheet-per-aspect ordering the Avery 5167 label\nsheet must render in, matching the spec's exact seven-group sequence.",
+			"tacticalObjective": "Ordered list consumed by {@link groupByAspect} and by render.ts\nto iterate sections in a deterministic, spec-pinned order.",
+			"kind": "const"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "AVERY_5167_GEOMETRY",
+			"displayName": "Avery 5167 Label Sheet Geometry",
+			"strategicPurpose": "Pins the exact twips geometry for Avery 5167 (0.5in x 1.75in,\n80/sheet, 4 cols x 20 rows, US Letter) so the DOCX renderer never improvises a\ndimension — every number here is load-bearing for physical label alignment.",
+			"tacticalObjective": "Constant geometry table consumed by render.ts.",
+			"kind": "const"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "AspectGroupKey",
+			"displayName": "Aspect Group Order",
+			"strategicPurpose": "Fixes the fresh-sheet-per-aspect ordering the Avery 5167 label\nsheet must render in, matching the spec's exact seven-group sequence.",
+			"tacticalObjective": "Ordered list consumed by {@link groupByAspect} and by render.ts\nto iterate sections in a deterministic, spec-pinned order.",
+			"kind": "type",
+			"canonicalRef": "ASPECT_GROUP_ORDER"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "CharacterStyleId",
+			"displayName": "Character Style Id",
+			"strategicPurpose": "Names the eight per-field named Word character styles\n(plus the doc-wide set-name and separator styles) the v3 stat line\nreferences, so the field→style mapping is one typed lookup table instead\nof inline string literals scattered across render.ts.",
+			"tacticalObjective": "Consumed by {@link styleIdsForStatSuffix} and directly by\nrender.ts for `setName`/`statSeparator`.",
+			"kind": "type"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "PREMIER_FILE_SET_PRECEDENCE",
+			"displayName": "Premier Per-Set File Precedence",
+			"strategicPurpose": "Encodes the dedupe tie-break rule: when the same card appears\nin multiple pinned per-set files (main-set printing vs. Intro Battle reprint),\nthe earlier set in this list wins.",
+			"tacticalObjective": "Ordered list consumed by {@link dedupeCards}.",
+			"kind": "const"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "StatLineSegment",
+			"displayName": "Stat Line Segment",
+			"strategicPurpose": "Typed shape the renderer consumes to bold the numeric value\nwhile leaving the suffix word regular weight, per the v2 stat-line spec.",
+			"tacticalObjective": "`bold` is the literal run text for the numeric portion\n(may carry a `/` and `+` for the pilot dual-stat and plain-upgrade shapes);\n`suffix` is the exact trailing word (`cost`, `power`, or `HP`).",
+			"kind": "type"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "assertPremierSetCoverage",
+			"displayName": "Assert Premier Set Coverage",
+			"strategicPurpose": "Guards the input-selection step: the pinned formats.json names\nsets legal in Premier, but only six carry a standalone per-set JSON file in this\nsnapshot — the rest are promo/dedupe printings folded into those six. A silent\nmismatch here (a new set added upstream with no file, or a missing main-set file)\nwould produce a label sheet that looks complete but is quietly wrong.",
+			"tacticalObjective": "Throws unless every premier set lacking a per-set file is a\nknown promo/dedupe code, and the set of available per-set files is exactly\n{JTL, LOF, SEC, LAW, ASH, IBH}.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "buildStatLineSegments",
+			"displayName": "Build Stat Line Segments",
+			"strategicPurpose": "Data-driven line-1 content: a Base shows only HP, an Event\nshows only cost, a Credit Token shows none — because the field is null,\nnever because of a `type_name` special case. Also covers the two upgrade\nshapes: a plain Upgrade (unit power/hp null, upgrade_power/upgrade_hp set)\nrenders `+N`; a JTL-era Pilot unit (both unit AND upgrade stats non-null)\nrenders `{unit}/{upgrade}+` for that field, independently per field.",
+			"tacticalObjective": "Returns segments in fixed order [cost, power, hp], omitting\nany field where both the unit value and the upgrade value are null.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "computeHangingIndent",
+			"displayName": "Compute Hanging Indent",
+			"strategicPurpose": "`hangingIndent` is only meaningful in `align: 'left'` mode\n(it aligns wrapped text under the title start, not under the icon/cost);\ncentered mode has no \"start\" for wrapped text to hang from.",
+			"tacticalObjective": "Returns the OOXML paragraph indent shape when\n`config.align === 'left' && config.hangingIndent`, else `undefined`.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "computeSubtitleFontHalfPoints",
+			"displayName": "Compute Subtitle Font Size",
+			"strategicPurpose": "Same auto-shrink mitigation as {@link computeTitleFontHalfPoints},\napplied to line 3.",
+			"tacticalObjective": "Returns `config.subtitleShrinkFontHalfPoints` when\n`subtitle.length > config.subtitleShrinkThreshold`, else `config.subtitleFontHalfPoints`.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "computeTitleFontHalfPoints",
+			"displayName": "Compute Title Font Size",
+			"strategicPurpose": "Line 2 must fit the exact 720-twip row; a long title needs\na smaller point size to reduce (not eliminate) wrap-induced clipping.",
+			"tacticalObjective": "Returns `config.titleShrinkFontHalfPoints` when\n`title.length > config.titleShrinkThreshold`, else `config.titleFontHalfPoints`.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "computeUniqueMarker",
+			"displayName": "Compute Unique Marker",
+			"strategicPurpose": "SWU convention: the unique-card diamond `◊` is prepended\nbefore a unique card's name. Pure decision function so the marker text is\nred-green testable without constructing a single docx Paragraph, and so\n`uniqueMarker: ''` disables the marker (via config, not a code branch).",
+			"tacticalObjective": "Returns `config.uniqueMarker` when `card.unique` is\ntrue, else `''`.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "dedupeCards",
+			"displayName": "Dedupe Cards Across Sets",
+			"strategicPurpose": "Declared effect: reduces. The pinned per-set files independently\ninclude reprints (main-set printing + Intro Battle Halcyon reprint); the label\nsheet must list each unique card once, keyed to the canonical (earliest-in-\nprecedence) printing.",
+			"tacticalObjective": "Keep-first dedupe keyed on `title|subtitle ?? ''|type_name`,\nwith `PREMIER_FILE_SET_PRECEDENCE` applied by the caller's input ordering\n(cards must already be concatenated in set-precedence order). Returns kept\ncards plus a dropped count for the replay record.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "foldSortKey",
+			"displayName": "Fold Sort Key",
+			"strategicPurpose": "Deterministic, locale-independent sort key so label ordering\nis byte-identical on every run and every machine. The locale-aware string\ncomparison built into JS strings is banned by the reproducible-data doctrine\nbecause its result depends on the host ICU locale data.",
+			"tacticalObjective": "NFD-normalizes `title + ' ' + (subtitle ?? '')`, strips combining\nmarks, lowercases. Compared by raw codepoint (`<`/`>`) by the caller.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "groupByAspect",
+			"displayName": "Group Cards By Primary Aspect",
+			"strategicPurpose": "Each aspect group starts on a fresh label sheet; grouping must\nfail loudly rather than silently drop a card under an unrecognized aspect key.",
+			"tacticalObjective": "Groups by `aspects[0] ?? 'Neutral'`; throws if any resulting\ngroup key is not a member of {@link ASPECT_GROUP_ORDER}. Returns a Map ordered\nper `ASPECT_GROUP_ORDER`, omitting empty groups.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "groupByAspectThenSet",
+			"displayName": "Group By Aspect, Then By Set",
+			"strategicPurpose": "The v2 grouping spec: GROUP BY aspect (unchanged order,\none DOCX section per aspect), then GROUP BY set within the aspect (no\npage break on set change), then alphabetical by title within each set.",
+			"tacticalObjective": "Composes {@link groupByAspect} (unchanged, still throws\non an unrecognized aspect key) with {@link orderCardsWithinAspectBySet}per aspect bucket.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "orderCardsWithinAspectBySet",
+			"displayName": "Order Cards Within An Aspect By Set",
+			"strategicPurpose": "Sets flow continuously within an aspect section (no page\nbreak on set change): the label sheet groups by set, but the row grid\nitself is unaware of the set boundary. Every card passed in must be\naccounted for in the output — a set code the ordering doesn't recognize\nwould otherwise silently vanish from the sheet.",
+			"tacticalObjective": "Buckets by `expansion_code`, orders the buckets per\n`setOrder` ('release' = {@link PREMIER_FILE_SET_PRECEDENCE}; 'alphabetical'\n= fold-sorted set codes, never localeCompare), sorts each bucket with\n{@link sortWithinGroup}, and concatenates. Throws if any set code present\nin `cards` is missing from the computed order (accounting guard).",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "sortWithinGroup",
+			"displayName": "Sort Within Aspect Group",
+			"strategicPurpose": "Alphabetical-by-title label ordering within one aspect group,\ndeterministic and reproducible (no locale-aware string comparison).",
+			"tacticalObjective": "Non-mutating sort by {@link foldSortKey}, codepoint-compared;\nties break on raw `title` then raw `subtitle`.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "styleIdsForStatSuffix",
+			"displayName": "Style Ids For Stat Suffix",
+			"strategicPurpose": "Each {@link StatLineSegment} carries a `suffix` of\n`'cost' | 'power' | 'HP'`; the v3 spec asks for a distinct bold \"value\"\ncharacter style and a regular \"label\" character style per field so the\nuser can restyle each independently from Word's style pane.",
+			"tacticalObjective": "Pure lookup, no docx dependency — deterministic and\nexhaustively switch-typed so a new `StatLineSegment['suffix']` value is a\ncompile error here, not a silent fallthrough.",
+			"kind": "function"
+		}
+	],
+	"coverage": {
+		"annotatedExports": 59,
+		"totalExports": 59,
+		"coveragePct": 100,
+		"gaps": []
+	}
+}
