@@ -1,0 +1,30 @@
+{
+	"name": "swu-labels",
+	"version": "0.1.0",
+	"type": "module",
+	"description": "Star Wars Unlimited Premier-format Avery 5167 card labels: official-site ingest through printable DOCX.",
+	"scripts": {
+		"ingest": "tsx src/ingest.ts",
+		"generate": "tsx src/index.ts",
+		"open": "open \"$(ls -t reports/*.docx | head -n 1)\"",
+		"pull-formats": "tsx src/pull-formats.ts",
+		"test": "vitest run",
+		"typecheck": "tsc --noEmit",
+		"lint": "biome check src test"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"dependencies": {
+		"docx": "9.7.1",
+		"sharp": "^0.34.5",
+		"zod": "^4.1.13"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.0",
+		"@types/node": "^22.10.0",
+		"tsx": "^4.19.0",
+		"typescript": "^5.7.0",
+		"vitest": "^2.1.0"
+	}
+}
