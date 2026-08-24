@@ -36,6 +36,10 @@ This repo was extracted from a working, fully-tested generator and re-pointed at
 
 With the migrated `v2026-08-23` pinned snapshot, `npm run generate` produces a `document.xml` (inside the DOCX) whose SHA-256 is `ea06edf6667a192b050d9fb7145b157d07b2a1bbd4f9c635fc7724b1e91fdb7b` — byte-identical to the sheet the original `slicer` generator produced. This is checked by hand after any change to the generator code; there is no automated CI gate for it in this repo.
 
+## Schema/artifact registry
+
+Every exported schema/function/const/type in `src/` carries co-located TSDoc (`@displayName`/`@strategicPurpose`/`@tacticalObjective`), rolled up by `src/registry.ts` into `docs/registry.json` — one entry per producer plus a `dataFlow` section (API → snapshot → DOCX) and a `coverage` block (`annotatedExports`/`totalExports`/`gaps`). Regenerate with `npm run registry`; verify it's not stale with `npm run audit:registry` (also wired as `prebuild`). Read `docs/registry.json` directly for the full end-to-end data-flow map — this section is a pointer, not a copy of its content.
+
 ## Ingest
 
 `src/ingest.ts` fetches `https://admin.starwarsunlimited.com/api/card-list` (a paginated Strapi endpoint), 3 pages concurrently with retry (mirrors `retrieve-cards/src/sync.ts`'s fragility handling), and parses every page at the boundary with `src/api-schema.ts` (Zod, closed on the fields this pipeline consumes — an unknown rarity/type/aspect value fails loudly rather than being coerced).
