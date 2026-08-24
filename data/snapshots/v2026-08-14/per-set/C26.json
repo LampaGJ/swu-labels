@@ -1,0 +1,104 @@
+[
+	{
+		"title": "Boba Fett",
+		"subtitle": "For a Price",
+		"cost": 5,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "C26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Mandalorian",
+		"subtitle": "Let's See the Puck",
+		"cost": 6,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "C26",
+		"aspects": [
+			"Vigilance",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Zam Wesell",
+		"subtitle": "Not What She Seems",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "C26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Qi'ra",
+		"subtitle": "Master of Teräs Käsi",
+		"cost": 7,
+		"power": 9,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "C26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Cad Bane",
+		"subtitle": "Now It's My Turn",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "C26",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Jabba the Hutt",
+		"subtitle": "Eminence of Tatooine",
+		"cost": 4,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "C26",
+		"aspects": [
+			"Vigilance",
+			"Cunning",
+			"Villainy"
+		]
+	}
+]

@@ -1,0 +1,4322 @@
+[
+	{
+		"title": "Experience",
+		"subtitle": null,
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": []
+	},
+	{
+		"title": "Gar Saxon",
+		"subtitle": "Viceroy of Mandalore",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Qi'ra",
+		"subtitle": "I Alone Survived",
+		"cost": 5,
+		"power": 0,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Shield",
+		"subtitle": null,
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": []
+	},
+	{
+		"title": "Finn",
+		"subtitle": "This is a Rescue",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Rey",
+		"subtitle": "More Than a Scavenger",
+		"cost": 6,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Hondo Ohnaka",
+		"subtitle": "That's Good Business",
+		"cost": 6,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Jabba the Hutt",
+		"subtitle": "His High Exaltedness",
+		"cost": 7,
+		"power": 2,
+		"hp": 12,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Moff Gideon",
+		"subtitle": "Formidable Commander",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Boba Fett",
+		"subtitle": "Daimyo",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Hunter",
+		"subtitle": "Outcast Sergeant",
+		"cost": 7,
+		"power": 5,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Bossk",
+		"subtitle": "Hunting His Prey",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Kylo Ren",
+		"subtitle": "Rash and Deadly",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Bo-Katan Kryze",
+		"subtitle": "Princess in Exile",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Han Solo",
+		"subtitle": "Worth the Risk",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Cad Bane",
+		"subtitle": "He Who Needs No Introduction",
+		"cost": 6,
+		"power": 2,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Doctor Aphra",
+		"subtitle": "Rapacious Archaeologist",
+		"cost": 5,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Fennec Shand",
+		"subtitle": "Honoring the Deal",
+		"cost": 5,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Lando Calrissian",
+		"subtitle": "With Impeccable Taste",
+		"cost": 4,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Mandalorian",
+		"subtitle": "Sworn To The Creed",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Remnant Science Facility",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Remote Village",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Maz Kanata's Castle",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Nevarro City",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Death Watch Hideout",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Spice Mines",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Coronet City",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Jabba's Palace",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Hylobon Enforcer",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Doctor Pershing",
+		"subtitle": "Experimenting With Life",
+		"cost": 2,
+		"power": 0,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Pyke Sentinel",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Death Trooper",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "The Client",
+		"subtitle": "Dictated by Discretion",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Lom Pyke",
+		"subtitle": "Dealer in Truths",
+		"cost": 4,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Synara San",
+		"subtitle": "Loyal to Kragan",
+		"cost": 4,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Supercommando Squad",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Clan Saxon Gauntlet",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "First Light",
+		"subtitle": "Headquarters of the Crimson Dawn",
+		"cost": 7,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Supreme Leader Snoke",
+		"subtitle": "Shadow Ruler",
+		"cost": 8,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Brutal Traditions",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Calculated Lethality",
+		"subtitle": null,
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Clan Wren Rescuer",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Kuiil",
+		"subtitle": "I Have Spoken",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Concord Dawn Interceptors",
+		"subtitle": "",
+		"cost": 3,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Village Protectors",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Razor Crest",
+		"subtitle": "Reliable Gunship",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Rose Tico",
+		"subtitle": "Dedicated to the Cause",
+		"cost": 4,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Rey",
+		"subtitle": "Keeping the Past",
+		"cost": 5,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "The Armorer",
+		"subtitle": "Survival Is Strength",
+		"cost": 5,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Gentle Giant",
+		"subtitle": "",
+		"cost": 6,
+		"power": 2,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "The Mandalorian",
+		"subtitle": "Wherever I Go, He Goes",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Chewbacca",
+		"subtitle": "Pykesbane",
+		"cost": 8,
+		"power": 4,
+		"hp": 10,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Mystic Reflection",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Sugi",
+		"subtitle": "Hired Guardian",
+		"cost": 4,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Second Chance",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Midnight Repairs",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Moisture Farmer",
+		"subtitle": "",
+		"cost": 1,
+		"power": 0,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Follower of The Way",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Rickety Quadjumper",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Val",
+		"subtitle": "Loyal to the End",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Embo",
+		"subtitle": "Stoic and Resolute",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "HWK-290 Freighter",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Wroshyr Tree Tender",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Niima Outpost Constables",
+		"subtitle": "",
+		"cost": 4,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "System Patrol Craft",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Survivors' Gauntlet",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Vigilant Pursuit Craft",
+		"subtitle": null,
+		"cost": 5,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Cargo Juggernaut",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Fenn Rau",
+		"subtitle": "Protector of Concord Dawn",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Public Enemy",
+		"subtitle": "",
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Foundling",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Resilient",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 3,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Top Target",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Imprisoned",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Mandalorian Armor",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 3,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Vambrace Grappleshot",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Covert Strength",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Unexpected Escape",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Evidence of the Crime",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Fell the Dragon",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Rival's Fall",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Salacious Crumb",
+		"subtitle": "Obnoxious Pet",
+		"cost": 1,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "General Tagge",
+		"subtitle": "Concerned Commander",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Outland TIE Vanguard",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Seasoned Shoretrooper",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Phase-III Dark Trooper",
+		"subtitle": null,
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Superlaser Technician",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Warbird Stowaway",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Crosshair",
+		"subtitle": "Following Orders",
+		"cost": 4,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Ephant Mon",
+		"subtitle": "Head of Security",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Pirate Battle Tank",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Maul",
+		"subtitle": "Shadow Collective Visionary",
+		"cost": 7,
+		"power": 7,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Jabba's Rancor",
+		"subtitle": "Pateesa",
+		"cost": 8,
+		"power": 9,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Finalizer",
+		"subtitle": "Might of the First Order",
+		"cost": 11,
+		"power": 11,
+		"hp": 11,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Remnant Reserves",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Palpatine's Return",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Clone Deserter",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Maz Kanata",
+		"subtitle": "Pirate Queen",
+		"cost": 1,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Freetown Backup",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Sundari Peacekeeper",
+		"subtitle": "",
+		"cost": 3,
+		"power": 1,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Echo",
+		"subtitle": "Restored",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Modded Cohort",
+		"subtitle": "",
+		"cost": 4,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Adelphi Patrol Wing",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Marauder",
+		"subtitle": "Shuttling the Bad Batch",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "General Rieekan",
+		"subtitle": "Defensive Strategist",
+		"cost": 6,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Inspiring Mentor",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Spark of Hope",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Rule with Respect",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Enterprising Lackeys",
+		"subtitle": "",
+		"cost": 4,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Enforced Loyalty",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Endless Legions",
+		"subtitle": "",
+		"cost": 14,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Warzone Lieutenant",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Collections Starhopper",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Gamorrean Retainer",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Privateer Crew",
+		"subtitle": null,
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Scanning Officer",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Cobb Vanth",
+		"subtitle": "The Marshal",
+		"cost": 3,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Outlaw Corona",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Reputable Hunter",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Kihraxz Heavy Fighter",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Weequay Pirate Gang",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Discerning Veteran",
+		"subtitle": "",
+		"cost": 5,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Mercenary Company",
+		"subtitle": "",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Arquitens Assault Cruiser",
+		"subtitle": "",
+		"cost": 8,
+		"power": 7,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Bounty Hunter's Quarry",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Legal Authority",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Price on Your Head",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "The Darksaber",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 4,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Commission",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Outflank",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Timely Intervention",
+		"subtitle": null,
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Moment of Glory",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Take Captive",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Choose Sides",
+		"subtitle": "",
+		"cost": 7,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Dengar",
+		"subtitle": "The Demolisher",
+		"cost": 1,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Guavian Antagonizer",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Kylo's TIE Silencer",
+		"subtitle": "Ruthlessly Efficient",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Death Watch Loyalist",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Punishing One",
+		"subtitle": "Dengar's Jumpmaster",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Jango Fett",
+		"subtitle": "Renowned Bounty Hunter",
+		"cost": 4,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Krrsantan",
+		"subtitle": "Muscle for Hire",
+		"cost": 5,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Trandoshan Hunters",
+		"subtitle": "",
+		"cost": 5,
+		"power": 6,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Kylo Ren",
+		"subtitle": "Killing the Past",
+		"cost": 6,
+		"power": 6,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Pre Vizsla",
+		"subtitle": "Power Hungry",
+		"cost": 7,
+		"power": 8,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Ruthlessness",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Give In to Your Anger",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Headhunting",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Heroic Renegade",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Ketsu Onyo",
+		"subtitle": "Old Friend",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Cassian Andor",
+		"subtitle": "Rebellions Are Built On Hope",
+		"cost": 3,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Nite Owl Skirmisher",
+		"subtitle": "",
+		"cost": 3,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Koska Reeves",
+		"subtitle": "Loyal Nite Owl",
+		"cost": 4,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Valiant Assault Ship",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Desperado Freighter",
+		"subtitle": "",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Poe Dameron",
+		"subtitle": "Quick to Improvise",
+		"cost": 5,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Wrecker",
+		"subtitle": "Boom!",
+		"cost": 6,
+		"power": 7,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Heroic Resolve",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Cripple Authority",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Bo-Katan Kryze",
+		"subtitle": "Fighting For Mandalore",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Wild Rancor",
+		"subtitle": "",
+		"cost": 6,
+		"power": 6,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "The Chaos of War",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Reckless Gunslinger",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Stolen Landspeeder",
+		"subtitle": "",
+		"cost": 1,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "House Kast Soldier",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Migs Mayfeld",
+		"subtitle": "Triggerman",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Rhokai Gunship",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Unlicensed Headhunter",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Disabling Fang Fighter",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Wanted Insurgents",
+		"subtitle": "",
+		"cost": 3,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Hunting Nexu",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Clan Challengers",
+		"subtitle": "",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "IG-11",
+		"subtitle": "I Cannot Be Captured",
+		"cost": 5,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Covetous Rivals",
+		"subtitle": "",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Krayt Dragon",
+		"subtitle": "",
+		"cost": 9,
+		"power": 10,
+		"hp": 10,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Guild Target",
+		"subtitle": "",
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Hotshot DL-44 Blaster",
+		"subtitle": null,
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Armed to the Teeth",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Death Mark",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Vambrace Flamethrower",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Daring Raid",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Desperate Attack",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Detention Block Rescue",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Pillage",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Bravado",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Kintan Intimidator",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Bazine Netal",
+		"subtitle": "Spy for the First Order",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Doctor Evazan",
+		"subtitle": "Wanted on Twelve Systems",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Hunter of the Haxion Brood",
+		"subtitle": "",
+		"cost": 3,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Lurking TIE Phantom",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "4-LOM",
+		"subtitle": "Bounty Hunter for Hire",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Slaver's Freighter",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Zuckuss",
+		"subtitle": "Bounty Hunter for Hire",
+		"cost": 5,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Xanadu Blood",
+		"subtitle": "Cad Bane's Reward",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Dryden Vos",
+		"subtitle": "Offering No Escape",
+		"cost": 7,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Frozen in Carbonite",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Triple Dark Raid",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Cartel Turncoat",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Grogu",
+		"subtitle": "Irresistible",
+		"cost": 2,
+		"power": 0,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "L3-37",
+		"subtitle": "Droid Revolutionary",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Omega",
+		"subtitle": "Part of the Squad",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Coruscant Dissident",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Liberated Slaves",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Principled Outlaw",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Qi'ra",
+		"subtitle": "Playing Her Part",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Zorii Bliss",
+		"subtitle": "Valiant Smuggler",
+		"cost": 5,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Millennium Falcon",
+		"subtitle": "Lando's Pride",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Let the Wookiee Win",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Spare the Target",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "A New Adventure",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Final Showdown",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Criminal Muscle",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Cloud-Rider",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Fugitive Wookiee",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Privateer Scyk",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "DJ",
+		"subtitle": "Blatant Thief",
+		"cost": 3,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Frontier Trader",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Smuggler's Starfighter",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Chain Code Collector",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Tobias Beckett",
+		"subtitle": "I Trust No One",
+		"cost": 4,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Resourceful Pursuers",
+		"subtitle": "",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Enfys Nest",
+		"subtitle": "Marauder",
+		"cost": 6,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Fennec Shand",
+		"subtitle": "Loyal Sharpshooter",
+		"cost": 7,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Wanted",
+		"subtitle": null,
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Enticing Reward",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Snapshot Reflexes",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Boba Fett's Armor",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Jetpack",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Unrefusable Offer",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Look the Other Way",
+		"subtitle": "",
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Bounty Posting",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Ma Klounkee",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Swoop Down",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Surprise Strike",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Relentless Pursuit",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Evacuate",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Incinerator Trooper",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Ruthless Assassin",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Snowtrooper Lieutenant",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Black Sun Starfighter",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Cell Block Guard",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Toro Calican",
+		"subtitle": "Ambitious Upstart",
+		"cost": 3,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Hutt's Henchmen",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Kragan Gorr",
+		"subtitle": "Warbird Captain",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Gideon's Light Cruiser",
+		"subtitle": "Dark Troopers' Station",
+		"cost": 8,
+		"power": 7,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Altering the Deal",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "No Bargain",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Greef Karga",
+		"subtitle": "Affable Commissioner",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Grey Squadron Y-Wing",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Protector of the Throne",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tech",
+		"subtitle": "Source of Insight",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Wookiee Warrior",
+		"subtitle": "",
+		"cost": 4,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tarfful",
+		"subtitle": "Kashyyyk Chieftain",
+		"cost": 7,
+		"power": 3,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Mandalorian's Rifle",
+		"subtitle": null,
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 3,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Smuggler's Aid",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "This Is The Way",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Bounty Guild Initiate",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": []
+	},
+	{
+		"title": "Lady Proxima",
+		"subtitle": "White Worm Matriarch",
+		"cost": 1,
+		"power": 0,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": []
+	},
+	{
+		"title": "Mercenary Gunship",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "SHD",
+		"aspects": []
+	},
+	{
+		"title": "Underworld Thug",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": []
+	},
+	{
+		"title": "Mandalorian Warrior",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": []
+	},
+	{
+		"title": "Twin Pod Cloud Car",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": []
+	},
+	{
+		"title": "Street Gang Recruiter",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": []
+	},
+	{
+		"title": "Rich Reward",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "SHD",
+		"aspects": []
+	},
+	{
+		"title": "Confiscate",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Special",
+		"expansion_code": "SHD",
+		"aspects": []
+	}
+]

@@ -1,0 +1,94 @@
+[
+	{
+		"title": "Dagobah Swamp",
+		"subtitle": null,
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "GG",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Echo Base",
+		"subtitle": null,
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "GG",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Catacombs of Cadera",
+		"subtitle": null,
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "GG",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Jabba's Palace",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "GG",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Experience",
+		"subtitle": null,
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "GG",
+		"aspects": []
+	},
+	{
+		"title": "Shield",
+		"subtitle": null,
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "GG",
+		"aspects": []
+	}
+]

@@ -1,0 +1,36 @@
+[
+	{
+		"title": "Darth Sidious",
+		"subtitle": "The Phantom Menace",
+		"cost": 8,
+		"power": 6,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "G25",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Obi-Wan Kenobi",
+		"subtitle": "Protective Padawan",
+		"cost": 3,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "G25",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	}
+]

@@ -1,0 +1,114 @@
+{
+	"$schema-doc": "Single source of truth for SWU competitive formats. Edit this file to add a new format or to update a format's legal set pool. All three projects (retrieve-cards, swu-mcp, swu-ml) read from here via their respective formats.{ts,py} loader.",
+	"formats": {
+		"premier": {
+			"name": "Premier",
+			"description": "Standard 1v1 competitive constructed format. Up to 6 sets legal at any time; rotates in batches of 3. As of May 2026: SOR/SHD/TWI rotated out March 2026 with the launch of LAW. ASH/ASHP added July 2026 with the launch of Ashes of the Empire.",
+			"sets": [
+				"JTL",
+				"JTLP",
+				"LOF",
+				"LOFP",
+				"SEC",
+				"SECP",
+				"LAW",
+				"LAWP",
+				"ASH",
+				"ASHP",
+				"G25",
+				"P25",
+				"P26",
+				"IBH"
+			],
+			"rules": {
+				"deckSize": { "min": 50 },
+				"maxCopiesPerCard": 3,
+				"requireLeader": true,
+				"requireBase": true,
+				"leaderTypes": ["Leader"],
+				"baseTypes": ["Base"],
+				"leadersCount": 1
+			}
+		},
+		"twin-suns": {
+			"name": "Twin Suns",
+			"description": "Multiplayer free-for-all format (3-4 players, two leaders sharing Heroism or Villainy, 80-card single-copy decks). No rotation — every Eternal-legal card can be played, plus the TS26 multiplayer-specific add-on set.",
+			"sets": [
+				"SOR",
+				"SHD",
+				"TWI",
+				"JTL",
+				"JTLP",
+				"LOF",
+				"LOFP",
+				"SEC",
+				"SECP",
+				"LAW",
+				"LAWP",
+				"ASH",
+				"ASHP",
+				"TS26",
+				"G25",
+				"P25",
+				"P26",
+				"C24",
+				"C25",
+				"C26",
+				"MV26",
+				"J24",
+				"J25",
+				"GG",
+				"IBH"
+			],
+			"rules": {
+				"deckSize": { "min": 80 },
+				"maxCopiesPerCard": 1,
+				"requireLeader": true,
+				"requireBase": false,
+				"leaderTypes": ["Leader"],
+				"leadersCount": 2,
+				"leaderAspectRule": "share-heroism-or-villainy"
+			}
+		},
+		"eternal": {
+			"name": "Eternal",
+			"description": "All released sets are permanently legal — no rotation. Launched alongside the first Premier rotation in March 2026.",
+			"sets": [
+				"SOR",
+				"SHD",
+				"TWI",
+				"JTL",
+				"JTLP",
+				"LOF",
+				"LOFP",
+				"SEC",
+				"SECP",
+				"LAW",
+				"LAWP",
+				"ASH",
+				"ASHP",
+				"TS26",
+				"G25",
+				"P25",
+				"P26",
+				"C24",
+				"C25",
+				"C26",
+				"MV26",
+				"J24",
+				"J25",
+				"GG",
+				"IBH"
+			],
+			"rules": {
+				"deckSize": { "min": 50 },
+				"maxCopiesPerCard": 3,
+				"requireLeader": true,
+				"requireBase": true,
+				"leaderTypes": ["Leader"],
+				"baseTypes": ["Base"],
+				"leadersCount": 1
+			}
+		}
+	}
+}
