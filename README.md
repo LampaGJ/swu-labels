@@ -49,24 +49,11 @@ With the migrated `v2026-08-23` pinned snapshot, `npm run generate` produces a `
 
 `src/index.ts` selects which per-set files to load as `formats.premier.sets ∩ files present`: `PREMIER_FILE_SET_PRECEDENCE` (`JTL, LOF, SEC, LAW, ASH, IBH`) filtered to codes that actually have a file on disk. A fresh `npm run ingest` writes a file for every expansion the API returns (including non-Premier sets like `SOR`, `SHD`, `TWI`) — those extra files are simply not selected, never asserted against. `assertPremierSetCoverage` (in `src/transform.ts`, unchanged from the migrated original) still checks that every Premier-legal set code lacking a per-set file is a known promo/dedupe code (`JTLP`, `LOFP`, `SECP`, `LAWP`, `ASHP`, `G25`, `P25`, `P26`).
 
-## Config knobs (`src/config.ts`)
+## Template-driven label layout
 
-`DEFAULT_CONFIG` (type `LabelLayoutConfig`) controls every layout decision without touching render code:
+The label's line content and order are controlled by `config.template` — an ordered array of `{ style, text }` lines, each `text` mixing literal characters with `{variable}` references (`{Title}`, `{cost_value}`, `{rarity_symbol}`, …) that collapse away automatically when their value is absent (this is how the Subtitle line vanishes for a subtitle-less card, and how a Base's stats line shows only HP). Full variable catalog, collapsing rules, and worked examples: [docs/template-language.md](docs/template-language.md). Every other `LabelLayoutConfig` knob (alignment, icon position, font sizes/auto-shrink, set ordering, the unique-card marker) is documented in [docs/configuration.md](docs/configuration.md), including the removal of the old `statsLinePosition` knob (superseded by template line order).
 
-- `align` — `'center'` (default) or `'left'` paragraph alignment.
-- `iconBaselineShiftHalfPoints` — vertical position of the rarity icon relative to the stat-line text baseline (default `-2`, i.e. 1pt lowered).
-- `hangingIndent` / `hangingIndentTwips` — wrapped-text indent, meaningful only in `align: 'left'` mode.
-- `setOrder` — `'release'` (JTL, LOF, SEC, LAW, ASH, IBH — default) or `'alphabetical'` (fold-sorted, no `localeCompare`).
-- `statLineFontHalfPoints`, `titleFontHalfPoints`, `titleShrinkFontHalfPoints`, `titleShrinkThreshold`, `subtitleFontHalfPoints`, `subtitleShrinkFontHalfPoints`, `subtitleShrinkThreshold` — per-line font sizes and the character-length thresholds above which a title/subtitle auto-shrinks to fit its row.
-- `statsLinePosition` — `'below'` (default: Title, Subtitle, Stats) or `'above'` (Stats, Title, Subtitle — the earlier v2 order).
-- `uniqueMarker` — text prepended to a unique card's title (default `'◊ '`); set to `''` to disable without removing the mechanism.
-
-## Named Word styles
-
-`src/render.ts` emits real DOCX paragraph and character styles (not just inline run formatting), so labels can be restyled from Word's style pane without touching this repo:
-
-- Paragraph styles: `Card Title`, `Card Subtitle`, `Card Stats`.
-- Character styles: `Set Name`, `Stat Separator`, `Cost Value`/`Cost Label`, `Power Value`/`Power Label`, `HP Value`/`HP Label`, `Rarity Icon`, `Unique Marker`.
+For the full ingest → generate → print sequence and the replay-record reproducibility contract, see [docs/pipeline.md](docs/pipeline.md).
 
 ## Layout
 
