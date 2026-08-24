@@ -1,0 +1,47 @@
+{
+  "snapshot": "v2026-08-23",
+  "inputs": {
+    "formats.json": "35459a6260ad0571903a4839b798455587398e18a3e4e0d454f0d299c30a9092",
+    "meta.json": "c73a0c8e901bf0bc4db6320d3cc99445546c1cd1f3faa9d1c6849338330d1ecf",
+    "per-set/JTL.json": "4a9a68b9341ba700629d0b0c5697fb0b924ba1dfd9e2d3ec183551319c523a64",
+    "per-set/LOF.json": "d795bfbd8f7adcc3bb0efb640bc9b9b0e93e29f912549416b4c051fceceef64a",
+    "per-set/SEC.json": "478733930edf88826c1cf028414fc138fe6008e722055216e4f649d1db92575d",
+    "per-set/LAW.json": "cb7ff2efc469f975ac222e4e0929ce5004f2d5fda133d8def257a44b9a5517eb",
+    "per-set/ASH.json": "cb2e867c3bb236224ba8840bf8adf55c5aaac2b9cf892a201dd197f49f3ab143",
+    "per-set/IBH.json": "4aade76e1e546810806fb0f332189ae842ded542271d97c2cb36bf81378327cf"
+  },
+  "codeCommit": "unknown",
+  "documentXmlSha256": "ea06edf6667a192b050d9fb7145b157d07b2a1bbd4f9c635fc7724b1e91fdb7b",
+  "totals": {
+    "parsed": 1368,
+    "deduped": 1368,
+    "dropped": 0
+  },
+  "groups": {
+    "Vigilance": 308,
+    "Command": 311,
+    "Aggression": 294,
+    "Cunning": 308,
+    "Villainy": 52,
+    "Heroism": 50,
+    "Neutral": 45
+  },
+  "layout": "v3-named-styles-title-subtitle-stats",
+  "config": {
+    "align": "center",
+    "iconBaselineShiftHalfPoints": -2,
+    "hangingIndent": false,
+    "hangingIndentTwips": 360,
+    "setOrder": "release",
+    "statLineFontHalfPoints": 12,
+    "titleFontHalfPoints": 14,
+    "titleShrinkFontHalfPoints": 12,
+    "titleShrinkThreshold": 30,
+    "subtitleFontHalfPoints": 12,
+    "subtitleShrinkFontHalfPoints": 11,
+    "subtitleShrinkThreshold": 34,
+    "statsLinePosition": "below",
+    "uniqueMarker": "◊ "
+  },
+  "generator": "src/index.ts"
+}

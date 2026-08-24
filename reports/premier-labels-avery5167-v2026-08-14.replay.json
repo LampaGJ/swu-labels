@@ -1,0 +1,47 @@
+{
+  "snapshot": "v2026-08-14",
+  "inputs": {
+    "formats.json": "94a3293c5332d442832c1b4f365b535c815f6d6d159013fb3d5dc13a1bd68fce",
+    "meta.json": "331090cd2ab93f5d59745050350fc49bd98ef838810fee3fdad0c00941e442fe",
+    "per-set/JTL.json": "830028878026f8774d666096d2637296b371f7e815eb43ef6824a360cf7062f8",
+    "per-set/LOF.json": "d3655cbf671f7aed32324086677f98b214611e61276cc4a22d14c902be60d0cc",
+    "per-set/SEC.json": "ce94a7fa3e5a7c1b12cb78720172782e79405ecf0bdd29c1dfb8ecf14350aeed",
+    "per-set/LAW.json": "854165e9a9af6a9f8c1443c90c059f2815479277250b1b67e046d3887b73705a",
+    "per-set/ASH.json": "9aeffb7d2bfe0133187b571ab332e1349619304486e0b427610700d31cc88694",
+    "per-set/IBH.json": "db14d12604b0c1dccf3930f986b22e560a2c4393cf1d5ddf682ef7f15f31d510"
+  },
+  "codeCommit": "unknown",
+  "documentXmlSha256": "be0e5db85b8bc04b72f16c50838a9078e312d3c609fe35f6ec496ff75e7bbc20",
+  "totals": {
+    "parsed": 1437,
+    "deduped": 1375,
+    "dropped": 62
+  },
+  "groups": {
+    "Vigilance": 311,
+    "Command": 312,
+    "Aggression": 296,
+    "Cunning": 308,
+    "Villainy": 52,
+    "Heroism": 50,
+    "Neutral": 46
+  },
+  "layout": "v3-named-styles-title-subtitle-stats",
+  "config": {
+    "align": "center",
+    "iconBaselineShiftHalfPoints": -2,
+    "hangingIndent": false,
+    "hangingIndentTwips": 360,
+    "setOrder": "release",
+    "statLineFontHalfPoints": 12,
+    "titleFontHalfPoints": 14,
+    "titleShrinkFontHalfPoints": 12,
+    "titleShrinkThreshold": 30,
+    "subtitleFontHalfPoints": 12,
+    "subtitleShrinkFontHalfPoints": 11,
+    "subtitleShrinkThreshold": 34,
+    "statsLinePosition": "below",
+    "uniqueMarker": "◊ "
+  },
+  "generator": "src/index.ts"
+}
