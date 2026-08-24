@@ -10,7 +10,7 @@
     "per-set/ASH.json": "cb2e867c3bb236224ba8840bf8adf55c5aaac2b9cf892a201dd197f49f3ab143",
     "per-set/IBH.json": "4aade76e1e546810806fb0f332189ae842ded542271d97c2cb36bf81378327cf"
   },
-  "codeCommit": "9ddaf511ec1c7a052e35d291fc4f3e024362fe6c",
+  "codeCommit": "9586ce90a6cd4ba13abd31e9244874b2054459f4",
   "documentXmlSha256": "ea06edf6667a192b050d9fb7145b157d07b2a1bbd4f9c635fc7724b1e91fdb7b",
   "totals": {
     "parsed": 1368,
@@ -40,8 +40,21 @@
     "subtitleFontHalfPoints": 12,
     "subtitleShrinkFontHalfPoints": 11,
     "subtitleShrinkThreshold": 34,
-    "statsLinePosition": "below",
-    "uniqueMarker": "◊ "
+    "uniqueMarker": "◊ ",
+    "template": [
+      {
+        "style": "cardTitle",
+        "text": "{unique_indicator} {Title}"
+      },
+      {
+        "style": "cardSubtitle",
+        "text": "{Subtitle}"
+      },
+      {
+        "style": "cardStats",
+        "text": "{rarity_symbol} {SET} - {cost_value} {cost_label} | {power_value} {power_label} | {hp_value} {hp_label}"
+      }
+    ]
   },
   "generator": "src/index.ts"
 }
