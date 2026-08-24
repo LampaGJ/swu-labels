@@ -49,11 +49,18 @@ export interface LabelLayoutConfig {
 	/** Subtitle character-length threshold above which the shrink size applies. Default: 34. */
 	subtitleShrinkThreshold: number
 	/**
-	 * Where the stats line ([icon] SET - stats) sits relative to title/subtitle.
-	 * 'below' (v3 default): Title, Subtitle, Stats — the stats line reads last.
-	 * 'above': Stats, Title, Subtitle — reproduces the v2 order.
+	 * The label's line layout, in render order — one entry per label line. Each
+	 * entry's `text` is a small template language: `{variable}` references resolve
+	 * per-card (see the variable catalog in docs/template-language.md); literal text
+	 * (including the ` - ` and `|` joiners) is kept only when it still separates
+	 * content that actually rendered. A line whose variables all resolve empty is
+	 * omitted from the label entirely (this is how the Subtitle line vanishes for
+	 * subtitle-less cards). `style` is the docx paragraph style id the line's
+	 * paragraph carries (e.g. `'cardTitle'`) — reordering the array reorders the
+	 * label's lines; no other config controls line order (replaces the removed
+	 * `statsLinePosition` knob — see docs/configuration.md).
 	 */
-	statsLinePosition: 'below' | 'above'
+	template: Array<{ style: string; text: string }>
 	/**
 	 * Text prepended, as its own run, before the title text run on cards where
 	 * `unique` is true — the SWU convention of marking a unique card with a
@@ -76,6 +83,13 @@ export const DEFAULT_CONFIG: LabelLayoutConfig = {
 	subtitleFontHalfPoints: 12,
 	subtitleShrinkFontHalfPoints: 11,
 	subtitleShrinkThreshold: 34,
-	statsLinePosition: 'below',
 	uniqueMarker: '◊ ',
+	template: [
+		{ style: 'cardTitle', text: '{unique_indicator} {Title}' },
+		{ style: 'cardSubtitle', text: '{Subtitle}' },
+		{
+			style: 'cardStats',
+			text: '{rarity_symbol} {SET} - {cost_value} {cost_label} | {power_value} {power_label} | {hp_value} {hp_label}',
+		},
+	],
 }

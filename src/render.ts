@@ -20,17 +20,14 @@ import {
 import sharp from 'sharp'
 import type { LabelLayoutConfig } from './config.ts'
 import type { Card } from './schema.ts'
-import type { AspectGroupKey, LabelLineKind } from './transform.ts'
 import {
-	AVERY_5167_GEOMETRY,
-	buildStatLineSegments,
-	computeHangingIndent,
-	computeSubtitleFontHalfPoints,
-	computeTitleFontHalfPoints,
-	computeUniqueMarker,
-	orderLabelLines,
-	styleIdsForStatSuffix,
-} from './transform.ts'
+	type ParsedLine,
+	type TemplateRunSpec,
+	parseTemplateLine,
+	resolveLine,
+} from './template.ts'
+import type { AspectGroupKey } from './transform.ts'
+import { AVERY_5167_GEOMETRY, computeHangingIndent } from './transform.ts'
 
 const RARITIES = ['common', 'uncommon', 'rare', 'legendary', 'special'] as const
 type RarityFile = (typeof RARITIES)[number]
@@ -90,12 +87,12 @@ export async function loadRarityAssets(
 
 const FONT = { name: 'Helvetica', hint: 'default' } as const
 
-/** Named Word paragraph-style ids, one per label line kind (v3). */
-const PARAGRAPH_STYLE_IDS: Record<LabelLineKind, string> = {
+/** Named Word paragraph-style ids matching the default template's `style` fields. */
+const PARAGRAPH_STYLE_IDS = {
 	title: 'cardTitle',
 	subtitle: 'cardSubtitle',
 	stats: 'cardStats',
-}
+} as const
 
 /** Named Word character-style id for the rarity icon's own run (best-effort, see below). */
 const RARITY_ICON_STYLE_ID = 'rarityIcon'
@@ -172,6 +169,9 @@ function buildStyles(config: LabelLayoutConfig): {
 			quickFormat: true,
 			run: { font: FONT, size: config.titleFontHalfPoints, bold: true },
 		},
+		{ id: 'rarityName', name: 'Rarity Name', quickFormat: true, run: { font: FONT, size } },
+		{ id: 'typeName', name: 'Type Name', quickFormat: true, run: { font: FONT, size } },
+		{ id: 'aspectName', name: 'Aspect Name', quickFormat: true, run: { font: FONT, size } },
 	]
 	return { paragraphStyles, characterStyles }
 }
@@ -225,138 +225,69 @@ function emptyCell(widthTwips: number): TableCell {
 }
 
 /**
- * @displayName Build Stat Line Paragraph
- * @strategicPurpose The stats line ([icon] SET - stats): rarity icon
- *   (baseline-shifted onto the text via `w:position`), the card's own set
- *   code (named-styled `setName`), then — only when
- *   {@link buildStatLineSegments} returns anything — a " - " separator and
- *   the data-driven stat segments joined by " | ", each field's numeric value
- *   and label run referencing its own named character style
- *   ({@link styleIdsForStatSuffix}) so the user can restyle per field from
- *   Word's style pane.
- * @tacticalObjective Single `cardStats`-styled paragraph per `config.align`;
- *   no inline size/bold on the runs — that comes from the named styles.
+ * @displayName Template Run Spec To Docx Run
+ * @strategicPurpose {@link resolveLine} (template.ts) is intentionally docx-free — it
+ *   returns abstract {@link TemplateRunSpec}s so the collapsing engine is unit-testable
+ *   without constructing a single docx object. This is the one place that materializes
+ *   a spec into a real `TextRun`/`ImageRun`, reusing the exact rarity-icon construction
+ *   (baseline shift + `rarityIcon` style) the v3 stat line always used.
+ * @tacticalObjective `'text'` specs map 1:1 to `TextRun`; `'image'` specs (only
+ *   `{rarity_symbol}` produces these) build the baseline-shifted rarity ImageRun.
  */
-function buildStatLineParagraph(
-	card: Card,
+function templateRunSpecToDocxRun(
+	spec: TemplateRunSpec,
 	asset: RarityAsset,
 	config: LabelLayoutConfig,
-): Paragraph {
-	const heightTwips = ICON_HEIGHT_TWIPS
-	const widthTwipsIcon = Math.round((heightTwips * asset.widthPx) / asset.heightPx)
-	const segments = buildStatLineSegments(card)
-
-	const iconRun = withIconBaselineShift(
-		new ImageRun({
-			type: 'svg',
-			data: asset.svgBuffer,
-			fallback: { type: 'png', data: asset.pngBuffer },
-			transformation: { width: widthTwipsIcon / 20, height: heightTwips / 20 },
-		}),
-		config.iconBaselineShiftHalfPoints,
-	)
-
-	const runs: (TextRun | ImageRun)[] = [
-		iconRun,
-		new TextRun({ text: ' ' }),
-		new TextRun({ text: card.expansion_code, style: 'setName' }),
-	]
-
-	if (segments.length > 0) {
-		runs.push(new TextRun({ text: ' - ', style: 'statSeparator' }))
-		segments.forEach((segment, i) => {
-			if (i > 0) {
-				runs.push(new TextRun({ text: ' | ', style: 'statSeparator' }))
-			}
-			const ids = styleIdsForStatSuffix(segment.suffix)
-			runs.push(new TextRun({ text: segment.bold, style: ids.value }))
-			runs.push(new TextRun({ text: ` ${segment.suffix}`, style: ids.label }))
-		})
-	}
-
-	return new Paragraph({
-		style: PARAGRAPH_STYLE_IDS.stats,
-		alignment: alignmentFor(config),
-		indent: computeHangingIndent(config),
-		spacing: { before: 0, after: 0 },
-		children: runs,
-	})
-}
-
-/**
- * @displayName Build Title Paragraph
- * @strategicPurpose v3: Title is line 1 (see {@link orderLabelLines}). Bold
- *   comes from the `cardTitle` named style; only the per-card auto-shrink
- *   size stays a run-level override, since the shrink value is computed per
- *   card and cannot live in a static style. SWU convention: a unique card's
- *   diamond marker is its own run, in the `uniqueMarker` named style, placed
- *   before the title run — sharing the same per-card auto-shrink size
- *   override as the title run so the two shrink together.
- * @tacticalObjective `cardTitle`-styled paragraph with zero spacing
- *   before/after (belt-and-suspenders alongside the style's own spacing).
- */
-function buildTitleParagraph(card: Card, config: LabelLayoutConfig): Paragraph {
-	const titleSize = computeTitleFontHalfPoints(card.title, config)
-	const markerText = computeUniqueMarker(card, config)
-	const children: TextRun[] = []
-	if (markerText) {
-		children.push(new TextRun({ text: markerText, style: UNIQUE_MARKER_STYLE_ID, size: titleSize }))
-	}
-	children.push(new TextRun({ text: card.title, size: titleSize }))
-	return new Paragraph({
-		style: PARAGRAPH_STYLE_IDS.title,
-		alignment: alignmentFor(config),
-		indent: computeHangingIndent(config),
-		spacing: { before: 0, after: 0 },
-		children,
-	})
-}
-
-/**
- * @displayName Build Subtitle Paragraph
- * @strategicPurpose v3: Subtitle is line 2, directly under Title with ZERO
- *   paragraph spacing between them (see {@link orderLabelLines}). Italics
- *   comes from the `cardSubtitle` named style; only the per-card auto-shrink
- *   size stays a run-level override.
- * @tacticalObjective `cardSubtitle`-styled paragraph with zero spacing
- *   before/after (belt-and-suspenders alongside the style's own spacing).
- */
-function buildSubtitleParagraph(subtitle: string, config: LabelLayoutConfig): Paragraph {
-	return new Paragraph({
-		style: PARAGRAPH_STYLE_IDS.subtitle,
-		alignment: alignmentFor(config),
-		indent: computeHangingIndent(config),
-		spacing: { before: 0, after: 0 },
-		children: [
-			new TextRun({
-				text: subtitle,
-				size: computeSubtitleFontHalfPoints(subtitle, config),
+): TextRun | ImageRun {
+	if (spec.kind === 'image') {
+		const heightTwips = ICON_HEIGHT_TWIPS
+		const widthTwipsIcon = Math.round((heightTwips * asset.widthPx) / asset.heightPx)
+		return withIconBaselineShift(
+			new ImageRun({
+				type: 'svg',
+				data: asset.svgBuffer,
+				fallback: { type: 'png', data: asset.pngBuffer },
+				transformation: { width: widthTwipsIcon / 20, height: heightTwips / 20 },
 			}),
-		],
-	})
+			config.iconBaselineShiftHalfPoints,
+		)
+	}
+	return new TextRun({ text: spec.text, style: spec.style, size: spec.size })
 }
 
 /**
  * @displayName Build Label Cell Paragraphs
- * @strategicPurpose v3 reorder: paragraph construction order is driven by
- *   {@link orderLabelLines}, not by call order in source — so
- *   `statsLinePosition: 'above'` reproduces the exact v2 order with no
- *   duplicated branch here.
- * @tacticalObjective Dispatches each `LabelLineKind` to its builder in the
- *   order `orderLabelLines` returns.
+ * @strategicPurpose Template-driven (v4): line order, paragraph style, and content
+ *   are entirely governed by `config.template` (see docs/template-language.md) —
+ *   this function no longer hardcodes title/subtitle/stats construction or their
+ *   order. A line whose {@link resolveLine} call returns `null` (every variable
+ *   collapsed empty) contributes no paragraph at all — this is how a subtitle-less
+ *   card's Subtitle line vanishes.
+ * @tacticalObjective Resolves each pre-parsed template line for this card, converts
+ *   the returned {@link TemplateRunSpec}s to docx runs, and builds one paragraph per
+ *   non-null line, in template order.
  */
 function buildLabelCellParagraphs(
 	card: Card,
 	asset: RarityAsset,
 	config: LabelLayoutConfig,
+	parsedTemplate: readonly ParsedLine[],
 ): Paragraph[] {
-	const order = orderLabelLines(config, Boolean(card.subtitle))
-	return order.map((kind) => {
-		if (kind === 'title') return buildTitleParagraph(card, config)
-		if (kind === 'stats') return buildStatLineParagraph(card, asset, config)
-		// kind === 'subtitle': only present in `order` when card.subtitle is set.
-		return buildSubtitleParagraph(card.subtitle as string, config)
-	})
+	const paragraphs: Paragraph[] = []
+	for (const parsedLine of parsedTemplate) {
+		const runs = resolveLine(parsedLine, card, config)
+		if (!runs) continue
+		paragraphs.push(
+			new Paragraph({
+				style: parsedLine.style,
+				alignment: alignmentFor(config),
+				indent: computeHangingIndent(config),
+				spacing: { before: 0, after: 0 },
+				children: runs.map((spec) => templateRunSpecToDocxRun(spec, asset, config)),
+			}),
+		)
+	}
+	return paragraphs
 }
 
 function labelCell(
@@ -364,9 +295,10 @@ function labelCell(
 	assets: Record<Card['rarity'], RarityAsset>,
 	widthTwips: number,
 	config: LabelLayoutConfig,
+	parsedTemplate: readonly ParsedLine[],
 ): TableCell {
 	const asset = assets[card.rarity]
-	const paragraphs = buildLabelCellParagraphs(card, asset, config)
+	const paragraphs = buildLabelCellParagraphs(card, asset, config, parsedTemplate)
 	return new TableCell({
 		width: { size: widthTwips, type: WidthType.DXA },
 		margins: { top: 0, bottom: 0, left: 40, right: 40 },
@@ -379,6 +311,7 @@ function labelRow(
 	cards: (Card | null)[],
 	assets: Record<Card['rarity'], RarityAsset>,
 	config: LabelLayoutConfig,
+	parsedTemplate: readonly ParsedLine[],
 ): TableRow {
 	const cols = AVERY_5167_GEOMETRY.columnWidths
 	const cells: TableCell[] = []
@@ -388,7 +321,7 @@ function labelRow(
 		if ((AVERY_5167_GEOMETRY.labelColumnIndices as readonly number[]).includes(col)) {
 			const card = cards[labelIndex]
 			labelIndex += 1
-			cells.push(card ? labelCell(card, assets, width, config) : emptyCell(width))
+			cells.push(card ? labelCell(card, assets, width, config, parsedTemplate) : emptyCell(width))
 		} else {
 			cells.push(emptyCell(width))
 		}
@@ -412,6 +345,7 @@ export function buildLabelTable(
 	assets: Record<Card['rarity'], RarityAsset>,
 	config: LabelLayoutConfig,
 ): Table {
+	const parsedTemplate = config.template.map(parseTemplateLine)
 	const rows: TableRow[] = []
 	for (let i = 0; i < cards.length; i += 4) {
 		const chunk: (Card | null)[] = [
@@ -420,7 +354,7 @@ export function buildLabelTable(
 			cards[i + 2] ?? null,
 			cards[i + 3] ?? null,
 		]
-		rows.push(labelRow(chunk, assets, config))
+		rows.push(labelRow(chunk, assets, config, parsedTemplate))
 	}
 	return new Table({
 		rows,

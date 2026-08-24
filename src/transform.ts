@@ -320,36 +320,6 @@ export function computeHangingIndent(
 }
 
 /**
- * @displayName Label Line Kind
- * @strategicPurpose Names the three possible paragraph roles in a label cell so
- *   ordering logic (v3: title, subtitle, stats) is expressed as data, not as
- *   duplicated paragraph-construction call order in render.ts.
- * @tacticalObjective Consumed by {@link orderLabelLines} and by render.ts's
- *   per-kind paragraph builder dispatch.
- */
-export type LabelLineKind = 'title' | 'subtitle' | 'stats'
-
-/**
- * @displayName Order Label Lines
- * @strategicPurpose v3 spec: Title first, Subtitle second, stats line LAST
- *   (`statsLinePosition: 'below'`, the default). `'above'` reproduces the v2
- *   order (stats, Title, Subtitle) for a config-level rollback with no code
- *   change. Pure and deterministic so it can be red-green tested without
- *   constructing a single docx Paragraph.
- * @tacticalObjective Returns the ordered `LabelLineKind[]` for one label cell,
- *   omitting `'subtitle'` when `hasSubtitle` is false.
- */
-export function orderLabelLines(
-	config: Pick<LabelLayoutConfig, 'statsLinePosition'>,
-	hasSubtitle: boolean,
-): LabelLineKind[] {
-	const titleSubtitle: LabelLineKind[] = hasSubtitle ? ['title', 'subtitle'] : ['title']
-	return config.statsLinePosition === 'above'
-		? ['stats', ...titleSubtitle]
-		: [...titleSubtitle, 'stats']
-}
-
-/**
  * @displayName Character Style Id
  * @strategicPurpose Names the eight per-field named Word character styles
  *   (plus the doc-wide set-name and separator styles) the v3 stat line
@@ -368,6 +338,10 @@ export type CharacterStyleId =
 	| 'hpValue'
 	| 'hpLabel'
 	| 'rarityIcon'
+	| 'uniqueMarker'
+	| 'rarityName'
+	| 'typeName'
+	| 'aspectName'
 
 /**
  * @displayName Style Ids For Stat Suffix

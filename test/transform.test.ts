@@ -16,7 +16,6 @@ import {
 	groupByAspect,
 	groupByAspectThenSet,
 	orderCardsWithinAspectBySet,
-	orderLabelLines,
 	sortWithinGroup,
 	styleIdsForStatSuffix,
 } from '../src/transform.ts'
@@ -369,29 +368,16 @@ describe('orderCardsWithinAspectBySet', () => {
 	})
 })
 
-describe('orderLabelLines', () => {
-	it("v3 default ('below'): title, subtitle, stats when a subtitle is present", () => {
-		const config: LabelLayoutConfig = { ...DEFAULT_CONFIG, statsLinePosition: 'below' }
-		expect(orderLabelLines(config, true)).toEqual(['title', 'subtitle', 'stats'])
-	})
-
-	it("v3 default ('below'): title, stats when no subtitle is present", () => {
-		const config: LabelLayoutConfig = { ...DEFAULT_CONFIG, statsLinePosition: 'below' }
-		expect(orderLabelLines(config, false)).toEqual(['title', 'stats'])
-	})
-
-	it("'above' reproduces the v2 order: stats, title, subtitle", () => {
-		const config: LabelLayoutConfig = { ...DEFAULT_CONFIG, statsLinePosition: 'above' }
-		expect(orderLabelLines(config, true)).toEqual(['stats', 'title', 'subtitle'])
-	})
-
-	it("'above' with no subtitle: stats, title", () => {
-		const config: LabelLayoutConfig = { ...DEFAULT_CONFIG, statsLinePosition: 'above' }
-		expect(orderLabelLines(config, false)).toEqual(['stats', 'title'])
-	})
-
-	it('DEFAULT_CONFIG.statsLinePosition is below', () => {
-		expect(DEFAULT_CONFIG.statsLinePosition).toBe('below')
+describe('DEFAULT_CONFIG.template', () => {
+	it('is the three-line title/subtitle/stats template in render order', () => {
+		expect(DEFAULT_CONFIG.template).toEqual([
+			{ style: 'cardTitle', text: '{unique_indicator} {Title}' },
+			{ style: 'cardSubtitle', text: '{Subtitle}' },
+			{
+				style: 'cardStats',
+				text: '{rarity_symbol} {SET} - {cost_value} {cost_label} | {power_value} {power_label} | {hp_value} {hp_label}',
+			},
+		])
 	})
 })
 
