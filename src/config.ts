@@ -70,6 +70,15 @@ export interface LabelLayoutConfig {
 	uniqueMarker: string
 }
 
+/**
+ * @displayName Default Premier Label Layout Config
+ * @strategicPurpose The one shipped instance of {@link LabelLayoutConfig} that
+ *   index.ts and render.ts actually consume — every layout knob's default value
+ *   lives here, in one place, rather than scattered as inline fallbacks.
+ * @tacticalObjective The v3/v4 default: centered alignment, -2 half-point icon
+ *   baseline shift, release-order sets, and the three-line title/subtitle/stats
+ *   template documented in docs/template-language.md.
+ */
 export const DEFAULT_CONFIG: LabelLayoutConfig = {
 	align: 'center',
 	iconBaselineShiftHalfPoints: -2,

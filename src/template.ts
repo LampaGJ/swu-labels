@@ -24,7 +24,14 @@ import {
  */
 export type TemplateToken = { type: 'literal'; text: string } | { type: 'variable'; name: string }
 
-/** One dash-side, split further into `|`-separated segments of tokens. */
+/**
+ * @displayName Template Segment
+ * @strategicPurpose One dash-side of a template line, split further into
+ *   `|`-separated segments of tokens — the intermediate unit {@link resolveSide}
+ *   collapses independently before the sibling-join and dash-join rules apply.
+ * @tacticalObjective Alias for `TemplateToken[]`; produced by {@link parseTemplateLine},
+ *   consumed by {@link resolveLine} via {@link ParsedLine.sides}.
+ */
 export type TemplateSegment = TemplateToken[]
 
 /**

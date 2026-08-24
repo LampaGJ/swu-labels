@@ -251,6 +251,9 @@ function sha256String(text: string): string {
 
 /**
  * @displayName Parse Tag Override CLI Arg
+ * @strategicPurpose Lets an operator pin a specific snapshot tag (e.g. to redo a
+ *   failed ingest under the same tag, or to label a manual test run distinctly
+ *   from the data-derived tag) without editing code.
  * @tacticalObjective Reads `--tag <value>` from argv; returns null when absent so
  *   the caller falls back to data-derived tag.
  */

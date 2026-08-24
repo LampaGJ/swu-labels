@@ -29,11 +29,28 @@ function epochMillisNow(): number {
 	return Math.round(performance.timeOrigin + performance.now())
 }
 
+/**
+ * @displayName Progress Job Options
+ * @strategicPurpose Caller-supplied shape for one {@link progress} job: the total
+ *   unit count a percentage/ETA can be computed against, plus an optional write
+ *   throttle for tight loops.
+ * @tacticalObjective `total` is the expected done-count at completion; `everyN`
+ *   (default 1) throttles `tick()` writes to every Nth call.
+ */
 export type ProgressOptions = {
 	total: number
 	everyN?: number
 }
 
+/**
+ * @displayName Progress Snapshot
+ * @strategicPurpose The exact JSON shape written to `reports/.progress/<job>.json`
+ *   and appended to `<job>.jsonl` — the pollable-progress contract external
+ *   watchers (and this project's own doctrine) rely on.
+ * @tacticalObjective `ts`/`done`/`total`/`pct`/`rate_per_s`/`eta_s` are always
+ *   present; `[key: string]: unknown` admits the caller's per-tick `extra` fields
+ *   (e.g. `{ fetched }`) without a schema change here.
+ */
 export type ProgressSnapshot = {
 	ts: number
 	done: number
@@ -44,6 +61,13 @@ export type ProgressSnapshot = {
 	[key: string]: unknown
 }
 
+/**
+ * @displayName Progress Handle
+ * @strategicPurpose The caller-facing handle returned by {@link progress} — the
+ *   only two operations a long-running job needs against its own progress file.
+ * @tacticalObjective `tick` writes an in-flight {@link ProgressSnapshot} (subject
+ *   to the `everyN` throttle); `done` writes a final snapshot with `eta_s: 0`.
+ */
 export type ProgressHandle = {
 	tick: (done: number, extra?: Record<string, unknown>) => void
 	done: (extra?: Record<string, unknown>) => void
