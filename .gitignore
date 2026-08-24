@@ -2,3 +2,6 @@ node_modules/
 reports/.progress/
 *.log
 .DS_Store
+
+# volatile session handoff (see /prep)
+WORK-STATE.md
