@@ -1,0 +1,882 @@
+{
+	"data": [
+		{
+			"id": 5,
+			"attributes": {
+				"title": "Luke Skywalker",
+				"subtitle": "Faithful Friend",
+				"cardNumber": 5,
+				"cardCount": 252,
+				"artist": "Borja Pindado",
+				"artFrontHorizontal": true,
+				"artBackHorizontal": null,
+				"hasFoil": false,
+				"cost": 6,
+				"hp": 7,
+				"power": 4,
+				"cardId": "2579145458",
+				"createdAt": "2023-04-28T15:42:53.903Z",
+				"updatedAt": "2024-07-15T17:47:00.124Z",
+				"publishedAt": "2023-04-28T17:09:29.077Z",
+				"locale": "en",
+				"hyperspace": false,
+				"unique": true,
+				"showcase": false,
+				"cardUid": "2579145458",
+				"serialCode": "0101005",
+				"upgradeHp": null,
+				"upgradePower": null,
+				"aspects": {
+					"data": [
+						{
+							"id": 2,
+							"attributes": {
+								"name": "Vigilance"
+							}
+						},
+						{
+							"id": 22,
+							"attributes": {
+								"name": "Heroism"
+							}
+						}
+					]
+				},
+				"aspectDuplicates": {
+					"data": []
+				},
+				"type": {
+					"data": {
+						"id": 4,
+						"attributes": {
+							"name": "Leader"
+						}
+					}
+				},
+				"type2": {
+					"data": {
+						"id": 6,
+						"attributes": {
+							"name": "Leader Unit",
+							"description": "",
+							"value": "Leader Unit",
+							"createdAt": "2023-08-14T21:41:58.575Z",
+							"updatedAt": "2024-03-05T17:12:16.062Z",
+							"publishedAt": "2023-11-15T17:30:47.748Z",
+							"locale": "en",
+							"sortValue": 1
+						}
+					}
+				},
+				"traits": {
+					"data": [
+						{
+							"id": 32,
+							"attributes": {
+								"name": "Force",
+								"description": "",
+								"createdAt": "2023-08-15T14:41:02.071Z",
+								"updatedAt": "2023-11-15T23:57:27.173Z",
+								"publishedAt": "2023-11-15T23:57:27.169Z",
+								"locale": "en"
+							}
+						},
+						{
+							"id": 37,
+							"attributes": {
+								"name": "Rebel",
+								"description": "",
+								"createdAt": "2023-08-15T14:41:27.374Z",
+								"updatedAt": "2023-11-16T00:00:24.048Z",
+								"publishedAt": "2023-11-16T00:00:24.044Z",
+								"locale": "en"
+							}
+						}
+					]
+				},
+				"arenas": {
+					"data": [
+						{
+							"id": 2,
+							"attributes": {
+								"name": "Ground",
+								"description": null,
+								"createdAt": "2023-08-15T14:32:07.804Z",
+								"updatedAt": "2023-08-18T21:37:34.527Z",
+								"publishedAt": "2023-08-18T21:37:34.522Z",
+								"locale": "en"
+							}
+						}
+					]
+				},
+				"keywords": {
+					"data": []
+				},
+				"rarity": {
+					"data": {
+						"id": 22,
+						"attributes": {
+							"name": "Special"
+						}
+					}
+				},
+				"expansion": {
+					"data": {
+						"id": 2,
+						"attributes": {
+							"name": "Spark of Rebellion",
+							"code": "SOR"
+						}
+					}
+				},
+				"variantTypes": {
+					"data": [
+						{
+							"id": 46,
+							"attributes": {
+								"name": "Standard",
+								"description": null,
+								"createdAt": "2024-07-15T14:37:37.643Z",
+								"updatedAt": "2024-07-15T19:55:03.314Z",
+								"publishedAt": "2024-07-15T19:54:44.645Z",
+								"locale": "en",
+								"variantId": "01",
+								"foil": false,
+								"sortValue": 10,
+								"icon": {
+									"data": {
+										"id": 8701,
+										"attributes": {
+											"name": "icon_standard.png",
+											"alternativeText": null,
+											"caption": null,
+											"width": 144,
+											"height": 144,
+											"formats": null,
+											"hash": "icon_standard_7dbd7cd8e6",
+											"ext": ".png",
+											"mime": "image/png",
+											"size": 0.39,
+											"url": "https://cdn.starwarsunlimited.com//icon_standard_7dbd7cd8e6.png",
+											"previewUrl": null,
+											"provider": "aws-s3",
+											"provider_metadata": null,
+											"createdAt": "2024-07-15T14:40:17.066Z",
+											"updatedAt": "2024-07-15T14:40:17.066Z"
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				"variantOf": {
+					"data": null
+				},
+				"reprintOf": {
+					"data": null
+				},
+				"validationId": "2579145458"
+			}
+		},
+		{
+			"id": 6,
+			"attributes": {
+				"title": "Darth Vader",
+				"subtitle": "Dark Lord of the Sith",
+				"cardNumber": 10,
+				"cardCount": 252,
+				"artist": "Borja Pindado",
+				"artFrontHorizontal": true,
+				"artBackHorizontal": null,
+				"hasFoil": false,
+				"cost": 7,
+				"hp": 8,
+				"power": 5,
+				"cardId": "6088773439",
+				"createdAt": "2023-04-28T19:02:00.259Z",
+				"updatedAt": "2024-07-19T16:37:09.748Z",
+				"publishedAt": "2023-04-28T19:03:07.268Z",
+				"locale": "en",
+				"hyperspace": false,
+				"unique": true,
+				"showcase": false,
+				"cardUid": "6088773439",
+				"serialCode": "0101010",
+				"upgradeHp": null,
+				"upgradePower": null,
+				"aspects": {
+					"data": [
+						{
+							"id": 12,
+							"attributes": {
+								"name": "Aggression"
+							}
+						},
+						{
+							"id": 27,
+							"attributes": {
+								"name": "Villainy"
+							}
+						}
+					]
+				},
+				"aspectDuplicates": {
+					"data": []
+				},
+				"type": {
+					"data": {
+						"id": 4,
+						"attributes": {
+							"name": "Leader"
+						}
+					}
+				},
+				"type2": {
+					"data": {
+						"id": 6,
+						"attributes": {
+							"name": "Leader Unit",
+							"description": "",
+							"value": "Leader Unit",
+							"createdAt": "2023-08-14T21:41:58.575Z",
+							"updatedAt": "2024-03-05T17:12:16.062Z",
+							"publishedAt": "2023-11-15T17:30:47.748Z",
+							"locale": "en",
+							"sortValue": 1
+						}
+					}
+				},
+				"traits": {
+					"data": [
+						{
+							"id": 32,
+							"attributes": {
+								"name": "Force",
+								"description": "",
+								"createdAt": "2023-08-15T14:41:02.071Z",
+								"updatedAt": "2023-11-15T23:57:27.173Z",
+								"publishedAt": "2023-11-15T23:57:27.169Z",
+								"locale": "en"
+							}
+						},
+						{
+							"id": 7,
+							"attributes": {
+								"name": "Imperial",
+								"description": "",
+								"createdAt": "2023-08-15T14:38:15.844Z",
+								"updatedAt": "2023-11-15T23:58:36.411Z",
+								"publishedAt": "2023-11-15T23:58:36.407Z",
+								"locale": "en"
+							}
+						},
+						{
+							"id": 42,
+							"attributes": {
+								"name": "Sith",
+								"description": "",
+								"createdAt": "2023-08-15T14:42:10.071Z",
+								"updatedAt": "2023-11-16T00:00:40.840Z",
+								"publishedAt": "2023-11-16T00:00:40.835Z",
+								"locale": "en"
+							}
+						}
+					]
+				},
+				"arenas": {
+					"data": [
+						{
+							"id": 2,
+							"attributes": {
+								"name": "Ground",
+								"description": null,
+								"createdAt": "2023-08-15T14:32:07.804Z",
+								"updatedAt": "2023-08-18T21:37:34.527Z",
+								"publishedAt": "2023-08-18T21:37:34.522Z",
+								"locale": "en"
+							}
+						}
+					]
+				},
+				"keywords": {
+					"data": []
+				},
+				"rarity": {
+					"data": {
+						"id": 22,
+						"attributes": {
+							"name": "Special"
+						}
+					}
+				},
+				"expansion": {
+					"data": {
+						"id": 2,
+						"attributes": {
+							"name": "Spark of Rebellion",
+							"code": "SOR"
+						}
+					}
+				},
+				"variantTypes": {
+					"data": [
+						{
+							"id": 46,
+							"attributes": {
+								"name": "Standard",
+								"description": null,
+								"createdAt": "2024-07-15T14:37:37.643Z",
+								"updatedAt": "2024-07-15T19:55:03.314Z",
+								"publishedAt": "2024-07-15T19:54:44.645Z",
+								"locale": "en",
+								"variantId": "01",
+								"foil": false,
+								"sortValue": 10,
+								"icon": {
+									"data": {
+										"id": 8701,
+										"attributes": {
+											"name": "icon_standard.png",
+											"alternativeText": null,
+											"caption": null,
+											"width": 144,
+											"height": 144,
+											"formats": null,
+											"hash": "icon_standard_7dbd7cd8e6",
+											"ext": ".png",
+											"mime": "image/png",
+											"size": 0.39,
+											"url": "https://cdn.starwarsunlimited.com//icon_standard_7dbd7cd8e6.png",
+											"previewUrl": null,
+											"provider": "aws-s3",
+											"provider_metadata": null,
+											"createdAt": "2024-07-15T14:40:17.066Z",
+											"updatedAt": "2024-07-15T14:40:17.066Z"
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				"variantOf": {
+					"data": null
+				},
+				"reprintOf": {
+					"data": null
+				},
+				"validationId": "6088773439"
+			}
+		},
+		{
+			"id": 15,
+			"attributes": {
+				"title": "Cell Block Guard",
+				"subtitle": null,
+				"cardNumber": 229,
+				"cardCount": 252,
+				"artist": "French Carlomagno",
+				"artFrontHorizontal": false,
+				"artBackHorizontal": null,
+				"hasFoil": false,
+				"cost": 3,
+				"hp": 3,
+				"power": 3,
+				"cardId": "2524528997",
+				"createdAt": "2023-07-25T15:23:06.073Z",
+				"updatedAt": "2026-07-20T20:35:59.809Z",
+				"publishedAt": "2023-07-25T15:26:38.439Z",
+				"locale": "en",
+				"hyperspace": false,
+				"unique": false,
+				"showcase": false,
+				"cardUid": "2524528997",
+				"serialCode": "0101229",
+				"upgradeHp": null,
+				"upgradePower": null,
+				"aspects": {
+					"data": [
+						{
+							"id": 27,
+							"attributes": {
+								"name": "Villainy"
+							}
+						}
+					]
+				},
+				"aspectDuplicates": {
+					"data": []
+				},
+				"type": {
+					"data": {
+						"id": 9,
+						"attributes": {
+							"name": "Unit"
+						}
+					}
+				},
+				"type2": {
+					"data": null
+				},
+				"traits": {
+					"data": [
+						{
+							"id": 7,
+							"attributes": {
+								"name": "Imperial",
+								"description": "",
+								"createdAt": "2023-08-15T14:38:15.844Z",
+								"updatedAt": "2023-11-15T23:58:36.411Z",
+								"publishedAt": "2023-11-15T23:58:36.407Z",
+								"locale": "en"
+							}
+						},
+						{
+							"id": 17,
+							"attributes": {
+								"name": "Trooper",
+								"description": "",
+								"createdAt": "2023-08-15T14:39:10.882Z",
+								"updatedAt": "2023-11-16T00:05:44.640Z",
+								"publishedAt": "2023-11-16T00:05:44.635Z",
+								"locale": "en"
+							}
+						}
+					]
+				},
+				"arenas": {
+					"data": [
+						{
+							"id": 2,
+							"attributes": {
+								"name": "Ground",
+								"description": null,
+								"createdAt": "2023-08-15T14:32:07.804Z",
+								"updatedAt": "2023-08-18T21:37:34.527Z",
+								"publishedAt": "2023-08-18T21:37:34.522Z",
+								"locale": "en"
+							}
+						}
+					]
+				},
+				"keywords": {
+					"data": [
+						{
+							"id": 7,
+							"attributes": {
+								"name": "Sentinel",
+								"description": "",
+								"createdAt": "2023-11-28T17:03:56.832Z",
+								"updatedAt": "2023-11-28T17:04:32.952Z",
+								"publishedAt": "2023-11-28T17:04:10.817Z",
+								"locale": "en"
+							}
+						}
+					]
+				},
+				"rarity": {
+					"data": {
+						"id": 2,
+						"attributes": {
+							"name": "Common"
+						}
+					}
+				},
+				"expansion": {
+					"data": {
+						"id": 2,
+						"attributes": {
+							"name": "Spark of Rebellion",
+							"code": "SOR"
+						}
+					}
+				},
+				"variantTypes": {
+					"data": [
+						{
+							"id": 46,
+							"attributes": {
+								"name": "Standard",
+								"description": null,
+								"createdAt": "2024-07-15T14:37:37.643Z",
+								"updatedAt": "2024-07-15T19:55:03.314Z",
+								"publishedAt": "2024-07-15T19:54:44.645Z",
+								"locale": "en",
+								"variantId": "01",
+								"foil": false,
+								"sortValue": 10,
+								"icon": {
+									"data": {
+										"id": 8701,
+										"attributes": {
+											"name": "icon_standard.png",
+											"alternativeText": null,
+											"caption": null,
+											"width": 144,
+											"height": 144,
+											"formats": null,
+											"hash": "icon_standard_7dbd7cd8e6",
+											"ext": ".png",
+											"mime": "image/png",
+											"size": 0.39,
+											"url": "https://cdn.starwarsunlimited.com//icon_standard_7dbd7cd8e6.png",
+											"previewUrl": null,
+											"provider": "aws-s3",
+											"provider_metadata": null,
+											"createdAt": "2024-07-15T14:40:17.066Z",
+											"updatedAt": "2024-07-15T14:40:17.066Z"
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				"variantOf": {
+					"data": null
+				},
+				"reprintOf": {
+					"data": null
+				},
+				"validationId": "2524528997"
+			}
+		},
+		{
+			"id": 20,
+			"attributes": {
+				"title": "Fleet Lieutenant",
+				"subtitle": null,
+				"cardNumber": 240,
+				"cardCount": 252,
+				"artist": "Hoan Nguyen",
+				"artFrontHorizontal": false,
+				"artBackHorizontal": null,
+				"hasFoil": false,
+				"cost": 3,
+				"hp": 3,
+				"power": 3,
+				"cardId": "3038238423",
+				"createdAt": "2023-07-25T15:31:30.124Z",
+				"updatedAt": "2024-07-19T16:46:34.149Z",
+				"publishedAt": "2023-07-25T15:42:14.826Z",
+				"locale": "en",
+				"hyperspace": false,
+				"unique": false,
+				"showcase": false,
+				"cardUid": "3038238423",
+				"serialCode": "0101240",
+				"upgradeHp": null,
+				"upgradePower": null,
+				"aspects": {
+					"data": [
+						{
+							"id": 22,
+							"attributes": {
+								"name": "Heroism"
+							}
+						}
+					]
+				},
+				"aspectDuplicates": {
+					"data": []
+				},
+				"type": {
+					"data": {
+						"id": 9,
+						"attributes": {
+							"name": "Unit"
+						}
+					}
+				},
+				"type2": {
+					"data": null
+				},
+				"traits": {
+					"data": [
+						{
+							"id": 37,
+							"attributes": {
+								"name": "Rebel",
+								"description": "",
+								"createdAt": "2023-08-15T14:41:27.374Z",
+								"updatedAt": "2023-11-16T00:00:24.048Z",
+								"publishedAt": "2023-11-16T00:00:24.044Z",
+								"locale": "en"
+							}
+						},
+						{
+							"id": 17,
+							"attributes": {
+								"name": "Trooper",
+								"description": "",
+								"createdAt": "2023-08-15T14:39:10.882Z",
+								"updatedAt": "2023-11-16T00:05:44.640Z",
+								"publishedAt": "2023-11-16T00:05:44.635Z",
+								"locale": "en"
+							}
+						}
+					]
+				},
+				"arenas": {
+					"data": [
+						{
+							"id": 2,
+							"attributes": {
+								"name": "Ground",
+								"description": null,
+								"createdAt": "2023-08-15T14:32:07.804Z",
+								"updatedAt": "2023-08-18T21:37:34.527Z",
+								"publishedAt": "2023-08-18T21:37:34.522Z",
+								"locale": "en"
+							}
+						}
+					]
+				},
+				"keywords": {
+					"data": []
+				},
+				"rarity": {
+					"data": {
+						"id": 2,
+						"attributes": {
+							"name": "Common"
+						}
+					}
+				},
+				"expansion": {
+					"data": {
+						"id": 2,
+						"attributes": {
+							"name": "Spark of Rebellion",
+							"code": "SOR"
+						}
+					}
+				},
+				"variantTypes": {
+					"data": [
+						{
+							"id": 46,
+							"attributes": {
+								"name": "Standard",
+								"description": null,
+								"createdAt": "2024-07-15T14:37:37.643Z",
+								"updatedAt": "2024-07-15T19:55:03.314Z",
+								"publishedAt": "2024-07-15T19:54:44.645Z",
+								"locale": "en",
+								"variantId": "01",
+								"foil": false,
+								"sortValue": 10,
+								"icon": {
+									"data": {
+										"id": 8701,
+										"attributes": {
+											"name": "icon_standard.png",
+											"alternativeText": null,
+											"caption": null,
+											"width": 144,
+											"height": 144,
+											"formats": null,
+											"hash": "icon_standard_7dbd7cd8e6",
+											"ext": ".png",
+											"mime": "image/png",
+											"size": 0.39,
+											"url": "https://cdn.starwarsunlimited.com//icon_standard_7dbd7cd8e6.png",
+											"previewUrl": null,
+											"provider": "aws-s3",
+											"provider_metadata": null,
+											"createdAt": "2024-07-15T14:40:17.066Z",
+											"updatedAt": "2024-07-15T14:40:17.066Z"
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				"variantOf": {
+					"data": null
+				},
+				"reprintOf": {
+					"data": null
+				},
+				"validationId": "3038238423"
+			}
+		},
+		{
+			"id": 25,
+			"attributes": {
+				"title": "Grand Moff Tarkin",
+				"subtitle": "Death Star Overseer",
+				"cardNumber": 84,
+				"cardCount": 252,
+				"artist": "Steve Morris",
+				"artFrontHorizontal": false,
+				"artBackHorizontal": null,
+				"hasFoil": false,
+				"cost": 4,
+				"hp": 3,
+				"power": 2,
+				"cardId": "9266336818",
+				"createdAt": "2023-07-25T15:50:50.149Z",
+				"updatedAt": "2025-04-15T21:44:21.593Z",
+				"publishedAt": "2023-07-25T15:50:52.287Z",
+				"locale": "en",
+				"hyperspace": false,
+				"unique": true,
+				"showcase": false,
+				"cardUid": "9266336818",
+				"serialCode": "0101084",
+				"upgradeHp": null,
+				"upgradePower": null,
+				"aspects": {
+					"data": [
+						{
+							"id": 7,
+							"attributes": {
+								"name": "Command"
+							}
+						},
+						{
+							"id": 27,
+							"attributes": {
+								"name": "Villainy"
+							}
+						}
+					]
+				},
+				"aspectDuplicates": {
+					"data": []
+				},
+				"type": {
+					"data": {
+						"id": 9,
+						"attributes": {
+							"name": "Unit"
+						}
+					}
+				},
+				"type2": {
+					"data": null
+				},
+				"traits": {
+					"data": [
+						{
+							"id": 7,
+							"attributes": {
+								"name": "Imperial",
+								"description": "",
+								"createdAt": "2023-08-15T14:38:15.844Z",
+								"updatedAt": "2023-11-15T23:58:36.411Z",
+								"publishedAt": "2023-11-15T23:58:36.407Z",
+								"locale": "en"
+							}
+						},
+						{
+							"id": 12,
+							"attributes": {
+								"name": "Official",
+								"description": "",
+								"createdAt": "2023-08-15T14:38:40.778Z",
+								"updatedAt": "2023-11-16T00:00:09.096Z",
+								"publishedAt": "2023-11-16T00:00:09.091Z",
+								"locale": "en"
+							}
+						}
+					]
+				},
+				"arenas": {
+					"data": [
+						{
+							"id": 2,
+							"attributes": {
+								"name": "Ground",
+								"description": null,
+								"createdAt": "2023-08-15T14:32:07.804Z",
+								"updatedAt": "2023-08-18T21:37:34.527Z",
+								"publishedAt": "2023-08-18T21:37:34.522Z",
+								"locale": "en"
+							}
+						}
+					]
+				},
+				"keywords": {
+					"data": []
+				},
+				"rarity": {
+					"data": {
+						"id": 22,
+						"attributes": {
+							"name": "Special"
+						}
+					}
+				},
+				"expansion": {
+					"data": {
+						"id": 2,
+						"attributes": {
+							"name": "Spark of Rebellion",
+							"code": "SOR"
+						}
+					}
+				},
+				"variantTypes": {
+					"data": [
+						{
+							"id": 46,
+							"attributes": {
+								"name": "Standard",
+								"description": null,
+								"createdAt": "2024-07-15T14:37:37.643Z",
+								"updatedAt": "2024-07-15T19:55:03.314Z",
+								"publishedAt": "2024-07-15T19:54:44.645Z",
+								"locale": "en",
+								"variantId": "01",
+								"foil": false,
+								"sortValue": 10,
+								"icon": {
+									"data": {
+										"id": 8701,
+										"attributes": {
+											"name": "icon_standard.png",
+											"alternativeText": null,
+											"caption": null,
+											"width": 144,
+											"height": 144,
+											"formats": null,
+											"hash": "icon_standard_7dbd7cd8e6",
+											"ext": ".png",
+											"mime": "image/png",
+											"size": 0.39,
+											"url": "https://cdn.starwarsunlimited.com//icon_standard_7dbd7cd8e6.png",
+											"previewUrl": null,
+											"provider": "aws-s3",
+											"provider_metadata": null,
+											"createdAt": "2024-07-15T14:40:17.066Z",
+											"updatedAt": "2024-07-15T14:40:17.066Z"
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				"variantOf": {
+					"data": null
+				},
+				"reprintOf": {
+					"data": null
+				},
+				"validationId": "9266336818"
+			}
+		}
+	],
+	"meta": {
+		"pagination": {
+			"page": 1,
+			"pageSize": 5,
+			"pageCount": 1837,
+			"total": 9185
+		}
+	}
+}
