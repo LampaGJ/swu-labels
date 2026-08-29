@@ -442,3 +442,186 @@ export function groupByAspectThenSet(
 	}
 	return ordered
 }
+
+/**
+ * @displayName Group By Aspect Only
+ * @strategicPurpose One label-sheet layout the user asked for alongside
+ *   {@link groupByAspectThenSet}: a fresh sheet per aspect color (the same
+ *   seven-group {@link ASPECT_GROUP_ORDER}, including Villainy/Heroism/Neutral),
+ *   but without sub-grouping by set within the aspect — cards from every legal
+ *   set interleave alphabetically inside one aspect's section.
+ * @tacticalObjective Composes {@link groupByAspect} with {@link sortWithinGroup}
+ *   per aspect bucket; no set precedence/order is consulted.
+ */
+export function groupByAspectOnly(cards: readonly Card[]): Map<AspectGroupKey, Card[]> {
+	const byAspect = groupByAspect(cards)
+	const ordered = new Map<AspectGroupKey, Card[]>()
+	for (const [key, bucket] of byAspect) {
+		ordered.set(key, sortWithinGroup(bucket))
+	}
+	return ordered
+}
+
+/**
+ * @displayName Group By Premier Set
+ * @strategicPurpose The second user-requested label-sheet layout: a fresh
+ *   sheet per premier-legal set (e.g. JTL, LOF, SEC), ignoring aspect entirely
+ *   — for binder/box organization by set rather than by color.
+ * @tacticalObjective Buckets by `expansion_code`, orders buckets per
+ *   `config.setOrder` (same rule as {@link orderCardsWithinAspectBySet}: 'release'
+ *   = {@link PREMIER_FILE_SET_PRECEDENCE}, 'alphabetical' = fold-sorted set
+ *   codes), sorts each bucket with {@link sortWithinGroup}. Throws if any set
+ *   code present in `cards` is missing from the computed order (accounting
+ *   guard, same shape as {@link orderCardsWithinAspectBySet}).
+ */
+export function groupBySet(
+	cards: readonly Card[],
+	config: Pick<LabelLayoutConfig, 'setOrder'>,
+): Map<string, Card[]> {
+	const bySet = new Map<string, Card[]>()
+	for (const c of cards) {
+		const bucket = bySet.get(c.expansion_code)
+		if (bucket) {
+			bucket.push(c)
+		} else {
+			bySet.set(c.expansion_code, [c])
+		}
+	}
+	const setCodes = [...bySet.keys()]
+	const orderedCodes =
+		config.setOrder === 'release'
+			? (PREMIER_FILE_SET_PRECEDENCE as readonly string[]).filter((code) => bySet.has(code))
+			: [...setCodes].sort(foldCompareCodes)
+	if (orderedCodes.length !== setCodes.length) {
+		const missing = setCodes.filter((code) => !orderedCodes.includes(code))
+		throw new Error(
+			`groupBySet: set code(s) [${missing.join(', ')}] not accounted for in '${config.setOrder}' order`,
+		)
+	}
+	const ordered = new Map<string, Card[]>()
+	for (const code of orderedCodes) {
+		const bucket = bySet.get(code)
+		if (bucket) {
+			ordered.set(code, sortWithinGroup(bucket))
+		}
+	}
+	return ordered
+}
+
+/**
+ * @displayName Alphabetical Group Key
+ * @strategicPurpose {@link groupAlphabetically} still returns a Map (so it composes
+ *   with {@link buildDocument}'s one-section-per-map-entry shape without a special
+ *   case there) even though the layout has exactly one section; this constant names
+ *   that section's sole key instead of an inline string literal.
+ * @tacticalObjective Sole key of the Map {@link groupAlphabetically} returns.
+ */
+export const ALPHABETICAL_GROUP_KEY = 'All Cards'
+
+/**
+ * @displayName Group Alphabetically (No Grouping)
+ * @strategicPurpose The third user-requested label-sheet layout: pure
+ *   alphabetical order with no section breaks by aspect or set — one
+ *   continuous sheet run.
+ * @tacticalObjective Returns a single-entry Map (key {@link ALPHABETICAL_GROUP_KEY})
+ *   so it composes with {@link buildDocument}'s one-section-per-map-entry
+ *   shape without a special case there.
+ */
+export function groupAlphabetically(cards: readonly Card[]): Map<string, Card[]> {
+	return new Map([[ALPHABETICAL_GROUP_KEY, sortWithinGroup(cards)]])
+}
+
+/**
+ * @displayName Label Slot
+ * @strategicPurpose Every label-sheet layout ultimately feeds render.ts one flat,
+ *   4-per-row sequence of grid cells — but the 'by set' layout must interleave real
+ *   card labels with divider labels (set code / full name / aspect breakdown) that
+ *   carry no {@link Card} at all. A discriminated union lets render.ts dispatch on
+ *   `kind` instead of the caller inventing a fake Card to smuggle divider text through.
+ * @tacticalObjective Consumed by {@link toCardSlots}, {@link groupBySetWithDividers},
+ *   and render.ts's `buildLabelTable`/`buildDocument`.
+ */
+export type LabelSlot =
+	| { kind: 'card'; card: Card }
+	| { kind: 'divider'; lines: readonly [string, string, string] }
+
+/**
+ * @displayName To Card Slots
+ * @strategicPurpose The three non-set layouts ({@link groupByAspectThenSet},
+ *   {@link groupByAspectOnly}, {@link groupAlphabetically}) return plain `Card[]`
+ *   buckets (kept test-compatible with their existing call sites); index.ts wraps
+ *   each into {@link LabelSlot}s at the point it hands groups to render.ts, so every
+ *   layout's groups converge on one shape there.
+ * @tacticalObjective Maps `cards` 1:1 to `{ kind: 'card', card }` slots.
+ */
+export function toCardSlots(cards: readonly Card[]): LabelSlot[] {
+	return cards.map((card) => ({ kind: 'card', card }))
+}
+
+/**
+ * @displayName Premier Set Full Names
+ * @strategicPurpose The 'by set' layout's divider label must show the set's full
+ *   display name, not just its short code — and that name is not present anywhere
+ *   in the ingested card/format data (no `expansion_name` field ships from the
+ *   official-site ingest; verified against schema.ts/api-schema.ts and formats.json).
+ *   Pinned here as reference data instead, sourced from the sibling
+ *   slicer2/slicer-dev-data Obsidian export's `expansion_name` frontmatter, which
+ *   the official site itself populated. ASH postdates that export; its name is the
+ *   launch name given verbatim in formats.json's `premier.description` field
+ *   ("...ASH/ASHP added July 2026 with the launch of Ashes of the Empire").
+ * @tacticalObjective Lookup consumed by {@link groupBySetWithDividers}; that
+ *   function throws (not this constant) if an encountered set code has no entry.
+ */
+export const PREMIER_SET_FULL_NAMES: Record<string, string> = {
+	SOR: 'Spark of Rebellion',
+	SHD: 'Shadows of the Galaxy',
+	TWI: 'Twilight of the Republic',
+	JTL: 'Jump to Lightspeed',
+	LOF: 'Legends of the Force',
+	SEC: 'Secrets of Power',
+	LAW: 'A Lawless Time',
+	ASH: 'Ashes of the Empire',
+	IBH: 'Intro Battle: Hoth',
+}
+
+/**
+ * @displayName Group By Set, With Aspect-Breakdown Divider Labels
+ * @strategicPurpose Prefaces each aspect subgroup within a set's section with a
+ *   divider label (set code / set full name / "(Aspect) x/y cards") so a binder
+ *   sorted by set can still be flipped straight to one aspect color within that set.
+ * @tacticalObjective Delegates set bucketing/ordering to {@link groupBySet}, then
+ *   within each set bucket re-groups by primary aspect via {@link groupByAspect}
+ *   (same `aspects[0] ?? 'Neutral'` rule, {@link ASPECT_GROUP_ORDER} order, throws on
+ *   an unrecognized key), sorts each aspect bucket with {@link sortWithinGroup}, and
+ *   prepends one divider slot per non-empty aspect bucket. `x` (the divider's count)
+ *   is that aspect bucket's size; `y` is the set's total deduped card count across
+ *   all aspects — both counted from `cards`, which the caller has already deduped.
+ *   Throws if a set code present in `cards` has no {@link PREMIER_SET_FULL_NAMES} entry.
+ */
+export function groupBySetWithDividers(
+	cards: readonly Card[],
+	config: Pick<LabelLayoutConfig, 'setOrder'>,
+): Map<string, LabelSlot[]> {
+	const bySet = groupBySet(cards, config)
+	const result = new Map<string, LabelSlot[]>()
+	for (const [setCode, setCards] of bySet) {
+		const fullName = PREMIER_SET_FULL_NAMES[setCode]
+		if (fullName === undefined) {
+			throw new Error(`groupBySetWithDividers: no full name pinned for set code "${setCode}"`)
+		}
+		const byAspect = groupByAspect(setCards)
+		const slots: LabelSlot[] = []
+		for (const [aspect, aspectCards] of byAspect) {
+			const sorted = sortWithinGroup(aspectCards)
+			slots.push({
+				kind: 'divider',
+				lines: [setCode, fullName, `(${aspect}) ${sorted.length}/${setCards.length} cards`],
+			})
+			for (const card of sorted) {
+				slots.push({ kind: 'card', card })
+			}
+		}
+		result.set(setCode, slots)
+	}
+	return result
+}

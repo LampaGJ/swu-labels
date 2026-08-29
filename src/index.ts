@@ -12,12 +12,16 @@ import { DEFAULT_CONFIG } from './config.ts'
 import { buildDocument, loadRarityAssets } from './render.ts'
 import { CardArraySchema, FormatsManifestSchema } from './schema.ts'
 import type { Card } from './schema.ts'
+import type { LabelSlot } from './transform.ts'
 import {
-	ASPECT_GROUP_ORDER,
 	PREMIER_FILE_SET_PRECEDENCE,
 	assertPremierSetCoverage,
 	dedupeCards,
+	groupAlphabetically,
+	groupByAspectOnly,
 	groupByAspectThenSet,
+	groupBySetWithDividers,
+	toCardSlots,
 } from './transform.ts'
 
 const LAYOUT_VERSION = 'v3-named-styles-title-subtitle-stats'
@@ -46,15 +50,88 @@ export function parseSnapshotArg(argv: readonly string[]): string {
 	return 'v2026-08-23'
 }
 
+/**
+ * @displayName Label Sheet Group Mode
+ * @strategicPurpose Three distinct organizational layouts a user may want printed
+ *   ('aspect-set' is the original v2/v3 combined layout, kept as the default so
+ *   existing tooling/filenames are unaffected): by premier-legal set, by aspect
+ *   color only, and pure alphabetical with no section breaks.
+ * @tacticalObjective Selects which `transform.ts` grouping function `main()` calls
+ *   and which output-filename suffix is used.
+ */
+export type GroupMode = 'aspect-set' | 'set' | 'aspect' | 'alphabetical'
+
+const GROUP_MODES: readonly GroupMode[] = ['aspect-set', 'set', 'aspect', 'alphabetical']
+
+const FILENAME_SUFFIX: Record<GroupMode, string> = {
+	'aspect-set': '',
+	set: '-by-set',
+	aspect: '-by-aspect',
+	alphabetical: '-alphabetical',
+}
+
+/**
+ * @displayName Parse Groups CLI Arg
+ * @strategicPurpose `npm run generate -- --groups set,aspect` must select which of
+ *   the three (or all four, including the legacy combined layout) sheet layouts to
+ *   emit in one run, without a code change.
+ * @tacticalObjective Reads `--groups <value>` from argv as a comma-separated list of
+ *   {@link GroupMode}, or the literal `all` for all four; defaults to `['aspect-set']`
+ *   (unchanged behavior) when absent. Throws on an unrecognized mode name.
+ */
+export function parseGroupsArg(argv: readonly string[]): GroupMode[] {
+	const flagIndex = argv.indexOf('--groups')
+	if (flagIndex === -1 || !argv[flagIndex + 1]) {
+		return ['aspect-set']
+	}
+	const value = argv[flagIndex + 1] as string
+	if (value === 'all') {
+		return [...GROUP_MODES]
+	}
+	const requested = value.split(',').map((s) => s.trim())
+	for (const mode of requested) {
+		if (!(GROUP_MODES as readonly string[]).includes(mode)) {
+			throw new Error(
+				`parseGroupsArg: unrecognized --groups mode "${mode}" (expected one of ${GROUP_MODES.join(', ')}, or "all")`,
+			)
+		}
+	}
+	return requested as GroupMode[]
+}
+
+/**
+ * @displayName Build Groups For Mode
+ * @strategicPurpose Central dispatch from a {@link GroupMode} to the `transform.ts`
+ *   grouping function that implements it, so `main()`'s per-mode loop stays a
+ *   one-line call regardless of how many layouts exist.
+ * @tacticalObjective Exhaustively switch-typed over `GroupMode` — a new mode value
+ *   is a compile error here, not a silent fallthrough.
+ */
+function buildGroupsForMode(mode: GroupMode, kept: readonly Card[]): Map<string, LabelSlot[]> {
+	switch (mode) {
+		case 'aspect-set': {
+			const groups = groupByAspectThenSet(kept, DEFAULT_CONFIG)
+			return new Map([...groups].map(([key, cards]) => [key, toCardSlots(cards)] as const))
+		}
+		case 'aspect': {
+			const groups = groupByAspectOnly(kept)
+			return new Map([...groups].map(([key, cards]) => [key, toCardSlots(cards)] as const))
+		}
+		case 'set':
+			// The only mode whose sections carry divider slots (set code / full
+			// name / per-aspect "x/y cards" breakdown) ahead of each aspect's cards.
+			return groupBySetWithDividers(kept, DEFAULT_CONFIG)
+		case 'alphabetical': {
+			const groups = groupAlphabetically(kept)
+			return new Map([...groups].map(([key, cards]) => [key, toCardSlots(cards)] as const))
+		}
+	}
+}
+
 async function main(): Promise<void> {
 	const snapshotTag = parseSnapshotArg(process.argv.slice(2))
+	const groupModes = parseGroupsArg(process.argv.slice(2))
 	const DATA_DIR = join(REPO_ROOT, 'data', 'snapshots', snapshotTag)
-	const OUT_DOCX = join(REPO_ROOT, 'reports', `premier-labels-avery5167-${snapshotTag}.docx`)
-	const OUT_REPLAY = join(
-		REPO_ROOT,
-		'reports',
-		`premier-labels-avery5167-${snapshotTag}.replay.json`,
-	)
 
 	if (!existsSync(DATA_DIR)) {
 		throw new Error(`index: snapshot directory not found: ${DATA_DIR}`)
@@ -113,32 +190,6 @@ async function main(): Promise<void> {
 		)
 	}
 
-	const groupedByAspectThenSet = groupByAspectThenSet(kept, DEFAULT_CONFIG)
-	const groups = new Map<string, Card[]>()
-	let totalLabels = 0
-	for (const key of ASPECT_GROUP_ORDER) {
-		const bucket = groupedByAspectThenSet.get(key)
-		if (bucket && bucket.length > 0) {
-			groups.set(key, bucket)
-			totalLabels += bucket.length
-		}
-	}
-	if (totalLabels !== kept.length) {
-		throw new Error('index: total labels across groups does not equal deduped total')
-	}
-
-	const assets = await loadRarityAssets(ASSETS_DIR)
-	const doc = buildDocument(groups as never, assets, DEFAULT_CONFIG)
-	const buffer = await Packer.toBuffer(doc)
-
-	mkdirSync(dirname(OUT_DOCX), { recursive: true })
-	writeFileSync(OUT_DOCX, buffer)
-
-	const documentXmlBuffer = execFileSync('unzip', ['-p', OUT_DOCX, 'word/document.xml'], {
-		maxBuffer: 1024 * 1024 * 256,
-	})
-	const documentXmlSha256 = createHash('sha256').update(documentXmlBuffer).digest('hex')
-
 	let codeCommit = 'unknown'
 	try {
 		codeCommit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: REPO_ROOT }).toString().trim()
@@ -146,28 +197,68 @@ async function main(): Promise<void> {
 		// Repo may have zero commits at generate-time (fresh git init); non-fatal.
 	}
 
-	const groupCounts: Record<string, number> = {}
-	for (const [key, cards] of groups) {
-		groupCounts[key] = cards.length
-	}
+	const assets = await loadRarityAssets(ASSETS_DIR)
 
-	const replay = {
-		snapshot: snapshotTag,
-		inputs: inputHashes,
-		codeCommit,
-		documentXmlSha256,
-		totals: { parsed: parsedCount, deduped: kept.length, dropped: droppedCount },
-		groups: groupCounts,
-		layout: LAYOUT_VERSION,
-		config: DEFAULT_CONFIG,
-		generator: 'src/index.ts',
-	}
-	writeFileSync(OUT_REPLAY, `${JSON.stringify(replay, null, 2)}\n`)
+	for (const mode of groupModes) {
+		const groups = buildGroupsForMode(mode, kept)
 
-	console.log(`Wrote ${OUT_DOCX}`)
-	console.log(`Wrote ${OUT_REPLAY}`)
-	console.log(JSON.stringify(replay.totals))
-	console.log(JSON.stringify(replay.groups))
+		let totalLabels = 0
+		for (const slots of groups.values()) {
+			totalLabels += slots.filter((s) => s.kind === 'card').length
+		}
+		if (totalLabels !== kept.length) {
+			throw new Error(
+				`index: mode '${mode}': total labels across groups (${totalLabels}) does not equal deduped total (${kept.length})`,
+			)
+		}
+
+		const suffix = FILENAME_SUFFIX[mode]
+		const OUT_DOCX = join(
+			REPO_ROOT,
+			'reports',
+			`premier-labels-avery5167-${snapshotTag}${suffix}.docx`,
+		)
+		const OUT_REPLAY = join(
+			REPO_ROOT,
+			'reports',
+			`premier-labels-avery5167-${snapshotTag}${suffix}.replay.json`,
+		)
+
+		const doc = buildDocument(groups, assets, DEFAULT_CONFIG)
+		const buffer = await Packer.toBuffer(doc)
+
+		mkdirSync(dirname(OUT_DOCX), { recursive: true })
+		writeFileSync(OUT_DOCX, buffer)
+
+		const documentXmlBuffer = execFileSync('unzip', ['-p', OUT_DOCX, 'word/document.xml'], {
+			maxBuffer: 1024 * 1024 * 256,
+		})
+		const documentXmlSha256 = createHash('sha256').update(documentXmlBuffer).digest('hex')
+
+		const groupCounts: Record<string, number> = {}
+		for (const [key, slots] of groups) {
+			groupCounts[key] = slots.filter((s) => s.kind === 'card').length
+		}
+
+		const replay = {
+			snapshot: snapshotTag,
+			groupMode: mode,
+			inputs: inputHashes,
+			codeCommit,
+			documentXmlSha256,
+			totals: { parsed: parsedCount, deduped: kept.length, dropped: droppedCount },
+			groups: groupCounts,
+			layout: LAYOUT_VERSION,
+			config: DEFAULT_CONFIG,
+			generator: 'src/index.ts',
+		}
+		writeFileSync(OUT_REPLAY, `${JSON.stringify(replay, null, 2)}\n`)
+
+		console.log(`Wrote ${OUT_DOCX}`)
+		console.log(`Wrote ${OUT_REPLAY}`)
+		console.log(JSON.stringify(replay.totals))
+		console.log(JSON.stringify(replay.groups))
+	}
 }
 
 main().catch((err) => {

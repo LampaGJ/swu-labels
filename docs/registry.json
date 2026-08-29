@@ -94,6 +94,22 @@
 		},
 		{
 			"file": "src/index.ts",
+			"exportName": "GroupMode",
+			"displayName": "Label Sheet Group Mode",
+			"strategicPurpose": "Three distinct organizational layouts a user may want printed\n('aspect-set' is the original v2/v3 combined layout, kept as the default so\nexisting tooling/filenames are unaffected): by premier-legal set, by aspect\ncolor only, and pure alphabetical with no section breaks.",
+			"tacticalObjective": "Selects which `transform.ts` grouping function `main()` calls\nand which output-filename suffix is used.",
+			"kind": "type"
+		},
+		{
+			"file": "src/index.ts",
+			"exportName": "parseGroupsArg",
+			"displayName": "Parse Groups CLI Arg",
+			"strategicPurpose": "`npm run generate -- --groups set,aspect` must select which of\nthe three (or all four, including the legacy combined layout) sheet layouts to\nemit in one run, without a code change.",
+			"tacticalObjective": "Reads `--groups <value>` from argv as a comma-separated list of\n{@link GroupMode}, or the literal `all` for all four; defaults to `['aspect-set']`\n(unchanged behavior) when absent. Throws on an unrecognized mode name.",
+			"kind": "function"
+		},
+		{
+			"file": "src/index.ts",
 			"exportName": "parseSnapshotArg",
 			"displayName": "Parse Snapshot CLI Arg",
 			"strategicPurpose": "`npm run generate -- --snapshot v<TAG>` must be able to target\nany ingested snapshot, not just the pinned migration-proof one, without a code\nchange — the snapshot directory name is data, not a constant.",
@@ -232,8 +248,8 @@
 			"file": "src/render.ts",
 			"exportName": "buildDocument",
 			"displayName": "Build Premier Labels DOCX Document",
-			"strategicPurpose": "Assembles one Document with one section per non-empty aspect\ngroup, each section a fresh Avery 5167 sheet, per spec.",
-			"tacticalObjective": "Iterates the grouped/sorted cards in ASPECT_GROUP_ORDER,\nbuilds one section per group with the label table as its first child and a\nminimal trailing paragraph so docx's forced final paragraph never adds a\nphantom page.",
+			"strategicPurpose": "Assembles one Document with one section per non-empty\ngroup, each section a fresh Avery 5167 sheet, per spec. The group key\nitself is opaque here — it's a display/bookkeeping label supplied by\nwhichever `transform.ts` grouping function produced the map (aspect,\nset, or the single flat alphabetical group), never read by this function.",
+			"tacticalObjective": "Iterates the caller-grouped/sorted cards in map-iteration\norder, builds one section per group with the label table as its first\nchild and a minimal trailing paragraph so docx's forced final paragraph\nnever adds a phantom page.",
 			"kind": "function"
 		},
 		{
@@ -352,6 +368,14 @@
 		},
 		{
 			"file": "src/transform.ts",
+			"exportName": "ALPHABETICAL_GROUP_KEY",
+			"displayName": "Alphabetical Group Key",
+			"strategicPurpose": "{@link groupAlphabetically} still returns a Map (so it composes\nwith {@link buildDocument}'s one-section-per-map-entry shape without a special\ncase there) even though the layout has exactly one section; this constant names\nthat section's sole key instead of an inline string literal.",
+			"tacticalObjective": "Sole key of the Map {@link groupAlphabetically} returns.",
+			"kind": "const"
+		},
+		{
+			"file": "src/transform.ts",
 			"exportName": "ASPECT_GROUP_ORDER",
 			"displayName": "Aspect Group Order",
 			"strategicPurpose": "Fixes the fresh-sheet-per-aspect ordering the Avery 5167 label\nsheet must render in, matching the spec's exact seven-group sequence.",
@@ -385,10 +409,26 @@
 		},
 		{
 			"file": "src/transform.ts",
+			"exportName": "LabelSlot",
+			"displayName": "Label Slot",
+			"strategicPurpose": "Every label-sheet layout ultimately feeds render.ts one flat,\n4-per-row sequence of grid cells — but the 'by set' layout must interleave real\ncard labels with divider labels (set code / full name / aspect breakdown) that\ncarry no {@link Card} at all. A discriminated union lets render.ts dispatch on\n`kind` instead of the caller inventing a fake Card to smuggle divider text through.",
+			"tacticalObjective": "Consumed by {@link toCardSlots}, {@link groupBySetWithDividers},\nand render.ts's `buildLabelTable`/`buildDocument`.",
+			"kind": "type"
+		},
+		{
+			"file": "src/transform.ts",
 			"exportName": "PREMIER_FILE_SET_PRECEDENCE",
 			"displayName": "Premier Per-Set File Precedence",
 			"strategicPurpose": "Encodes the dedupe tie-break rule: when the same card appears\nin multiple pinned per-set files (main-set printing vs. Intro Battle reprint),\nthe earlier set in this list wins.",
 			"tacticalObjective": "Ordered list consumed by {@link dedupeCards}.",
+			"kind": "const"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "PREMIER_SET_FULL_NAMES",
+			"displayName": "Premier Set Full Names",
+			"strategicPurpose": "The 'by set' layout's divider label must show the set's full\ndisplay name, not just its short code — and that name is not present anywhere\nin the ingested card/format data (no `expansion_name` field ships from the\nofficial-site ingest; verified against schema.ts/api-schema.ts and formats.json).\nPinned here as reference data instead, sourced from the sibling\nslicer2/slicer-dev-data Obsidian export's `expansion_name` frontmatter, which\nthe official site itself populated. ASH postdates that export; its name is the\nlaunch name given verbatim in formats.json's `premier.description` field\n(\"...ASH/ASHP added July 2026 with the launch of Ashes of the Empire\").",
+			"tacticalObjective": "Lookup consumed by {@link groupBySetWithDividers}; that\nfunction throws (not this constant) if an encountered set code has no entry.",
 			"kind": "const"
 		},
 		{
@@ -465,6 +505,14 @@
 		},
 		{
 			"file": "src/transform.ts",
+			"exportName": "groupAlphabetically",
+			"displayName": "Group Alphabetically (No Grouping)",
+			"strategicPurpose": "The third user-requested label-sheet layout: pure\nalphabetical order with no section breaks by aspect or set — one\ncontinuous sheet run.",
+			"tacticalObjective": "Returns a single-entry Map (key {@link ALPHABETICAL_GROUP_KEY})\nso it composes with {@link buildDocument}'s one-section-per-map-entry\nshape without a special case there.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
 			"exportName": "groupByAspect",
 			"displayName": "Group Cards By Primary Aspect",
 			"strategicPurpose": "Each aspect group starts on a fresh label sheet; grouping must\nfail loudly rather than silently drop a card under an unrecognized aspect key.",
@@ -473,10 +521,34 @@
 		},
 		{
 			"file": "src/transform.ts",
+			"exportName": "groupByAspectOnly",
+			"displayName": "Group By Aspect Only",
+			"strategicPurpose": "One label-sheet layout the user asked for alongside\n{@link groupByAspectThenSet}: a fresh sheet per aspect color (the same\nseven-group {@link ASPECT_GROUP_ORDER}, including Villainy/Heroism/Neutral),\nbut without sub-grouping by set within the aspect — cards from every legal\nset interleave alphabetically inside one aspect's section.",
+			"tacticalObjective": "Composes {@link groupByAspect} with {@link sortWithinGroup}per aspect bucket; no set precedence/order is consulted.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
 			"exportName": "groupByAspectThenSet",
 			"displayName": "Group By Aspect, Then By Set",
 			"strategicPurpose": "The v2 grouping spec: GROUP BY aspect (unchanged order,\none DOCX section per aspect), then GROUP BY set within the aspect (no\npage break on set change), then alphabetical by title within each set.",
 			"tacticalObjective": "Composes {@link groupByAspect} (unchanged, still throws\non an unrecognized aspect key) with {@link orderCardsWithinAspectBySet}per aspect bucket.",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "groupBySet",
+			"displayName": "Group By Premier Set",
+			"strategicPurpose": "The second user-requested label-sheet layout: a fresh\nsheet per premier-legal set (e.g. JTL, LOF, SEC), ignoring aspect entirely\n— for binder/box organization by set rather than by color.",
+			"tacticalObjective": "Buckets by `expansion_code`, orders buckets per\n`config.setOrder` (same rule as {@link orderCardsWithinAspectBySet}: 'release'\n= {@link PREMIER_FILE_SET_PRECEDENCE}, 'alphabetical' = fold-sorted set\ncodes), sorts each bucket with {@link sortWithinGroup}. Throws if any set\ncode present in `cards` is missing from the computed order (accounting\nguard, same shape as {@link orderCardsWithinAspectBySet}).",
+			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "groupBySetWithDividers",
+			"displayName": "Group By Set, With Aspect-Breakdown Divider Labels",
+			"strategicPurpose": "Prefaces each aspect subgroup within a set's section with a\ndivider label (set code / set full name / \"(Aspect) x/y cards\") so a binder\nsorted by set can still be flipped straight to one aspect color within that set.",
+			"tacticalObjective": "Delegates set bucketing/ordering to {@link groupBySet}, then\nwithin each set bucket re-groups by primary aspect via {@link groupByAspect}\n(same `aspects[0] ?? 'Neutral'` rule, {@link ASPECT_GROUP_ORDER} order, throws on\nan unrecognized key), sorts each aspect bucket with {@link sortWithinGroup}, and\nprepends one divider slot per non-empty aspect bucket. `x` (the divider's count)\nis that aspect bucket's size; `y` is the set's total deduped card count across\nall aspects — both counted from `cards`, which the caller has already deduped.\nThrows if a set code present in `cards` has no {@link PREMIER_SET_FULL_NAMES} entry.",
 			"kind": "function"
 		},
 		{
@@ -502,11 +574,19 @@
 			"strategicPurpose": "Each {@link StatLineSegment} carries a `suffix` of\n`'cost' | 'power' | 'HP'`; the v3 spec asks for a distinct bold \"value\"\ncharacter style and a regular \"label\" character style per field so the\nuser can restyle each independently from Word's style pane.",
 			"tacticalObjective": "Pure lookup, no docx dependency — deterministic and\nexhaustively switch-typed so a new `StatLineSegment['suffix']` value is a\ncompile error here, not a silent fallthrough.",
 			"kind": "function"
+		},
+		{
+			"file": "src/transform.ts",
+			"exportName": "toCardSlots",
+			"displayName": "To Card Slots",
+			"strategicPurpose": "The three non-set layouts ({@link groupByAspectThenSet},\n{@link groupByAspectOnly}, {@link groupAlphabetically}) return plain `Card[]`\nbuckets (kept test-compatible with their existing call sites); index.ts wraps\neach into {@link LabelSlot}s at the point it hands groups to render.ts, so every\nlayout's groups converge on one shape there.",
+			"tacticalObjective": "Maps `cards` 1:1 to `{ kind: 'card', card }` slots.",
+			"kind": "function"
 		}
 	],
 	"coverage": {
-		"annotatedExports": 59,
-		"totalExports": 59,
+		"annotatedExports": 69,
+		"totalExports": 69,
 		"coveragePct": 100,
 		"gaps": []
 	}

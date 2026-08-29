@@ -1,6 +1,6 @@
 {
   "snapshot": "v2026-08-23",
-  "groupMode": "aspect-set",
+  "groupMode": "alphabetical",
   "inputs": {
     "formats.json": "35459a6260ad0571903a4839b798455587398e18a3e4e0d454f0d299c30a9092",
     "meta.json": "c73a0c8e901bf0bc4db6320d3cc99445546c1cd1f3faa9d1c6849338330d1ecf",
@@ -12,20 +12,14 @@
     "per-set/IBH.json": "4aade76e1e546810806fb0f332189ae842ded542271d97c2cb36bf81378327cf"
   },
   "codeCommit": "714aea30fb79e23d05cb98ac66d03f898243ffc5",
-  "documentXmlSha256": "ea06edf6667a192b050d9fb7145b157d07b2a1bbd4f9c635fc7724b1e91fdb7b",
+  "documentXmlSha256": "0444550d27ad93d9f3a815ffa13c97ca0a82136f73b96241b4600ebb68bbf5fa",
   "totals": {
     "parsed": 1368,
     "deduped": 1368,
     "dropped": 0
   },
   "groups": {
-    "Vigilance": 308,
-    "Command": 311,
-    "Aggression": 294,
-    "Cunning": 308,
-    "Villainy": 52,
-    "Heroism": 50,
-    "Neutral": 45
+    "All Cards": 1368
   },
   "layout": "v3-named-styles-title-subtitle-stats",
   "config": {

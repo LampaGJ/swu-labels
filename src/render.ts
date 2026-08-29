@@ -26,7 +26,7 @@ import {
 	parseTemplateLine,
 	resolveLine,
 } from './template.ts'
-import type { AspectGroupKey } from './transform.ts'
+import type { LabelSlot } from './transform.ts'
 import { AVERY_5167_GEOMETRY, computeHangingIndent } from './transform.ts'
 
 const RARITIES = ['common', 'uncommon', 'rare', 'legendary', 'special'] as const
@@ -307,8 +307,46 @@ function labelCell(
 	})
 }
 
+/**
+ * @displayName Build Divider Label Cell
+ * @strategicPurpose The 'by set' layout's divider label (set code / set full name /
+ *   aspect breakdown) is not a {@link Card} and carries no rarity icon or template —
+ *   it's three plain lines reusing the same three named paragraph styles a real
+ *   label's title/subtitle/stats lines use, so it reads as visually consistent
+ *   (bold code, italic set name, plain breakdown) without inventing new styles.
+ * @tacticalObjective One paragraph per entry in `lines` (always exactly 3, per
+ *   {@link LabelSlot}'s divider shape), styled title/subtitle/stats in order.
+ */
+function dividerCell(
+	lines: readonly [string, string, string],
+	widthTwips: number,
+	config: LabelLayoutConfig,
+): TableCell {
+	const styleIds = [
+		PARAGRAPH_STYLE_IDS.title,
+		PARAGRAPH_STYLE_IDS.subtitle,
+		PARAGRAPH_STYLE_IDS.stats,
+	]
+	const paragraphs = lines.map(
+		(text, i) =>
+			new Paragraph({
+				style: styleIds[i],
+				alignment: alignmentFor(config),
+				indent: computeHangingIndent(config),
+				spacing: { before: 0, after: 0 },
+				children: [new TextRun({ text })],
+			}),
+	)
+	return new TableCell({
+		width: { size: widthTwips, type: WidthType.DXA },
+		margins: { top: 0, bottom: 0, left: 40, right: 40 },
+		verticalAlign: VerticalAlign.CENTER,
+		children: paragraphs,
+	})
+}
+
 function labelRow(
-	cards: (Card | null)[],
+	slots: (LabelSlot | null)[],
 	assets: Record<Card['rarity'], RarityAsset>,
 	config: LabelLayoutConfig,
 	parsedTemplate: readonly ParsedLine[],
@@ -319,9 +357,15 @@ function labelRow(
 	for (let col = 0; col < cols.length; col++) {
 		const width = cols[col] as number
 		if ((AVERY_5167_GEOMETRY.labelColumnIndices as readonly number[]).includes(col)) {
-			const card = cards[labelIndex]
+			const slot = slots[labelIndex]
 			labelIndex += 1
-			cells.push(card ? labelCell(card, assets, width, config, parsedTemplate) : emptyCell(width))
+			if (!slot) {
+				cells.push(emptyCell(width))
+			} else if (slot.kind === 'divider') {
+				cells.push(dividerCell(slot.lines, width, config))
+			} else {
+				cells.push(labelCell(slot.card, assets, width, config, parsedTemplate))
+			}
 		} else {
 			cells.push(emptyCell(width))
 		}
@@ -341,18 +385,18 @@ function labelRow(
  *   AVERY_5167_GEOMETRY, zero indent/cell-margin-top/bottom, one row per 4 labels.
  */
 export function buildLabelTable(
-	cards: readonly Card[],
+	items: readonly LabelSlot[],
 	assets: Record<Card['rarity'], RarityAsset>,
 	config: LabelLayoutConfig,
 ): Table {
 	const parsedTemplate = config.template.map(parseTemplateLine)
 	const rows: TableRow[] = []
-	for (let i = 0; i < cards.length; i += 4) {
-		const chunk: (Card | null)[] = [
-			cards[i] ?? null,
-			cards[i + 1] ?? null,
-			cards[i + 2] ?? null,
-			cards[i + 3] ?? null,
+	for (let i = 0; i < items.length; i += 4) {
+		const chunk: (LabelSlot | null)[] = [
+			items[i] ?? null,
+			items[i + 1] ?? null,
+			items[i + 2] ?? null,
+			items[i + 3] ?? null,
 		]
 		rows.push(labelRow(chunk, assets, config, parsedTemplate))
 	}
@@ -368,19 +412,22 @@ export function buildLabelTable(
 
 /**
  * @displayName Build Premier Labels DOCX Document
- * @strategicPurpose Assembles one Document with one section per non-empty aspect
- *   group, each section a fresh Avery 5167 sheet, per spec.
- * @tacticalObjective Iterates the grouped/sorted cards in ASPECT_GROUP_ORDER,
- *   builds one section per group with the label table as its first child and a
- *   minimal trailing paragraph so docx's forced final paragraph never adds a
- *   phantom page.
+ * @strategicPurpose Assembles one Document with one section per non-empty
+ *   group, each section a fresh Avery 5167 sheet, per spec. The group key
+ *   itself is opaque here — it's a display/bookkeeping label supplied by
+ *   whichever `transform.ts` grouping function produced the map (aspect,
+ *   set, or the single flat alphabetical group), never read by this function.
+ * @tacticalObjective Iterates the caller-grouped/sorted cards in map-iteration
+ *   order, builds one section per group with the label table as its first
+ *   child and a minimal trailing paragraph so docx's forced final paragraph
+ *   never adds a phantom page.
  */
 export function buildDocument(
-	groups: ReadonlyMap<AspectGroupKey, Card[]>,
+	groups: ReadonlyMap<string, LabelSlot[]>,
 	assets: Record<Card['rarity'], RarityAsset>,
 	config: LabelLayoutConfig,
 ): Document {
-	const sections = [...groups.entries()].map(([, cards]) => ({
+	const sections = [...groups.entries()].map(([, slots]) => ({
 		properties: {
 			page: {
 				size: { width: AVERY_5167_GEOMETRY.page.width, height: AVERY_5167_GEOMETRY.page.height },
@@ -393,7 +440,7 @@ export function buildDocument(
 			},
 		},
 		children: [
-			buildLabelTable(cards, assets, config),
+			buildLabelTable(slots, assets, config),
 			new Paragraph({
 				alignment: AlignmentType.LEFT,
 				spacing: { before: 0, after: 0, line: 20, lineRule: 'exact' as never },
