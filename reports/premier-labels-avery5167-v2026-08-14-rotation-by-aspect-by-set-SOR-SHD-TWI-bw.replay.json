@@ -1,8 +1,12 @@
 {
   "snapshot": "v2026-08-14",
-  "groupMode": "set",
-  "assetsMode": "color",
-  "setsFilter": null,
+  "groupMode": "rotation-aspect-set",
+  "assetsMode": "bw",
+  "setsFilter": [
+    "SOR",
+    "SHD",
+    "TWI"
+  ],
   "inputs": {
     "formats.json": "94a3293c5332d442832c1b4f365b535c815f6d6d159013fb3d5dc13a1bd68fce",
     "meta.json": "331090cd2ab93f5d59745050350fc49bd98ef838810fee3fdad0c00941e442fe",
@@ -17,22 +21,20 @@
     "per-set/IBH.json": "db14d12604b0c1dccf3930f986b22e560a2c4393cf1d5ddf682ef7f15f31d510"
   },
   "codeCommit": "696ebee2fc32ca1f6bbf7d1db0e8db0e7709c3dc",
-  "documentXmlSha256": "8f4a5ea24d9ffcf502d635ec8068b6ddec38ac385adb3b12b78c2e344af5a3ec",
+  "documentXmlSha256": "3cc7c33d118e407f2b0298858bdff8dcdac323b53f776bf20fdd04e0a9cf612a",
   "totals": {
     "parsed": 2214,
-    "deduped": 2105,
+    "deduped": 750,
     "dropped": 109
   },
   "groups": {
-    "SOR": 254,
-    "SHD": 247,
-    "TWI": 249,
-    "JTL": 258,
-    "LOF": 261,
-    "SEC": 261,
-    "LAW": 261,
-    "ASH": 263,
-    "IBH": 51
+    "Vigilance": 140,
+    "Command": 165,
+    "Aggression": 139,
+    "Cunning": 168,
+    "Villainy": 61,
+    "Heroism": 57,
+    "Neutral": 20
   },
   "layout": "v3-named-styles-title-subtitle-stats",
   "config": {

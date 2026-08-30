@@ -96,32 +96,66 @@ export function parseSnapshotArg(argv: readonly string[]): string {
 }
 
 /**
+ * @displayName Parse Sets CLI Arg
+ * @strategicPurpose A user may want a sheet scoped to a specific handful of sets
+ *   (e.g. only the three rotated-out sets, or only two adjacent current sets)
+ *   rather than every set the chosen `--groups` mode's pool covers, without a
+ *   code change or a one-off script per combination.
+ * @tacticalObjective Reads `--sets <CODE,CODE,...>` from argv as a comma-separated
+ *   list of set codes (order irrelevant — the grouping functions impose their own
+ *   precedence order); returns `null` when absent, meaning "every set the pool
+ *   covers" (unchanged behavior). Does not validate codes here — `main()` checks
+ *   each requested code actually has a file in the targeted pool, since only it
+ *   knows which pool (premier-legal-today vs full-rotation) is in play.
+ */
+export function parseSetsArg(argv: readonly string[]): string[] | null {
+	const flagIndex = argv.indexOf('--sets')
+	if (flagIndex === -1 || !argv[flagIndex + 1]) {
+		return null
+	}
+	return (argv[flagIndex + 1] as string).split(',').map((s) => s.trim())
+}
+
+/**
  * @displayName Label Sheet Group Mode
- * @strategicPurpose Three distinct organizational layouts a user may want printed
+ * @strategicPurpose Five distinct organizational layouts a user may want printed
  *   ('aspect-set' is the original v2/v3 combined layout, kept as the default so
  *   existing tooling/filenames are unaffected): by premier-legal set, by aspect
- *   color only, and pure alphabetical with no section breaks.
+ *   color only, pure alphabetical with no section breaks, by premier-legal set
+ *   then aspect (with divider labels), and by full-rotation-history aspect then
+ *   set — the same aspect-then-set shape as the default, but scoped to the
+ *   full-rotation-history pool (SOR/SHD/TWI included) instead of premier-legal-today.
  * @tacticalObjective Selects which `transform.ts` grouping function `main()` calls
  *   and which output-filename suffix is used.
  */
-export type GroupMode = 'aspect-set' | 'set' | 'aspect' | 'alphabetical'
+export type GroupMode = 'aspect-set' | 'set' | 'aspect' | 'alphabetical' | 'rotation-aspect-set'
 
-const GROUP_MODES: readonly GroupMode[] = ['aspect-set', 'set', 'aspect', 'alphabetical']
+const GROUP_MODES: readonly GroupMode[] = [
+	'aspect-set',
+	'set',
+	'aspect',
+	'alphabetical',
+	'rotation-aspect-set',
+]
 
 const FILENAME_SUFFIX: Record<GroupMode, string> = {
 	'aspect-set': '',
 	set: '-by-set',
 	aspect: '-by-aspect',
 	alphabetical: '-alphabetical',
+	'rotation-aspect-set': '-rotation-by-aspect-by-set',
 }
+
+/** Group modes that read the full-rotation-history pool (SOR/SHD/TWI included) instead of the premier-legal-today pool. */
+const ROTATION_POOL_MODES: readonly GroupMode[] = ['set', 'rotation-aspect-set']
 
 /**
  * @displayName Parse Groups CLI Arg
  * @strategicPurpose `npm run generate -- --groups set,aspect` must select which of
- *   the three (or all four, including the legacy combined layout) sheet layouts to
+ *   the five (or all five, including the legacy combined layout) sheet layouts to
  *   emit in one run, without a code change.
  * @tacticalObjective Reads `--groups <value>` from argv as a comma-separated list of
- *   {@link GroupMode}, or the literal `all` for all four; defaults to `['aspect-set']`
+ *   {@link GroupMode}, or the literal `all` for all five; defaults to `['aspect-set']`
  *   (unchanged behavior) when absent. Throws on an unrecognized mode name.
  */
 export function parseGroupsArg(argv: readonly string[]): GroupMode[] {
@@ -170,6 +204,14 @@ function buildGroupsForMode(mode: GroupMode, kept: readonly Card[]): Map<string,
 			return groupBySetWithDividers(kept, DEFAULT_CONFIG, ROTATION_FILE_SET_PRECEDENCE)
 		case 'alphabetical': {
 			const groups = groupAlphabetically(kept)
+			return new Map([...groups].map(([key, cards]) => [key, toCardSlots(cards)] as const))
+		}
+		case 'rotation-aspect-set': {
+			// Same aspect-then-set shape as 'aspect-set', but the caller passes
+			// `kept` built from ROTATION_FILE_SET_PRECEDENCE, so sets flow
+			// SOR, SHD, TWI, JTL, ... within each aspect instead of stopping at
+			// the six currently-legal sets.
+			const groups = groupByAspectThenSet(kept, DEFAULT_CONFIG, ROTATION_FILE_SET_PRECEDENCE)
 			return new Map([...groups].map(([key, cards]) => [key, toCardSlots(cards)] as const))
 		}
 	}
@@ -242,6 +284,7 @@ async function main(): Promise<void> {
 	const snapshotTag = parseSnapshotArg(process.argv.slice(2))
 	const groupModes = parseGroupsArg(process.argv.slice(2))
 	const assetsMode = parseAssetsArg(process.argv.slice(2))
+	const setsFilter = parseSetsArg(process.argv.slice(2))
 	const DATA_DIR = join(REPO_ROOT, 'data', 'snapshots', snapshotTag)
 	const ASSETS_DIR = join(REPO_ROOT, 'assets', ASSETS_DIR_NAME[assetsMode])
 
@@ -269,18 +312,19 @@ async function main(): Promise<void> {
 		)
 	}
 
-	// The full-rotation-history pool only matters — and is only computed — when the
-	// 'set' layout was actually requested; loading it eagerly for every invocation
-	// would mean every other mode pays a needless second parse/dedupe pass.
+	// The full-rotation-history pool only matters — and is only computed — when a
+	// ROTATION_POOL_MODES layout was actually requested; loading it eagerly for
+	// every invocation would mean every other mode pays a needless second
+	// parse/dedupe pass.
 	let rotationPool: CardPool | undefined
-	if (groupModes.includes('set')) {
+	if (groupModes.some((mode) => ROTATION_POOL_MODES.includes(mode))) {
 		rotationPool = loadCardPool(DATA_DIR, ROTATION_FILE_SET_PRECEDENCE)
 		const missingRotationSets = ['SOR', 'SHD', 'TWI'].filter(
 			(code) => !rotationPool?.setsToLoad.includes(code),
 		)
 		if (missingRotationSets.length > 0) {
 			throw new Error(
-				`index: 'set' layout needs full rotation history but [${missingRotationSets.join(', ')}] have no per-set file under ${DATA_DIR}/per-set — run \`npm run ingest\` (it fetches every set the API returns) and target that snapshot with --snapshot.`,
+				`index: a full-rotation-history layout needs [${missingRotationSets.join(', ')}] but they have no per-set file under ${DATA_DIR}/per-set — run \`npm run ingest\` (it fetches every set the API returns) and target that snapshot with --snapshot.`,
 			)
 		}
 		if (rotationPool.kept.length < 1800 || rotationPool.kept.length > 2800) {
@@ -300,20 +344,33 @@ async function main(): Promise<void> {
 	const assets = await loadRarityAssets(ASSETS_DIR)
 
 	for (const mode of groupModes) {
-		const pool = mode === 'set' ? (rotationPool as CardPool) : basePool
-		const groups = buildGroupsForMode(mode, pool.kept)
+		const pool = ROTATION_POOL_MODES.includes(mode) ? (rotationPool as CardPool) : basePool
+
+		let modeCards: Card[] = pool.kept
+		if (setsFilter) {
+			const unavailable = setsFilter.filter((code) => !pool.setsToLoad.includes(code))
+			if (unavailable.length > 0) {
+				throw new Error(
+					`index: mode '${mode}': --sets code(s) [${unavailable.join(', ')}] not in this mode's pool (available: ${pool.setsToLoad.join(', ')})`,
+				)
+			}
+			modeCards = pool.kept.filter((c) => setsFilter.includes(c.expansion_code))
+		}
+
+		const groups = buildGroupsForMode(mode, modeCards)
 
 		let totalLabels = 0
 		for (const slots of groups.values()) {
 			totalLabels += slots.filter((s) => s.kind === 'card').length
 		}
-		if (totalLabels !== pool.kept.length) {
+		if (totalLabels !== modeCards.length) {
 			throw new Error(
-				`index: mode '${mode}': total labels across groups (${totalLabels}) does not equal deduped total (${pool.kept.length})`,
+				`index: mode '${mode}': total labels across groups (${totalLabels}) does not equal deduped total (${modeCards.length})`,
 			)
 		}
 
-		const suffix = FILENAME_SUFFIX[mode] + ASSETS_FILENAME_SUFFIX[assetsMode]
+		const setsFilterSuffix = setsFilter ? `-${setsFilter.join('-')}` : ''
+		const suffix = FILENAME_SUFFIX[mode] + setsFilterSuffix + ASSETS_FILENAME_SUFFIX[assetsMode]
 		const OUT_DOCX = join(
 			REPO_ROOT,
 			'reports',
@@ -345,10 +402,11 @@ async function main(): Promise<void> {
 			snapshot: snapshotTag,
 			groupMode: mode,
 			assetsMode,
+			setsFilter,
 			inputs: { ...sharedInputHashes, ...pool.inputHashes },
 			codeCommit,
 			documentXmlSha256,
-			totals: { parsed: pool.parsedCount, deduped: pool.kept.length, dropped: pool.droppedCount },
+			totals: { parsed: pool.parsedCount, deduped: modeCards.length, dropped: pool.droppedCount },
 			groups: groupCounts,
 			layout: LAYOUT_VERSION,
 			config: DEFAULT_CONFIG,

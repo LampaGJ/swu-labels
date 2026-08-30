@@ -104,7 +104,7 @@
 			"file": "src/index.ts",
 			"exportName": "GroupMode",
 			"displayName": "Label Sheet Group Mode",
-			"strategicPurpose": "Three distinct organizational layouts a user may want printed\n('aspect-set' is the original v2/v3 combined layout, kept as the default so\nexisting tooling/filenames are unaffected): by premier-legal set, by aspect\ncolor only, and pure alphabetical with no section breaks.",
+			"strategicPurpose": "Five distinct organizational layouts a user may want printed\n('aspect-set' is the original v2/v3 combined layout, kept as the default so\nexisting tooling/filenames are unaffected): by premier-legal set, by aspect\ncolor only, pure alphabetical with no section breaks, by premier-legal set\nthen aspect (with divider labels), and by full-rotation-history aspect then\nset — the same aspect-then-set shape as the default, but scoped to the\nfull-rotation-history pool (SOR/SHD/TWI included) instead of premier-legal-today.",
 			"tacticalObjective": "Selects which `transform.ts` grouping function `main()` calls\nand which output-filename suffix is used.",
 			"kind": "type"
 		},
@@ -120,8 +120,16 @@
 			"file": "src/index.ts",
 			"exportName": "parseGroupsArg",
 			"displayName": "Parse Groups CLI Arg",
-			"strategicPurpose": "`npm run generate -- --groups set,aspect` must select which of\nthe three (or all four, including the legacy combined layout) sheet layouts to\nemit in one run, without a code change.",
-			"tacticalObjective": "Reads `--groups <value>` from argv as a comma-separated list of\n{@link GroupMode}, or the literal `all` for all four; defaults to `['aspect-set']`\n(unchanged behavior) when absent. Throws on an unrecognized mode name.",
+			"strategicPurpose": "`npm run generate -- --groups set,aspect` must select which of\nthe five (or all five, including the legacy combined layout) sheet layouts to\nemit in one run, without a code change.",
+			"tacticalObjective": "Reads `--groups <value>` from argv as a comma-separated list of\n{@link GroupMode}, or the literal `all` for all five; defaults to `['aspect-set']`\n(unchanged behavior) when absent. Throws on an unrecognized mode name.",
+			"kind": "function"
+		},
+		{
+			"file": "src/index.ts",
+			"exportName": "parseSetsArg",
+			"displayName": "Parse Sets CLI Arg",
+			"strategicPurpose": "A user may want a sheet scoped to a specific handful of sets\n(e.g. only the three rotated-out sets, or only two adjacent current sets)\nrather than every set the chosen `--groups` mode's pool covers, without a\ncode change or a one-off script per combination.",
+			"tacticalObjective": "Reads `--sets <CODE,CODE,...>` from argv as a comma-separated\nlist of set codes (order irrelevant — the grouping functions impose their own\nprecedence order); returns `null` when absent, meaning \"every set the pool\ncovers\" (unchanged behavior). Does not validate codes here — `main()` checks\neach requested code actually has a file in the targeted pool, since only it\nknows which pool (premier-legal-today vs full-rotation) is in play.",
 			"kind": "function"
 		},
 		{
@@ -556,7 +564,7 @@
 			"exportName": "groupByAspectThenSet",
 			"displayName": "Group By Aspect, Then By Set",
 			"strategicPurpose": "The v2 grouping spec: GROUP BY aspect (unchanged order,\none DOCX section per aspect), then GROUP BY set within the aspect (no\npage break on set change), then alphabetical by title within each set.",
-			"tacticalObjective": "Composes {@link groupByAspect} (unchanged, still throws\non an unrecognized aspect key) with {@link orderCardsWithinAspectBySet}per aspect bucket.",
+			"tacticalObjective": "Composes {@link groupByAspect} (unchanged, still throws\non an unrecognized aspect key) with {@link orderCardsWithinAspectBySet}\nper aspect bucket. `setPrecedence` forwards unchanged (defaults to\n{@link PREMIER_FILE_SET_PRECEDENCE}; the caller passes\n{@link ROTATION_FILE_SET_PRECEDENCE} for the full-rotation-history layout).",
 			"kind": "function"
 		},
 		{
@@ -580,7 +588,7 @@
 			"exportName": "orderCardsWithinAspectBySet",
 			"displayName": "Order Cards Within An Aspect By Set",
 			"strategicPurpose": "Sets flow continuously within an aspect section (no page\nbreak on set change): the label sheet groups by set, but the row grid\nitself is unaware of the set boundary. Every card passed in must be\naccounted for in the output — a set code the ordering doesn't recognize\nwould otherwise silently vanish from the sheet.",
-			"tacticalObjective": "Buckets by `expansion_code`, orders the buckets per\n`setOrder` ('release' = {@link PREMIER_FILE_SET_PRECEDENCE}; 'alphabetical'\n= fold-sorted set codes, never localeCompare), sorts each bucket with\n{@link sortWithinGroup}, and concatenates. Throws if any set code present\nin `cards` is missing from the computed order (accounting guard).",
+			"tacticalObjective": "Buckets by `expansion_code`, orders the buckets per\n`setOrder` ('release' = `setPrecedence`, defaulting to\n{@link PREMIER_FILE_SET_PRECEDENCE} — the caller passes\n{@link ROTATION_FILE_SET_PRECEDENCE} for the full-rotation-history layout;\n'alphabetical' = fold-sorted set codes, never localeCompare), sorts each\nbucket with {@link sortWithinGroup}, and concatenates. Throws if any set\ncode present in `cards` is missing from the computed order (accounting\nguard).",
 			"kind": "function"
 		},
 		{
@@ -609,8 +617,8 @@
 		}
 	],
 	"coverage": {
-		"annotatedExports": 72,
-		"totalExports": 72,
+		"annotatedExports": 73,
+		"totalExports": 73,
 		"coveragePct": 100,
 		"gaps": []
 	}

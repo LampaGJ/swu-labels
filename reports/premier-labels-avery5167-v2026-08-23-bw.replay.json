@@ -2,6 +2,7 @@
   "snapshot": "v2026-08-23",
   "groupMode": "aspect-set",
   "assetsMode": "bw",
+  "setsFilter": null,
   "inputs": {
     "formats.json": "35459a6260ad0571903a4839b798455587398e18a3e4e0d454f0d299c30a9092",
     "meta.json": "c73a0c8e901bf0bc4db6320d3cc99445546c1cd1f3faa9d1c6849338330d1ecf",
@@ -12,7 +13,7 @@
     "per-set/ASH.json": "cb2e867c3bb236224ba8840bf8adf55c5aaac2b9cf892a201dd197f49f3ab143",
     "per-set/IBH.json": "4aade76e1e546810806fb0f332189ae842ded542271d97c2cb36bf81378327cf"
   },
-  "codeCommit": "7b774d6ba260691e269bf7212efd71909f44044d",
+  "codeCommit": "696ebee2fc32ca1f6bbf7d1db0e8db0e7709c3dc",
   "documentXmlSha256": "ea06edf6667a192b050d9fb7145b157d07b2a1bbd4f9c635fc7724b1e91fdb7b",
   "totals": {
     "parsed": 1368,

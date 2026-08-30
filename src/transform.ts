@@ -410,14 +410,18 @@ function foldCompareCodes(a: string, b: string): number {
  *   accounted for in the output — a set code the ordering doesn't recognize
  *   would otherwise silently vanish from the sheet.
  * @tacticalObjective Buckets by `expansion_code`, orders the buckets per
- *   `setOrder` ('release' = {@link PREMIER_FILE_SET_PRECEDENCE}; 'alphabetical'
- *   = fold-sorted set codes, never localeCompare), sorts each bucket with
- *   {@link sortWithinGroup}, and concatenates. Throws if any set code present
- *   in `cards` is missing from the computed order (accounting guard).
+ *   `setOrder` ('release' = `setPrecedence`, defaulting to
+ *   {@link PREMIER_FILE_SET_PRECEDENCE} — the caller passes
+ *   {@link ROTATION_FILE_SET_PRECEDENCE} for the full-rotation-history layout;
+ *   'alphabetical' = fold-sorted set codes, never localeCompare), sorts each
+ *   bucket with {@link sortWithinGroup}, and concatenates. Throws if any set
+ *   code present in `cards` is missing from the computed order (accounting
+ *   guard).
  */
 export function orderCardsWithinAspectBySet(
 	cards: readonly Card[],
 	setOrder: LabelLayoutConfig['setOrder'],
+	setPrecedence: readonly string[] = PREMIER_FILE_SET_PRECEDENCE,
 ): Card[] {
 	const bySet = new Map<string, Card[]>()
 	for (const c of cards) {
@@ -431,7 +435,7 @@ export function orderCardsWithinAspectBySet(
 	const setCodes = [...bySet.keys()]
 	const orderedCodes =
 		setOrder === 'release'
-			? (PREMIER_FILE_SET_PRECEDENCE as readonly string[]).filter((code) => bySet.has(code))
+			? setPrecedence.filter((code) => bySet.has(code))
 			: [...setCodes].sort(foldCompareCodes)
 	if (orderedCodes.length !== setCodes.length) {
 		const missing = setCodes.filter((code) => !orderedCodes.includes(code))
@@ -456,16 +460,19 @@ export function orderCardsWithinAspectBySet(
  *   page break on set change), then alphabetical by title within each set.
  * @tacticalObjective Composes {@link groupByAspect} (unchanged, still throws
  *   on an unrecognized aspect key) with {@link orderCardsWithinAspectBySet}
- *   per aspect bucket.
+ *   per aspect bucket. `setPrecedence` forwards unchanged (defaults to
+ *   {@link PREMIER_FILE_SET_PRECEDENCE}; the caller passes
+ *   {@link ROTATION_FILE_SET_PRECEDENCE} for the full-rotation-history layout).
  */
 export function groupByAspectThenSet(
 	cards: readonly Card[],
 	config: LabelLayoutConfig,
+	setPrecedence: readonly string[] = PREMIER_FILE_SET_PRECEDENCE,
 ): Map<AspectGroupKey, Card[]> {
 	const byAspect = groupByAspect(cards)
 	const ordered = new Map<AspectGroupKey, Card[]>()
 	for (const [key, bucket] of byAspect) {
-		ordered.set(key, orderCardsWithinAspectBySet(bucket, config.setOrder))
+		ordered.set(key, orderCardsWithinAspectBySet(bucket, config.setOrder, setPrecedence))
 	}
 	return ordered
 }
