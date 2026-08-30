@@ -1,6 +1,7 @@
 {
   "snapshot": "v2026-08-23",
-  "groupMode": "set",
+  "groupMode": "alphabetical",
+  "assetsMode": "bw",
   "inputs": {
     "formats.json": "35459a6260ad0571903a4839b798455587398e18a3e4e0d454f0d299c30a9092",
     "meta.json": "c73a0c8e901bf0bc4db6320d3cc99445546c1cd1f3faa9d1c6849338330d1ecf",
@@ -11,20 +12,15 @@
     "per-set/ASH.json": "cb2e867c3bb236224ba8840bf8adf55c5aaac2b9cf892a201dd197f49f3ab143",
     "per-set/IBH.json": "4aade76e1e546810806fb0f332189ae842ded542271d97c2cb36bf81378327cf"
   },
-  "codeCommit": "714aea30fb79e23d05cb98ac66d03f898243ffc5",
-  "documentXmlSha256": "6a4a5f4a6fa6a043b2937f8a99f675f3e9e2404aeb1bf8a6a61e541359c8de42",
+  "codeCommit": "7b774d6ba260691e269bf7212efd71909f44044d",
+  "documentXmlSha256": "0444550d27ad93d9f3a815ffa13c97ca0a82136f73b96241b4600ebb68bbf5fa",
   "totals": {
     "parsed": 1368,
     "deduped": 1368,
     "dropped": 0
   },
   "groups": {
-    "JTL": 266,
-    "LOF": 263,
-    "SEC": 262,
-    "LAW": 262,
-    "ASH": 264,
-    "IBH": 51
+    "All Cards": 1368
   },
   "layout": "v3-named-styles-title-subtitle-stats",
   "config": {

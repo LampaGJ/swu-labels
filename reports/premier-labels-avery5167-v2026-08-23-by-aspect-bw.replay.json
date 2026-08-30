@@ -1,7 +1,7 @@
 {
   "snapshot": "v2026-08-23",
   "groupMode": "aspect",
-  "assetsMode": "color",
+  "assetsMode": "bw",
   "inputs": {
     "formats.json": "35459a6260ad0571903a4839b798455587398e18a3e4e0d454f0d299c30a9092",
     "meta.json": "c73a0c8e901bf0bc4db6320d3cc99445546c1cd1f3faa9d1c6849338330d1ecf",

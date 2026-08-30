@@ -15,6 +15,7 @@ import type { Card } from './schema.ts'
 import type { LabelSlot } from './transform.ts'
 import {
 	PREMIER_FILE_SET_PRECEDENCE,
+	ROTATION_FILE_SET_PRECEDENCE,
 	assertPremierSetCoverage,
 	dedupeCards,
 	groupAlphabetically,
@@ -28,10 +29,54 @@ const LAYOUT_VERSION = 'v3-named-styles-title-subtitle-stats'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = join(__dirname, '..')
-const ASSETS_DIR = join(REPO_ROOT, 'assets', 'rarities')
 
 function sha256File(path: string): string {
 	return createHash('sha256').update(readFileSync(path)).digest('hex')
+}
+
+/**
+ * @displayName Rarity Icon Set
+ * @strategicPurpose The Avery labels are print output, most often to a monochrome
+ *   printer — the shipped `assets/rarities/*.svg` icons carry rarity-specific hues
+ *   (olive/gray/gold/blue) chosen for on-screen legibility that convert to
+ *   low-contrast, sometimes near-invisible grays at the ~0.14in print size (the
+ *   uncommon icon's #d6d6d6 inner glyph is the worst case). `assets/rarities-bw/`
+ *   is the same five icons with only the inner-glyph fill recolored solid black —
+ *   geometry, silhouette shape (circle/diamond/starburst/spiky-starburst/square),
+ *   and the letter glyph are unchanged, so rarity stays distinguishable by shape
+ *   even with color read out entirely.
+ * @tacticalObjective Selects which `assets/rarities` variant directory `main()` loads.
+ */
+export type AssetsMode = 'color' | 'bw'
+
+const ASSETS_DIR_NAME: Record<AssetsMode, string> = {
+	color: 'rarities',
+	bw: 'rarities-bw',
+}
+
+const ASSETS_FILENAME_SUFFIX: Record<AssetsMode, string> = {
+	color: '',
+	bw: '-bw',
+}
+
+/**
+ * @displayName Parse Assets CLI Arg
+ * @strategicPurpose `npm run generate -- --assets bw` must select the
+ *   print-optimized monochrome rarity icon set instead of the color one, without a
+ *   code change.
+ * @tacticalObjective Reads `--assets <color|bw>` from argv; defaults to `'color'`
+ *   (unchanged behavior) when absent. Throws on an unrecognized value.
+ */
+export function parseAssetsArg(argv: readonly string[]): AssetsMode {
+	const flagIndex = argv.indexOf('--assets')
+	if (flagIndex === -1 || !argv[flagIndex + 1]) {
+		return 'color'
+	}
+	const value = argv[flagIndex + 1] as string
+	if (value !== 'color' && value !== 'bw') {
+		throw new Error(`parseAssetsArg: unrecognized --assets value "${value}" (expected color or bw)`)
+	}
+	return value
 }
 
 /**
@@ -119,8 +164,10 @@ function buildGroupsForMode(mode: GroupMode, kept: readonly Card[]): Map<string,
 		}
 		case 'set':
 			// The only mode whose sections carry divider slots (set code / full
-			// name / per-aspect "x/y cards" breakdown) ahead of each aspect's cards.
-			return groupBySetWithDividers(kept, DEFAULT_CONFIG)
+			// name / per-aspect "x/y cards" breakdown) ahead of each aspect's cards,
+			// and the only mode fed the full-rotation-history pool/precedence — the
+			// caller passes `kept` built from ROTATION_FILE_SET_PRECEDENCE.
+			return groupBySetWithDividers(kept, DEFAULT_CONFIG, ROTATION_FILE_SET_PRECEDENCE)
 		case 'alphabetical': {
 			const groups = groupAlphabetically(kept)
 			return new Map([...groups].map(([key, cards]) => [key, toCardSlots(cards)] as const))
@@ -128,10 +175,75 @@ function buildGroupsForMode(mode: GroupMode, kept: readonly Card[]): Map<string,
 	}
 }
 
+/**
+ * @displayName Card Pool
+ * @strategicPurpose Two of the four label layouts now read from genuinely different
+ *   card pools: the three premier-legal-today layouts (aspect-set, aspect,
+ *   alphabetical) read the same six-set pool as before (unchanged, byte-identical);
+ *   the 'set' (full-rotation-history) layout reads a nine-set pool including the
+ *   rotated-out SOR/SHD/TWI sets. Bundling one pool's parse/dedupe outputs into a
+ *   typed shape keeps `main()`'s per-mode loop from re-deriving them inline twice.
+ * @tacticalObjective Consumed by {@link loadCardPool} and `main()`.
+ */
+type CardPool = {
+	kept: Card[]
+	parsedCount: number
+	droppedCount: number
+	inputHashes: Record<string, string>
+	setsToLoad: readonly string[]
+}
+
+/**
+ * @displayName Load Card Pool
+ * @strategicPurpose Parses, concatenates (in `setPrecedence` order), and dedupes
+ *   exactly the per-set files present on disk for a given precedence list — the one
+ *   piece of loading logic both the premier-legal-today pool and the full-rotation
+ *   pool share, so `main()` calls it twice with two different precedence lists
+ *   instead of duplicating the parse/dedupe/hash steps.
+ * @tacticalObjective Reads `dataDir/per-set/<CODE>.json` for every `setPrecedence`
+ *   code present in `dataDir/per-set/`, parses each at the boundary with
+ *   {@link CardArraySchema}, concatenates in precedence order, and dedupes via
+ *   {@link dedupeCards}. Throws on a kept+dropped accounting mismatch (a bug guard,
+ *   not a data-quality check).
+ */
+function loadCardPool(dataDir: string, setPrecedence: readonly string[]): CardPool {
+	const perSetDir = join(dataDir, 'per-set')
+	const allAvailableSetCodes = new Set(
+		readdirSync(perSetDir)
+			.filter((f) => f.endsWith('.json'))
+			.map((f) => f.slice(0, -'.json'.length)),
+	)
+	const setsToLoad = setPrecedence.filter((set) => allAvailableSetCodes.has(set))
+
+	const inputHashes: Record<string, string> = {}
+	for (const set of setsToLoad) {
+		const rel = join('per-set', `${set}.json`)
+		inputHashes[rel] = sha256File(join(dataDir, rel))
+	}
+
+	let parsedCount = 0
+	const cardsInPrecedenceOrder: Card[] = []
+	for (const set of setsToLoad) {
+		const raw = JSON.parse(readFileSync(join(dataDir, 'per-set', `${set}.json`), 'utf8'))
+		const parsed = CardArraySchema.parse(raw)
+		parsedCount += parsed.length
+		cardsInPrecedenceOrder.push(...parsed)
+	}
+
+	const { kept, droppedCount } = dedupeCards(cardsInPrecedenceOrder)
+	if (kept.length !== parsedCount - droppedCount) {
+		throw new Error('loadCardPool: dedupe accounting mismatch (kept + dropped != parsed)')
+	}
+
+	return { kept, parsedCount, droppedCount, inputHashes, setsToLoad }
+}
+
 async function main(): Promise<void> {
 	const snapshotTag = parseSnapshotArg(process.argv.slice(2))
 	const groupModes = parseGroupsArg(process.argv.slice(2))
+	const assetsMode = parseAssetsArg(process.argv.slice(2))
 	const DATA_DIR = join(REPO_ROOT, 'data', 'snapshots', snapshotTag)
+	const ASSETS_DIR = join(REPO_ROOT, 'assets', ASSETS_DIR_NAME[assetsMode])
 
 	if (!existsSync(DATA_DIR)) {
 		throw new Error(`index: snapshot directory not found: ${DATA_DIR}`)
@@ -141,53 +253,41 @@ async function main(): Promise<void> {
 	const formats = FormatsManifestSchema.parse(formatsRaw)
 	const premierSets = formats.formats.premier.sets
 
-	// The ingest emits a per-set file for EVERY expansion the upstream API returns
-	// (SOR, SHD, TWI, C24, TS26, ...), not just the six PREMIER_FILE_SET_PRECEDENCE
-	// codes the original pinned snapshot happened to cover. Selection is
-	// formats.premier.sets ∩ files present: a file for a non-premier-legal code
-	// (e.g. SOR) is simply skipped, never asserted against. assertPremierSetCoverage
-	// keeps its original exact-six-file contract (migrated test unchanged) — we
-	// satisfy that contract by narrowing "available" to PREMIER_FILE_SET_PRECEDENCE
-	// codes actually present on disk before calling it, so extra non-premier files
-	// never reach the assertion.
-	const perSetDir = join(DATA_DIR, 'per-set')
-	const allAvailableSetCodes = new Set(
-		readdirSync(perSetDir)
-			.filter((f) => f.endsWith('.json'))
-			.map((f) => f.slice(0, -'.json'.length)),
-	)
-
-	const setsToLoad = PREMIER_FILE_SET_PRECEDENCE.filter((set) => allAvailableSetCodes.has(set))
-
-	assertPremierSetCoverage(premierSets, setsToLoad)
-
-	const inputRelPaths = [
-		'formats.json',
-		'meta.json',
-		...setsToLoad.map((set) => join('per-set', `${set}.json`)),
-	]
-	const inputHashes: Record<string, string> = {}
-	for (const rel of inputRelPaths) {
-		inputHashes[rel] = sha256File(join(DATA_DIR, rel))
+	const sharedInputHashes: Record<string, string> = {
+		'formats.json': sha256File(join(DATA_DIR, 'formats.json')),
+		'meta.json': sha256File(join(DATA_DIR, 'meta.json')),
 	}
 
-	let parsedCount = 0
-	const cardsInPrecedenceOrder: Card[] = []
-	for (const set of setsToLoad) {
-		const raw = JSON.parse(readFileSync(join(DATA_DIR, 'per-set', `${set}.json`), 'utf8'))
-		const parsed = CardArraySchema.parse(raw)
-		parsedCount += parsed.length
-		cardsInPrecedenceOrder.push(...parsed)
-	}
-
-	const { kept, droppedCount } = dedupeCards(cardsInPrecedenceOrder)
-	if (kept.length !== parsedCount - droppedCount) {
-		throw new Error('index: dedupe accounting mismatch (kept + dropped != parsed)')
-	}
-	if (kept.length < 1200 || kept.length > 1450) {
+	// The premier-legal-today pool: unchanged from before this session's 'set'-mode
+	// work — same six files, same assertPremierSetCoverage gate, same 1200-1450
+	// magnitude guard — so the three non-'set' layouts stay byte-identical.
+	const basePool = loadCardPool(DATA_DIR, PREMIER_FILE_SET_PRECEDENCE)
+	assertPremierSetCoverage(premierSets, basePool.setsToLoad)
+	if (basePool.kept.length < 1200 || basePool.kept.length > 1450) {
 		throw new Error(
-			`index: deduped total ${kept.length} is outside the expected 1200-1450 magnitude — stopping instead of shipping.`,
+			`index: premier-legal-today deduped total ${basePool.kept.length} is outside the expected 1200-1450 magnitude — stopping instead of shipping.`,
 		)
+	}
+
+	// The full-rotation-history pool only matters — and is only computed — when the
+	// 'set' layout was actually requested; loading it eagerly for every invocation
+	// would mean every other mode pays a needless second parse/dedupe pass.
+	let rotationPool: CardPool | undefined
+	if (groupModes.includes('set')) {
+		rotationPool = loadCardPool(DATA_DIR, ROTATION_FILE_SET_PRECEDENCE)
+		const missingRotationSets = ['SOR', 'SHD', 'TWI'].filter(
+			(code) => !rotationPool?.setsToLoad.includes(code),
+		)
+		if (missingRotationSets.length > 0) {
+			throw new Error(
+				`index: 'set' layout needs full rotation history but [${missingRotationSets.join(', ')}] have no per-set file under ${DATA_DIR}/per-set — run \`npm run ingest\` (it fetches every set the API returns) and target that snapshot with --snapshot.`,
+			)
+		}
+		if (rotationPool.kept.length < 1800 || rotationPool.kept.length > 2800) {
+			throw new Error(
+				`index: full-rotation deduped total ${rotationPool.kept.length} is outside the expected 1800-2800 magnitude — stopping instead of shipping.`,
+			)
+		}
 	}
 
 	let codeCommit = 'unknown'
@@ -200,19 +300,20 @@ async function main(): Promise<void> {
 	const assets = await loadRarityAssets(ASSETS_DIR)
 
 	for (const mode of groupModes) {
-		const groups = buildGroupsForMode(mode, kept)
+		const pool = mode === 'set' ? (rotationPool as CardPool) : basePool
+		const groups = buildGroupsForMode(mode, pool.kept)
 
 		let totalLabels = 0
 		for (const slots of groups.values()) {
 			totalLabels += slots.filter((s) => s.kind === 'card').length
 		}
-		if (totalLabels !== kept.length) {
+		if (totalLabels !== pool.kept.length) {
 			throw new Error(
-				`index: mode '${mode}': total labels across groups (${totalLabels}) does not equal deduped total (${kept.length})`,
+				`index: mode '${mode}': total labels across groups (${totalLabels}) does not equal deduped total (${pool.kept.length})`,
 			)
 		}
 
-		const suffix = FILENAME_SUFFIX[mode]
+		const suffix = FILENAME_SUFFIX[mode] + ASSETS_FILENAME_SUFFIX[assetsMode]
 		const OUT_DOCX = join(
 			REPO_ROOT,
 			'reports',
@@ -243,10 +344,11 @@ async function main(): Promise<void> {
 		const replay = {
 			snapshot: snapshotTag,
 			groupMode: mode,
-			inputs: inputHashes,
+			assetsMode,
+			inputs: { ...sharedInputHashes, ...pool.inputHashes },
 			codeCommit,
 			documentXmlSha256,
-			totals: { parsed: parsedCount, deduped: kept.length, dropped: droppedCount },
+			totals: { parsed: pool.parsedCount, deduped: pool.kept.length, dropped: pool.droppedCount },
 			groups: groupCounts,
 			layout: LAYOUT_VERSION,
 			config: DEFAULT_CONFIG,

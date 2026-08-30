@@ -2,25 +2,44 @@
 
 **What this answers:** how to go from the live Star Wars Unlimited card database to a printable sheet of Avery 5167 Premier-format card labels, and where every piece of this pipeline came from.
 
-**TL;DR:** `npm install`, then `npm run ingest` (pulls the live card list), `npm run generate` (builds the DOCX from the newest ingest), `npm run open` (opens the newest DOCX). Print at 100% scale, no "fit to page." Print one test sheet before committing a full run.
+**TL;DR:** `npm install`, then `npm run ingest` (pulls the live card list), `npm run generate` (builds the default DOCX from the newest ingest), `npm run open` (opens the newest DOCX). Print at 100% scale, no "fit to page." Print one test sheet before committing a full run. Want every layout at once? `npm run generate:all`.
 
 ## Quick start
 
 - `npm install` — installs dependencies.
 - `npm run pull-formats` — refreshes the vendored `formats.json` from its canonical home (optional; a copy already ships in this repo).
 - `npm run ingest` — fetches every card from the official Star Wars Unlimited admin API, filters to canonical printings, and writes a new pinned snapshot under `data/snapshots/v<TAG>/`.
-- `npm run generate` — reads a pinned snapshot (default: `v2026-08-23`, the migration-proof snapshot) and writes a DOCX + replay record to `reports/`. Target a different snapshot with `npm run generate -- --snapshot v<TAG>`.
+- `npm run generate` — reads a pinned snapshot (default: `v2026-08-23`, the migration-proof snapshot) and writes the default aspect-then-set DOCX + replay record to `reports/`. Target a different snapshot with `npm run generate -- --snapshot v<TAG>`. See [Label sheet layouts](#label-sheet-layouts) for the other three layouts and their dedicated npm scripts.
+- `npm run generate:by-set` — the "grouped by rotation set" layout (SOR, SHD, TWI, JTL, LOF, SEC, LAW, ASH, IBH — every set that has ever been part of Premier rotation, not just the six currently legal). Reads the `v2026-08-14` snapshot (the only pinned snapshot with per-set files for the three rotated-out sets); the default `v2026-08-23` snapshot doesn't have them and this script targets `v2026-08-14` explicitly so it works out of the box.
+- `npm run generate:by-aspect` — one section per aspect color, no set sub-grouping, alphabetical within.
+- `npm run generate:alphabetical` — one continuous alphabetical sheet, no section breaks at all.
+- `npm run generate:all` — all four layouts in one run (by-set correctly reading `v2026-08-14`, the other three reading the default snapshot).
+- `npm run generate:bw` — all four layouts rendered with the print-optimized monochrome rarity icons (`assets/rarities-bw/`) instead of the color ones. Append `-bw` to any generate script's output filename to find these.
 - `npm run open` — opens the newest `reports/*.docx` in the default application (Word, Pages, LibreOffice).
 - `npm run test` — runs the full test suite (migrated generator tests + new ingest tests).
 - `npm run typecheck` — `tsc --noEmit`.
 - `npm run lint` — `biome check src test`.
+
+## Label sheet layouts
+
+`src/index.ts` can emit four distinct label-sheet organizations from the same deduped card pool, selected with `--groups <mode>` (comma-separated, or `all`):
+
+- **`aspect-set`** (default) — one section per aspect color (Vigilance, Command, Aggression, Cunning, Villainy, Heroism, Neutral), sets flowing continuously within each aspect (no page break on set change), alphabetical within each set. Output: `premier-labels-avery5167-<snapshot>.docx`.
+- **`set`** — one section per set, in rotation-release order; the only layout drawn from the *full rotation history* pool (see below), not just the six currently-legal sets. Each aspect present within a set is prefaced with a **divider label** — three lines: the set code, its full name, and `(Aspect) x/y cards` (`x` = deduped cards of that aspect in that set, `y` = the set's total deduped card count). Output: `premier-labels-avery5167-<snapshot>-by-set.docx`.
+- **`aspect`** — one section per aspect color, same as `aspect-set` but without the set sub-grouping — cards from every set interleave alphabetically within one aspect's section. Output: `…-by-aspect.docx`.
+- **`alphabetical`** — one continuous section, no breaks by aspect or set at all. Output: `…-alphabetical.docx`.
+
+**Why `set` needs its own snapshot:** the other three layouts answer "what's legal to play *today*" and read the same six-set pool as always (`PREMIER_FILE_SET_PRECEDENCE`: `JTL, LOF, SEC, LAW, ASH, IBH`) — unchanged, byte-identical to before. `set` answers "every set that has ever been part of Premier rotation," which includes the three sets that have since rotated out (`SOR`, `SHD`, `TWI`) — pool precedence `ROTATION_FILE_SET_PRECEDENCE` in `src/transform.ts`. A card originally released pre-rotation and later reprinted to survive rotation (e.g. into `JTL`) lands under its *original* set here, not the reprint's set, because dedupe keeps the earliest printing in precedence order. `main()` throws a clear error (rather than silently shipping an incomplete sheet) if `SOR`/`SHD`/`TWI` per-set files aren't present under the targeted snapshot's `per-set/` directory — run `npm run ingest` and target the resulting snapshot with `--snapshot` if you're not using the pinned `v2026-08-14` one.
+
+Icon set is selected independently with `--assets <color|bw>` (default `color`); see [Rarity icons](#rarity-icons) below.
 
 ## Avery 5167 print guidance
 
 - Avery 5167 is 0.5in x 1.75in labels, 80 per sheet (4 columns x 20 rows), on US Letter.
 - Print at **100% scale**. Do **not** use "fit to page" or "shrink to fit" — either will misalign every label on the sheet.
 - **Print one test sheet on plain paper first**, hold it up to a blank Avery 5167 sheet against a light source, and confirm alignment before loading actual labels.
-- The document has one section per aspect group (Vigilance, Command, Aggression, Cunning, Villainy, Heroism, Neutral); each section starts a fresh sheet.
+- The default (`aspect-set`) and `by-aspect` documents have one section per aspect group (Vigilance, Command, Aggression, Cunning, Villainy, Heroism, Neutral); the `by-set` document has one section per set instead; `alphabetical` is a single continuous section. Every section starts a fresh sheet — see [Label sheet layouts](#label-sheet-layouts).
+- **Printing to a monochrome/B&W printer:** use `--assets bw` (or `npm run generate:bw`) — the default rarity icons carry hues (olive/gray/gold/blue) that convert to low-contrast, sometimes near-invisible grays at print size; see [Rarity icons](#rarity-icons).
 
 ## Provenance
 
@@ -51,7 +70,10 @@ Every exported schema/function/const/type in `src/` carries co-located TSDoc (`@
 
 ## Set selection at generate time
 
-`src/index.ts` selects which per-set files to load as `formats.premier.sets ∩ files present`: `PREMIER_FILE_SET_PRECEDENCE` (`JTL, LOF, SEC, LAW, ASH, IBH`) filtered to codes that actually have a file on disk. A fresh `npm run ingest` writes a file for every expansion the API returns (including non-Premier sets like `SOR`, `SHD`, `TWI`) — those extra files are simply not selected, never asserted against. `assertPremierSetCoverage` (in `src/transform.ts`, unchanged from the migrated original) still checks that every Premier-legal set code lacking a per-set file is a known promo/dedupe code (`JTLP`, `LOFP`, `SECP`, `LAWP`, `ASHP`, `G25`, `P25`, `P26`).
+`src/index.ts` loads two independent card pools per run, each its own parse/dedupe pass (`loadCardPool` in `src/index.ts`):
+
+- **Premier-legal-today pool** (feeds `aspect-set`, `aspect`, `alphabetical`): `formats.premier.sets ∩ files present`, `PREMIER_FILE_SET_PRECEDENCE` (`JTL, LOF, SEC, LAW, ASH, IBH`) filtered to codes that actually have a file on disk. `assertPremierSetCoverage` (in `src/transform.ts`, unchanged from the migrated original) checks that every Premier-legal set code lacking a per-set file is a known promo/dedupe code (`JTLP`, `LOFP`, `SECP`, `LAWP`, `ASHP`, `G25`, `P25`, `P26`).
+- **Full-rotation-history pool** (feeds `set` only): `ROTATION_FILE_SET_PRECEDENCE` (`SOR, SHD, TWI, JTL, LOF, SEC, LAW, ASH, IBH`) filtered the same way. A fresh `npm run ingest` writes a file for every expansion the API returns (including the rotated-out `SOR`/`SHD`/`TWI`), so a fresh ingest's snapshot has both pools' files; the pinned `v2026-08-23` migration-proof snapshot only ever had the six current-premier files, so `set` targets the pinned `v2026-08-14` snapshot instead (see [Label sheet layouts](#label-sheet-layouts)).
 
 ## Template-driven label layout
 
@@ -59,7 +81,14 @@ The label's line content and order are controlled by `config.template` — an or
 
 For the full ingest → generate → print sequence and the replay-record reproducibility contract, see [docs/pipeline.md](docs/pipeline.md).
 
+## Rarity icons
+
+Each label carries a rarity symbol (circle=Common, diamond=Uncommon, starburst=Rare, spiky starburst=Legendary, square=Special), matched by an embedded letter glyph (c/u/r/l/s). Two icon sets ship:
+
+- **`assets/rarities/`** (default, `--assets color`) — the original color icons: rarity-specific hues (olive/gray/gold/blue) chosen for on-screen legibility.
+- **`assets/rarities-bw/`** (`--assets bw`) — the same five icons, same geometry and silhouette shapes, with only the inner glyph's fill recolored solid black. Optimized for monochrome/B&W printing: the color set's hues (especially Uncommon's `#d6d6d6` light gray) convert to low-contrast, sometimes near-invisible grays at the ~0.14in print size; rarity stays distinguishable by outer silhouette shape plus the glyph even with color read out entirely.
+
 ## Layout
 
-- Repo layout: `src/` (pipeline code), `test/` (Vitest suites + fixtures), `assets/rarities/` (rarity SVGs), `data/snapshots/v<TAG>/` (pinned per-set JSON + `formats.json` + `meta.json`), `reports/` (generated DOCX + replay JSON land here; `.progress/` is gitignored).
+- Repo layout: `src/` (pipeline code), `test/` (Vitest suites + fixtures), `assets/rarities/` + `assets/rarities-bw/` (rarity SVGs, color and print-optimized monochrome), `data/snapshots/v<TAG>/` (pinned per-set JSON + `formats.json` + `meta.json`), `reports/` (generated DOCX + replay JSON land here; `.progress/` is gitignored).
 - `docx` is pinned to the exact `9.7.1` patch version (not a caret range): `src/render.ts` reaches into `ImageRun`'s internal `root[0]` to inject a `w:position` baseline shift, verified against that exact version's `node_modules/docx/dist/index.mjs` — a minor/patch bump could silently change that internal shape.

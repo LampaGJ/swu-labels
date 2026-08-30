@@ -35,6 +35,33 @@ export type AspectGroupKey = (typeof ASPECT_GROUP_ORDER)[number]
 export const PREMIER_FILE_SET_PRECEDENCE = ['JTL', 'LOF', 'SEC', 'LAW', 'ASH', 'IBH'] as const
 
 /**
+ * @displayName Rotation Per-Set File Precedence
+ * @strategicPurpose The 'by set' label layout means "every set that has ever been
+ *   part of Premier rotation" (SOR/SHD/TWI included, even though they have since
+ *   rotated out), not just the six currently-legal sets {@link PREMIER_FILE_SET_PRECEDENCE}
+ *   covers — a card originally released in a rotated-out set and later reprinted to
+ *   survive rotation (e.g. into JTL) should land under its *original* set on this
+ *   layout, which is exactly what dedupe's keep-first-in-precedence-order rule gives
+ *   for free once the original set is earlier in this list than the reprint's set.
+ * @tacticalObjective Full chronological release order: SOR, SHD, TWI, JTL, LOF, SEC,
+ *   LAW, ASH, IBH. Passed as the `setPrecedence` override to {@link groupBySet} and
+ *   {@link groupBySetWithDividers} (and as the caller's own dedupe precedence) —
+ *   never consulted by {@link orderCardsWithinAspectBySet}/{@link groupByAspectThenSet},
+ *   which stay scoped to the six currently-legal sets.
+ */
+export const ROTATION_FILE_SET_PRECEDENCE = [
+	'SOR',
+	'SHD',
+	'TWI',
+	'JTL',
+	'LOF',
+	'SEC',
+	'LAW',
+	'ASH',
+	'IBH',
+] as const
+
+/**
  * @displayName Avery 5167 Label Sheet Geometry
  * @strategicPurpose Pins the exact twips geometry for Avery 5167 (0.5in x 1.75in,
  *   80/sheet, 4 cols x 20 rows, US Letter) so the DOCX renderer never improvises a
@@ -465,18 +492,21 @@ export function groupByAspectOnly(cards: readonly Card[]): Map<AspectGroupKey, C
 /**
  * @displayName Group By Premier Set
  * @strategicPurpose The second user-requested label-sheet layout: a fresh
- *   sheet per premier-legal set (e.g. JTL, LOF, SEC), ignoring aspect entirely
- *   — for binder/box organization by set rather than by color.
+ *   sheet per set (e.g. SOR, SHD, TWI, JTL, LOF, SEC, ...), ignoring aspect
+ *   entirely — for binder/box organization by set rather than by color.
  * @tacticalObjective Buckets by `expansion_code`, orders buckets per
  *   `config.setOrder` (same rule as {@link orderCardsWithinAspectBySet}: 'release'
- *   = {@link PREMIER_FILE_SET_PRECEDENCE}, 'alphabetical' = fold-sorted set
- *   codes), sorts each bucket with {@link sortWithinGroup}. Throws if any set
- *   code present in `cards` is missing from the computed order (accounting
- *   guard, same shape as {@link orderCardsWithinAspectBySet}).
+ *   = `setPrecedence` (defaults to {@link PREMIER_FILE_SET_PRECEDENCE}; the caller
+ *   passes {@link ROTATION_FILE_SET_PRECEDENCE} for the full-rotation-history
+ *   layout), 'alphabetical' = fold-sorted set codes), sorts each bucket with
+ *   {@link sortWithinGroup}. Throws if any set code present in `cards` is missing
+ *   from the computed order (accounting guard, same shape as
+ *   {@link orderCardsWithinAspectBySet}).
  */
 export function groupBySet(
 	cards: readonly Card[],
 	config: Pick<LabelLayoutConfig, 'setOrder'>,
+	setPrecedence: readonly string[] = PREMIER_FILE_SET_PRECEDENCE,
 ): Map<string, Card[]> {
 	const bySet = new Map<string, Card[]>()
 	for (const c of cards) {
@@ -490,7 +520,7 @@ export function groupBySet(
 	const setCodes = [...bySet.keys()]
 	const orderedCodes =
 		config.setOrder === 'release'
-			? (PREMIER_FILE_SET_PRECEDENCE as readonly string[]).filter((code) => bySet.has(code))
+			? setPrecedence.filter((code) => bySet.has(code))
 			: [...setCodes].sort(foldCompareCodes)
 	if (orderedCodes.length !== setCodes.length) {
 		const missing = setCodes.filter((code) => !orderedCodes.includes(code))
@@ -597,12 +627,16 @@ export const PREMIER_SET_FULL_NAMES: Record<string, string> = {
  *   is that aspect bucket's size; `y` is the set's total deduped card count across
  *   all aspects — both counted from `cards`, which the caller has already deduped.
  *   Throws if a set code present in `cards` has no {@link PREMIER_SET_FULL_NAMES} entry.
+ *   `setPrecedence` forwards to {@link groupBySet} unchanged (defaults to
+ *   {@link PREMIER_FILE_SET_PRECEDENCE}; the caller passes
+ *   {@link ROTATION_FILE_SET_PRECEDENCE} for the full-rotation-history layout).
  */
 export function groupBySetWithDividers(
 	cards: readonly Card[],
 	config: Pick<LabelLayoutConfig, 'setOrder'>,
+	setPrecedence: readonly string[] = PREMIER_FILE_SET_PRECEDENCE,
 ): Map<string, LabelSlot[]> {
-	const bySet = groupBySet(cards, config)
+	const bySet = groupBySet(cards, config, setPrecedence)
 	const result = new Map<string, LabelSlot[]>()
 	for (const [setCode, setCards] of bySet) {
 		const fullName = PREMIER_SET_FULL_NAMES[setCode]

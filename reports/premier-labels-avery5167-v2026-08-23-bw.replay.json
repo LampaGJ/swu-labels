@@ -1,7 +1,7 @@
 {
   "snapshot": "v2026-08-23",
-  "groupMode": "aspect",
-  "assetsMode": "color",
+  "groupMode": "aspect-set",
+  "assetsMode": "bw",
   "inputs": {
     "formats.json": "35459a6260ad0571903a4839b798455587398e18a3e4e0d454f0d299c30a9092",
     "meta.json": "c73a0c8e901bf0bc4db6320d3cc99445546c1cd1f3faa9d1c6849338330d1ecf",
@@ -13,7 +13,7 @@
     "per-set/IBH.json": "4aade76e1e546810806fb0f332189ae842ded542271d97c2cb36bf81378327cf"
   },
   "codeCommit": "7b774d6ba260691e269bf7212efd71909f44044d",
-  "documentXmlSha256": "313d503400da2b257cc55409b5ab6fee286567fde3e28b9c31bfccd27373079f",
+  "documentXmlSha256": "ea06edf6667a192b050d9fb7145b157d07b2a1bbd4f9c635fc7724b1e91fdb7b",
   "totals": {
     "parsed": 1368,
     "deduped": 1368,

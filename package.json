@@ -6,10 +6,11 @@
 	"scripts": {
 		"ingest": "tsx src/ingest.ts",
 		"generate": "tsx src/index.ts",
-		"generate:by-set": "tsx src/index.ts --groups set",
+		"generate:by-set": "tsx src/index.ts --groups set --snapshot v2026-08-14",
 		"generate:by-aspect": "tsx src/index.ts --groups aspect",
 		"generate:alphabetical": "tsx src/index.ts --groups alphabetical",
-		"generate:all": "tsx src/index.ts --groups all",
+		"generate:all": "tsx src/index.ts --groups aspect-set,aspect,alphabetical && tsx src/index.ts --groups set --snapshot v2026-08-14",
+		"generate:bw": "tsx src/index.ts --groups aspect-set,aspect,alphabetical --assets bw && tsx src/index.ts --groups set --snapshot v2026-08-14 --assets bw",
 		"build": "npm run generate",
 		"open": "open \"$(ls -t reports/*.docx | head -n 1)\"",
 		"pull-formats": "tsx src/pull-formats.ts",

@@ -94,11 +94,27 @@
 		},
 		{
 			"file": "src/index.ts",
+			"exportName": "AssetsMode",
+			"displayName": "Rarity Icon Set",
+			"strategicPurpose": "The Avery labels are print output, most often to a monochrome\nprinter — the shipped `assets/rarities/*.svg` icons carry rarity-specific hues\n(olive/gray/gold/blue) chosen for on-screen legibility that convert to\nlow-contrast, sometimes near-invisible grays at the ~0.14in print size (the\nuncommon icon's #d6d6d6 inner glyph is the worst case). `assets/rarities-bw/`\nis the same five icons with only the inner-glyph fill recolored solid black —\ngeometry, silhouette shape (circle/diamond/starburst/spiky-starburst/square),\nand the letter glyph are unchanged, so rarity stays distinguishable by shape\neven with color read out entirely.",
+			"tacticalObjective": "Selects which `assets/rarities` variant directory `main()` loads.",
+			"kind": "type"
+		},
+		{
+			"file": "src/index.ts",
 			"exportName": "GroupMode",
 			"displayName": "Label Sheet Group Mode",
 			"strategicPurpose": "Three distinct organizational layouts a user may want printed\n('aspect-set' is the original v2/v3 combined layout, kept as the default so\nexisting tooling/filenames are unaffected): by premier-legal set, by aspect\ncolor only, and pure alphabetical with no section breaks.",
 			"tacticalObjective": "Selects which `transform.ts` grouping function `main()` calls\nand which output-filename suffix is used.",
 			"kind": "type"
+		},
+		{
+			"file": "src/index.ts",
+			"exportName": "parseAssetsArg",
+			"displayName": "Parse Assets CLI Arg",
+			"strategicPurpose": "`npm run generate -- --assets bw` must select the\nprint-optimized monochrome rarity icon set instead of the color one, without a\ncode change.",
+			"tacticalObjective": "Reads `--assets <color|bw>` from argv; defaults to `'color'`\n(unchanged behavior) when absent. Throws on an unrecognized value.",
+			"kind": "function"
 		},
 		{
 			"file": "src/index.ts",
@@ -433,6 +449,14 @@
 		},
 		{
 			"file": "src/transform.ts",
+			"exportName": "ROTATION_FILE_SET_PRECEDENCE",
+			"displayName": "Rotation Per-Set File Precedence",
+			"strategicPurpose": "The 'by set' label layout means \"every set that has ever been\npart of Premier rotation\" (SOR/SHD/TWI included, even though they have since\nrotated out), not just the six currently-legal sets {@link PREMIER_FILE_SET_PRECEDENCE}covers — a card originally released in a rotated-out set and later reprinted to\nsurvive rotation (e.g. into JTL) should land under its *original* set on this\nlayout, which is exactly what dedupe's keep-first-in-precedence-order rule gives\nfor free once the original set is earlier in this list than the reprint's set.",
+			"tacticalObjective": "Full chronological release order: SOR, SHD, TWI, JTL, LOF, SEC,\nLAW, ASH, IBH. Passed as the `setPrecedence` override to {@link groupBySet} and\n{@link groupBySetWithDividers} (and as the caller's own dedupe precedence) —\nnever consulted by {@link orderCardsWithinAspectBySet}/{@link groupByAspectThenSet},\nwhich stay scoped to the six currently-legal sets.",
+			"kind": "const"
+		},
+		{
+			"file": "src/transform.ts",
 			"exportName": "StatLineSegment",
 			"displayName": "Stat Line Segment",
 			"strategicPurpose": "Typed shape the renderer consumes to bold the numeric value\nwhile leaving the suffix word regular weight, per the v2 stat-line spec.",
@@ -539,8 +563,8 @@
 			"file": "src/transform.ts",
 			"exportName": "groupBySet",
 			"displayName": "Group By Premier Set",
-			"strategicPurpose": "The second user-requested label-sheet layout: a fresh\nsheet per premier-legal set (e.g. JTL, LOF, SEC), ignoring aspect entirely\n— for binder/box organization by set rather than by color.",
-			"tacticalObjective": "Buckets by `expansion_code`, orders buckets per\n`config.setOrder` (same rule as {@link orderCardsWithinAspectBySet}: 'release'\n= {@link PREMIER_FILE_SET_PRECEDENCE}, 'alphabetical' = fold-sorted set\ncodes), sorts each bucket with {@link sortWithinGroup}. Throws if any set\ncode present in `cards` is missing from the computed order (accounting\nguard, same shape as {@link orderCardsWithinAspectBySet}).",
+			"strategicPurpose": "The second user-requested label-sheet layout: a fresh\nsheet per set (e.g. SOR, SHD, TWI, JTL, LOF, SEC, ...), ignoring aspect\nentirely — for binder/box organization by set rather than by color.",
+			"tacticalObjective": "Buckets by `expansion_code`, orders buckets per\n`config.setOrder` (same rule as {@link orderCardsWithinAspectBySet}: 'release'\n= `setPrecedence` (defaults to {@link PREMIER_FILE_SET_PRECEDENCE}; the caller\npasses {@link ROTATION_FILE_SET_PRECEDENCE} for the full-rotation-history\nlayout), 'alphabetical' = fold-sorted set codes), sorts each bucket with\n{@link sortWithinGroup}. Throws if any set code present in `cards` is missing\nfrom the computed order (accounting guard, same shape as\n{@link orderCardsWithinAspectBySet}).",
 			"kind": "function"
 		},
 		{
@@ -548,7 +572,7 @@
 			"exportName": "groupBySetWithDividers",
 			"displayName": "Group By Set, With Aspect-Breakdown Divider Labels",
 			"strategicPurpose": "Prefaces each aspect subgroup within a set's section with a\ndivider label (set code / set full name / \"(Aspect) x/y cards\") so a binder\nsorted by set can still be flipped straight to one aspect color within that set.",
-			"tacticalObjective": "Delegates set bucketing/ordering to {@link groupBySet}, then\nwithin each set bucket re-groups by primary aspect via {@link groupByAspect}\n(same `aspects[0] ?? 'Neutral'` rule, {@link ASPECT_GROUP_ORDER} order, throws on\nan unrecognized key), sorts each aspect bucket with {@link sortWithinGroup}, and\nprepends one divider slot per non-empty aspect bucket. `x` (the divider's count)\nis that aspect bucket's size; `y` is the set's total deduped card count across\nall aspects — both counted from `cards`, which the caller has already deduped.\nThrows if a set code present in `cards` has no {@link PREMIER_SET_FULL_NAMES} entry.",
+			"tacticalObjective": "Delegates set bucketing/ordering to {@link groupBySet}, then\nwithin each set bucket re-groups by primary aspect via {@link groupByAspect}\n(same `aspects[0] ?? 'Neutral'` rule, {@link ASPECT_GROUP_ORDER} order, throws on\nan unrecognized key), sorts each aspect bucket with {@link sortWithinGroup}, and\nprepends one divider slot per non-empty aspect bucket. `x` (the divider's count)\nis that aspect bucket's size; `y` is the set's total deduped card count across\nall aspects — both counted from `cards`, which the caller has already deduped.\nThrows if a set code present in `cards` has no {@link PREMIER_SET_FULL_NAMES} entry.\n`setPrecedence` forwards to {@link groupBySet} unchanged (defaults to\n{@link PREMIER_FILE_SET_PRECEDENCE}; the caller passes\n{@link ROTATION_FILE_SET_PRECEDENCE} for the full-rotation-history layout).",
 			"kind": "function"
 		},
 		{
@@ -585,8 +609,8 @@
 		}
 	],
 	"coverage": {
-		"annotatedExports": 69,
-		"totalExports": 69,
+		"annotatedExports": 72,
+		"totalExports": 72,
 		"coveragePct": 100,
 		"gaps": []
 	}
