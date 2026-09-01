@@ -3,20 +3,18 @@
 <plist version="1.0">
 <dict>
 	<!--
-	  Sandboxed by default — the safe modern baseline and a prerequisite for
-	  the Mac App Store. This template reads no files and makes no network
-	  calls, so it needs nothing more.
+	  NOT sandboxed, deliberately.
 
-	  Add capabilities as your app grows, e.g.:
-	    com.apple.security.network.client                       (outbound network)
-	    com.apple.security.files.user-selected.read-write       (open/save panels)
-	    com.apple.security.files.downloads.read-write           (~/Downloads)
+	  Two reasons. The bundle ships a command-line tool at
+	  Contents/MacOS/swu-labels that must read and write paths the person
+	  running it chooses; a sandboxed CLI can reach almost none of them. And
+	  this is a Developer ID app, not an App Store submission, so the sandbox
+	  buys no distribution requirement here.
 
-	  If you must spawn helper processes / load unsigned code, you'll instead
-	  turn the sandbox OFF and add hardened-runtime exceptions — but prefer
-	  staying sandboxed.
+	  The hardened runtime still applies at `make dist`. If this ever targets
+	  the App Store, the CLI has to leave the bundle first.
 	-->
-	<key>com.apple.security.app-sandbox</key>
-	<true/>
+	<key>com.apple.security.cs.disable-library-validation</key>
+	<false/>
 </dict>
 </plist>

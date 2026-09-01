@@ -5,15 +5,15 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>Starter</string>
+	<string>SWULabels</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.example.starter</string>
+	<string>com.snapstream.swulabels</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Starter</string>
+	<string>SWULabels</string>
 	<key>CFBundleDisplayName</key>
-	<string>Starter</string>
+	<string>SWU Labels</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -31,6 +31,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2026 Thomas Ptacek</string>
+	<string>© 2026 Graham Lampa</string>
 </dict>
 </plist>

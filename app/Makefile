@@ -1,7 +1,7 @@
-# Starter — a clean SwiftUI macOS app template
+# SWU Labels — Star Wars Unlimited Avery 5167 label generator
 #
 # Quick start:
-#   make           # debug-builds via SwiftPM into ./build/Starter.app
+#   make           # debug-builds via SwiftPM into ./build/SWULabels.app
 #   make run       # build + launch
 #   make check     # compile only, no bundling/signing (agent / CI gate)
 #   make test      # run the SwiftPM test suite
@@ -17,13 +17,13 @@
 # every reference (this Makefile included) in one pass.
 
 CONFIG       := debug
-APP          := build/Starter.app
+APP          := build/SWULabels.app
 LSREGISTER   := /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister
 MIN_MACOS    := 14
 MIN_SWIFT    := 6.0
 
-APP_NAME      := Starter
-ENTITLEMENTS  := Starter/Starter.entitlements
+APP_NAME      := SWULabels
+ENTITLEMENTS  := SWULabels/SWULabels.entitlements
 
 # ---------------------------------------------------------------------------
 # Release variables
@@ -47,16 +47,16 @@ DEV_IDENTITY  ?= -
 # Distribution signing. Developer ID + hardened runtime + notarization.
 # Fill TEAM_ID / CERT_NAME in before the first `make dist`.
 TEAM_ID       ?=
-CERT_NAME     ?= $(if $(TEAM_ID),Developer ID Application: Thomas Ptacek ($(TEAM_ID)),)
+CERT_NAME     ?= $(if $(TEAM_ID),Developer ID Application: Graham Lampa ($(TEAM_ID)),)
 
 # Notarization credentials profile name. Populate once with
 # `make notary-setup` (interactive; never puts the password on the cmdline).
-NOTARY_PROFILE ?= starter-notary
+NOTARY_PROFILE ?= swulabels-notary
 
 PROVISION_PROFILE ?=
 NOTES_FILE       ?=
 
-.PHONY: all deps build check test release run clean install uninstall register help \
+.PHONY: all deps build check test gate release run clean install uninstall register help \
         icon check-version notary-setup sign zip-notary notarize staple zip-release \
         checksum verify-release dist github-release print-version
 
@@ -67,6 +67,7 @@ help:
 	@echo "  make / build      Build $(CONFIG) into ./$(APP)  (default)"
 	@echo "  check             Compile only (swift build) — no bundle/sign; CI/agent gate"
 	@echo "  test              Run the SwiftPM test suite"
+	@echo "  gate              Regenerate reference plans, then run the fidelity gates"
 	@echo "  release           Build release into ./$(APP)"
 	@echo "  run               Build and launch $(APP_NAME)"
 	@echo "  icon              Regenerate build/AppIcon.icns from scripts/make-icon.swift"
@@ -144,6 +145,21 @@ check: deps
 test: deps
 	swift test
 	@echo "✓ tests pass"
+
+# Regenerate the reference sheet plans, then run the full gate.
+#
+# The plan-parity suite compares this port against plans emitted by the
+# TypeScript generator. Those plans are large and deterministic, so they are
+# regenerated rather than committed — which means a fresh checkout runs this
+# target, not a bare `swift test`.
+.PHONY: gate
+gate:
+	@echo "→ regenerating reference plans from the TypeScript generator"
+	cd .. && npx tsx src/index.ts --groups aspect-set,aspect,alphabetical --emit-plan >/dev/null
+	cd .. && npx tsx src/index.ts --groups set,rotation-aspect-set --snapshot v2026-08-14 --emit-plan >/dev/null
+	@echo "→ running the fidelity gates"
+	swift test
+	@echo "✓ gates pass: the Swift port matches the reference generator cell for cell"
 
 print-version:
 	@echo "VERSION=$(VERSION)"
