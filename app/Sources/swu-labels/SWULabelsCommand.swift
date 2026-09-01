@@ -15,7 +15,7 @@ struct SWULabelsCommand: AsyncParsableCommand {
         commandName: "swu-labels",
         abstract: "Generate printable Star Wars Unlimited card labels for Avery 5167 sheets.",
         version: "0.1.0",
-        subcommands: [Generate.self, Plan.self, Snapshots.self, InstallCLI.self],
+        subcommands: [Generate.self, Plan.self, Ingest.self, Snapshots.self, InstallCLI.self],
         defaultSubcommand: Generate.self
     )
 }
@@ -223,5 +223,45 @@ struct InstallCLI: AsyncParsableCommand {
         }
         try fileManager.createSymbolicLink(at: destination, withDestinationURL: source)
         print("Linked \(destination.path) -> \(source.path)")
+    }
+}
+
+/// Fetches the live card list and writes a pinned snapshot.
+struct Ingest: AsyncParsableCommand {
+    static let configuration = CommandConfiguration(
+        commandName: "ingest",
+        abstract: "Fetch every card from the live API and write a pinned snapshot."
+    )
+
+    @Option(
+        name: .customLong("tag"),
+        help: "Pin the snapshot tag instead of deriving it from the data."
+    )
+    var tag: String?
+
+    @Option(
+        name: .customLong("content-root"),
+        help: "Directory holding assets/, data/ and formats.json."
+    )
+    var contentRoot: String?
+
+    func run() async throws {
+        let root = try ContentLocator.resolve(override: contentRoot)
+        let service = IngestService(contentRoot: root)
+
+        // Progress goes to stderr so stdout stays a clean, pipeable summary.
+        let summary = try await service.run(tagOverride: tag) { done, total, fetched in
+            FileHandle.standardError.write(
+                Data("\rpages \(done)/\(total) · \(fetched) cards".utf8)
+            )
+        }
+        FileHandle.standardError.write(Data("\n".utf8))
+
+        print("Wrote \(summary.snapshotURL.path(percentEncoded: false))")
+        print("  tag \(summary.tag)")
+        print("  \(summary.totalCardsFetched) fetched, \(summary.canonicalCards) canonical")
+        for entry in summary.setCounts {
+            print("  \(entry.code.padding(toLength: 6, withPad: " ", startingAt: 0)) \(entry.count)")
+        }
     }
 }
