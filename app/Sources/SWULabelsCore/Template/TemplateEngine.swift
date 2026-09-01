@@ -115,6 +115,12 @@ public enum TemplateEngine {
         },
     ]
 
+    /// Every variable name a template may reference.
+    ///
+    /// Exposed so the interface can list them without reaching into the catalog
+    /// itself, and so adding a variable updates the help text for free.
+    public static var catalogVariableNames: [String] { Array(catalog.keys) }
+
     /// The canonical separator between sibling segments within one dash side.
     static let siblingJoiner = " | "
 

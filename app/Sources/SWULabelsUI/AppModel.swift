@@ -42,8 +42,60 @@ public final class AppModel {
         didSet { if snapshotTag != oldValue { reload() } }
     }
 
-    public var layoutMode: LayoutMode = .aspectSet {
-        didSet { if layoutMode != oldValue { reload() } }
+    /// Which card pool is loaded.
+    ///
+    /// Mapped onto a representative ``LayoutMode`` rather than given its own
+    /// loader, so both pools keep the coverage and magnitude guards the shipped
+    /// pipeline already applies — a pool that silently loaded without them
+    /// could ship an incomplete sheet.
+    public enum PoolKind: String, CaseIterable, Identifiable, Sendable {
+        case premierToday
+        case fullRotation
+
+        public var id: String { rawValue }
+
+        public var displayName: String {
+            switch self {
+            case .premierToday: return "Premier-legal today"
+            case .fullRotation: return "Full rotation history"
+            }
+        }
+
+        public var summary: String {
+            switch self {
+            case .premierToday: return "The six sets currently legal in Premier."
+            case .fullRotation: return "Every set that has ever been Premier-legal, rotated-out ones included."
+            }
+        }
+
+        var representativeMode: LayoutMode {
+            self == .premierToday ? .aspectSet : .rotationAspectSet
+        }
+
+        public var precedence: [String] {
+            representativeMode.precedence
+        }
+    }
+
+    public var poolKind: PoolKind = .fullRotation {
+        didSet {
+            guard poolKind != oldValue else { return }
+            // A pool the current snapshot cannot satisfy would throw on load and
+            // show an error where a working sheet is expected. Moving to a
+            // snapshot that carries the pool's sets is the useful behaviour;
+            // `reload()` follows from the snapshot change, or is called here
+            // when the snapshot already suited both pools.
+            if let better = bestSnapshot(for: poolKind), better != snapshotTag {
+                snapshotTag = better
+            } else {
+                reload()
+            }
+        }
+    }
+
+    /// How sheets are divided and ordered.
+    public var sheetOrder: SheetOrder = .aspectThenSet {  // matches the aspect-set preset
+        didSet { if sheetOrder != oldValue { replan() } }
     }
 
     public var assetsMode: AssetsMode = .color {
@@ -66,6 +118,13 @@ public final class AppModel {
 
     public private(set) var phase: Phase = .idle
     public private(set) var pool: CardPool?
+    /// The grouped, ordered sections behind the current plan.
+    ///
+    /// Kept alongside the plan because the browser lists cards in printed order.
+    /// Recovering that order from the plan would mean matching resolved label
+    /// text back to cards, which is both slower and wrong for two cards sharing
+    /// a title.
+    public private(set) var sections: [LabelSection] = []
     public private(set) var plan: SheetPlan?
     public private(set) var icons: IconStore?
 
@@ -76,12 +135,64 @@ public final class AppModel {
         self.contentRoot = contentRoot
         snapshotTag = ""
         availableSnapshots = Self.discoverSnapshots(in: contentRoot)
-        // Newest tag first: tags are `vYYYY-MM-DD`, so lexicographic order is
-        // chronological order without parsing a date — and without a `Date`,
-        // which the determinism rules keep out of this codebase entirely.
-        snapshotTag = availableSnapshots.sorted().last ?? ""
+        // Prefer the newest snapshot that can actually satisfy the starting
+        // pool. Taking the newest tag unconditionally is what hid SOR, SHD and
+        // TWI: the most recent snapshot carries only the six currently-legal
+        // sets, so the app opened on a pool three sets short with nothing to
+        // say why.
+        snapshotTag = Self.bestSnapshot(
+            for: poolKind, among: availableSnapshots, contentRoot: contentRoot
+        ) ?? availableSnapshots.sorted().last ?? ""
         reloadIcons()
         reload()
+    }
+
+    /// The newest snapshot carrying every set `pool` needs.
+    ///
+    /// Tags are `vYYYY-MM-DD`, so sorting them lexicographically sorts them
+    /// chronologically — no date parsing, and no `Date`, which the determinism
+    /// rules keep out of this codebase entirely.
+    static func bestSnapshot(
+        for pool: PoolKind,
+        among tags: [String],
+        contentRoot: URL
+    ) -> String? {
+        let required: [String] = pool == .fullRotation
+            ? LabelPipeline.requiredRotationSets
+            : SetCatalog.premierPrecedence
+        return tags.sorted().reversed().first { tag in
+            let store = SnapshotStore(
+                root: contentRoot
+                    .appendingPathComponent("data/snapshots", isDirectory: true)
+                    .appendingPathComponent(tag, isDirectory: true)
+            )
+            let available = Set((try? store.availableSetCodes()) ?? [])
+            return required.allSatisfy(available.contains)
+        }
+    }
+
+    func bestSnapshot(for pool: PoolKind) -> String? {
+        Self.bestSnapshot(for: pool, among: availableSnapshots, contentRoot: contentRoot)
+    }
+
+    /// Snapshots that cannot satisfy the current pool, for the sidebar to mark.
+    public func snapshotSupportsCurrentPool(_ tag: String) -> Bool {
+        bestSnapshotCandidates.contains(tag)
+    }
+
+    var bestSnapshotCandidates: Set<String> {
+        let required: [String] = poolKind == .fullRotation
+            ? LabelPipeline.requiredRotationSets
+            : SetCatalog.premierPrecedence
+        return Set(availableSnapshots.filter { tag in
+            let store = SnapshotStore(
+                root: contentRoot
+                    .appendingPathComponent("data/snapshots", isDirectory: true)
+                    .appendingPathComponent(tag, isDirectory: true)
+            )
+            let available = Set((try? store.availableSetCodes()) ?? [])
+            return required.allSatisfy(available.contains)
+        })
     }
 
     // MARK: - Loading
@@ -121,7 +232,7 @@ public final class AppModel {
         }
         phase = .loading
         let store = snapshotStore
-        let mode = layoutMode
+        let mode = poolKind.representativeMode
         let config = config
 
         Task { [weak self] in
@@ -158,12 +269,15 @@ public final class AppModel {
         guard let pool else { return }
         do {
             let cards = try pool.filtered(toSets: selectedSets.isEmpty ? nil : Array(selectedSets))
-            let pipeline = LabelPipeline(store: snapshotStore, config: config)
-            let sections = try pipeline.sections(for: layoutMode, cards: cards)
+            let sections = try Transform.layout(
+                cards, order: sheetOrder, precedence: poolKind.precedence
+            )
+            self.sections = sections
             plan = try SheetPlanner.plan(sections: sections, config: config)
             phase = .ready
             if previewCard == nil { previewCard = cards.first }
         } catch {
+            sections = []
             plan = nil
             phase = .failed(Self.describe(error))
         }
@@ -232,5 +346,21 @@ public final class AppModel {
         var template = config.template
         template.move(fromOffsets: offsets, toOffset: destination)
         config.template = template
+    }
+
+    // MARK: - Order presets
+
+    /// Applies a shipped layout, setting both the pool and the ordering.
+    public func apply(preset mode: LayoutMode) {
+        poolKind = mode.usesRotationPool ? .fullRotation : .premierToday
+        sheetOrder = SheetOrder.preset(for: mode)
+    }
+
+    /// The shipped layout the current order matches, or nil when it is custom.
+    public var matchingPreset: LayoutMode? {
+        LayoutMode.allCases.first { mode in
+            SheetOrder.preset(for: mode) == sheetOrder
+                && (mode.usesRotationPool ? PoolKind.fullRotation : .premierToday) == poolKind
+        }
     }
 }
