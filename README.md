@@ -77,7 +77,9 @@ Every exported schema/function/const/type in `src/` carries co-located TSDoc (`@
 `src/index.ts` loads two independent card pools per run, each its own parse/dedupe pass (`loadCardPool` in `src/index.ts`):
 
 - **Premier-legal-today pool** (feeds `aspect-set`, `aspect`, `alphabetical`): `formats.premier.sets ∩ files present`, `PREMIER_FILE_SET_PRECEDENCE` (`JTL, LOF, SEC, LAW, ASH, IBH`) filtered to codes that actually have a file on disk. `assertPremierSetCoverage` (in `src/transform.ts`, unchanged from the migrated original) checks that every Premier-legal set code lacking a per-set file is a known promo/dedupe code (`JTLP`, `LOFP`, `SECP`, `LAWP`, `ASHP`, `G25`, `P25`, `P26`).
-- **Full-rotation-history pool** (feeds `set` only): `ROTATION_FILE_SET_PRECEDENCE` (`SOR, SHD, TWI, JTL, LOF, SEC, LAW, ASH, IBH`) filtered the same way. A fresh `npm run ingest` writes a file for every expansion the API returns (including the rotated-out `SOR`/`SHD`/`TWI`), so a fresh ingest's snapshot has both pools' files; the pinned `v2026-08-23` migration-proof snapshot only ever had the six current-premier files, so `set` targets the pinned `v2026-08-14` snapshot instead (see [Label sheet layouts](#label-sheet-layouts)).
+- **Full-rotation-history pool** (feeds `set` and `rotation-aspect-set` — `ROTATION_POOL_MODES` in `src/index.ts`): `ROTATION_FILE_SET_PRECEDENCE` (`SOR, SHD, TWI, JTL, LOF, SEC, LAW, ASH, IBH`) filtered the same way. A fresh `npm run ingest` writes a file for every expansion the API returns (including the rotated-out `SOR`/`SHD`/`TWI`), so a fresh ingest's snapshot has both pools' files; the pinned `v2026-08-23` migration-proof snapshot only ever had the six current-premier files, so `set` and `rotation-aspect-set` target the pinned `v2026-08-14` snapshot instead (see [Label sheet layouts](#label-sheet-layouts)).
+
+Either pool can be further restricted to a handful of set codes with `--sets` — see [Label sheet layouts](#label-sheet-layouts).
 
 ## Template-driven label layout
 
