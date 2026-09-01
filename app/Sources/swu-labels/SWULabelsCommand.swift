@@ -15,7 +15,10 @@ struct SWULabelsCommand: AsyncParsableCommand {
         commandName: "swu-labels",
         abstract: "Generate printable Star Wars Unlimited card labels for Avery 5167 sheets.",
         version: "0.1.0",
-        subcommands: [Generate.self, Plan.self, Ingest.self, Snapshots.self, InstallCLI.self],
+        subcommands: [
+            Generate.self, Plan.self, Ingest.self,
+            AlignmentTest.self, Snapshots.self, InstallCLI.self,
+        ],
         defaultSubcommand: Generate.self
     )
 }
@@ -263,5 +266,33 @@ struct Ingest: AsyncParsableCommand {
         for entry in summary.setCounts {
             print("  \(entry.code.padding(toLength: 6, withPad: " ", startingAt: 0)) \(entry.count)")
         }
+    }
+}
+
+/// Emits the registration sheet used to verify a printer before a real run.
+struct AlignmentTest: AsyncParsableCommand {
+    static let configuration = CommandConfiguration(
+        commandName: "alignment-sheet",
+        abstract: "Write a registration sheet to check printer scale and alignment."
+    )
+
+    @Option(name: .customLong("out"), help: "Output directory. Defaults to ./reports.")
+    var outputDirectory: String?
+
+    @Option(name: .customLong("content-root"), help: "Directory holding assets/ and data/.")
+    var contentRoot: String?
+
+    func run() async throws {
+        let reports: URL = if let outputDirectory {
+            URL(fileURLWithPath: outputDirectory)
+        } else {
+            try ContentLocator.resolve(override: contentRoot).appending(path: "reports")
+        }
+        try FileManager.default.createDirectory(at: reports, withIntermediateDirectories: true)
+
+        let url = reports.appending(path: "avery5167-alignment-sheet.pdf")
+        try AlignmentSheet.renderPDF().write(to: url)
+        print("Wrote \(url.path(percentEncoded: false))")
+        print("  Print at 100% on plain paper, then hold it to a light against a blank sheet.")
     }
 }

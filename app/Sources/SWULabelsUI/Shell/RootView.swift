@@ -58,6 +58,24 @@ public struct RootView: View {
                 .keyboardShortcut("p")
                 .disabled(model.renderer == nil)
                 .help("Print the current sheet at 100% scale")
+
+            Menu("More print options", systemImage: "ellipsis.circle") {
+                Button("Print Registration Sheet\u{2026}", action: printAlignmentSheet)
+                    .keyboardShortcut("p", modifiers: [.command, .shift])
+            }
+            .menuIndicator(.hidden)
+            .help("Check a printer's scale and alignment before using label stock")
+        }
+    }
+
+    /// Prints the registration sheet, so a printer can be checked on plain
+    /// paper rather than on a sheet of label stock.
+    private func printAlignmentSheet() {
+        do {
+            try PrintService.shared.printAlignmentSheet()
+        } catch {
+            printFailure = error.localizedDescription
+            isShowingPrintFailure = true
         }
     }
 

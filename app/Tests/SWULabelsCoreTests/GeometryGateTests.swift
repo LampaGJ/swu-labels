@@ -171,6 +171,34 @@ struct GeometryGate {
     }
 
     /// The card title from a cell's first paragraph.
+    @Test
+    func `the alignment sheet marks the same grid the labels print on`() throws {
+        // A registration sheet is only useful if it registers the *same* grid.
+        // One drawn against its own slightly different geometry would certify a
+        // printer as correct and still misalign every label, which is worse than
+        // having no registration sheet at all.
+        for row in 0..<Sheet.rows {
+            for column in 0..<Sheet.columns {
+                let marks = AlignmentSheet.cellFrame(row: row, column: column)
+                let expected = Sheet.cell(row: row, column: column)
+                #expect(abs(marks.minX - expected.minX) < Self.tolerance, "row \(row) column \(column) x")
+                #expect(abs(marks.minY - expected.minY) < Self.tolerance, "row \(row) column \(column) y")
+                #expect(abs(marks.width - expected.width) < Self.tolerance, "row \(row) column \(column) width")
+                #expect(abs(marks.height - expected.height) < Self.tolerance, "row \(row) column \(column) height")
+            }
+        }
+    }
+
+    @Test
+    func `the alignment sheet is one US Letter page`() throws {
+        let data = try AlignmentSheet.renderPDF()
+        let document = try #require(PDFDocument(data: data))
+        #expect(document.pageCount == 1)
+        let box = try #require(document.page(at: 0)).bounds(for: .mediaBox)
+        #expect(abs(box.width - Sheet.pageWidth) < Self.tolerance)
+        #expect(abs(box.height - Sheet.pageHeight) < Self.tolerance)
+    }
+
     static func titleText(of cell: PlanCell) -> String? {
         guard let paragraph = cell.paragraphs.first(where: { $0.style == "cardTitle" }) else {
             return nil

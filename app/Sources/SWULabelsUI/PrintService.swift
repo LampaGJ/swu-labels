@@ -1,4 +1,6 @@
+import CoreGraphics
 import Foundation
+import SWULabelsCore
 import SWULabelsRender
 
 #if os(macOS)
@@ -41,6 +43,21 @@ public struct PrintService: Sendable {
     public func print(renderer: SheetRenderer, jobName: String) throws {
         let data = try renderer.renderPDF()
         try present(pdf: data, jobName: jobName, pageSize: renderer.pageSize)
+    }
+
+    /// Prints the registration sheet used to verify a printer before a real run.
+    ///
+    /// Goes through the same unscaled path as a label sheet on purpose: a
+    /// registration sheet printed under different settings would certify
+    /// settings nobody is going to use.
+    @MainActor
+    public func printAlignmentSheet() throws {
+        let data = try AlignmentSheet.renderPDF()
+        let pageSize = CGSize(
+            width: Avery5167.points(fromTwips: Avery5167.pageWidthTwips),
+            height: Avery5167.points(fromTwips: Avery5167.pageHeightTwips)
+        )
+        try present(pdf: data, jobName: "Avery 5167 registration sheet", pageSize: pageSize)
     }
 
     #if os(macOS)
