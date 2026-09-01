@@ -4,6 +4,12 @@
 
 **TL;DR:** `npm install`, then `npm run ingest` (pulls the live card list), `npm run generate` (builds the default DOCX from the newest ingest), `npm run open` (opens the newest DOCX). Print at 100% scale, no "fit to page." Print one test sheet before committing a full run. Want every layout at once? `npm run generate:all`.
 
+## Native macOS app
+
+There is also a native app and command-line tool under [`app/`](app/README.md), sharing one Swift core. `cd app && make run` builds and launches `SWULabels.app`; the bundle carries the `swu-labels` CLI inside it at `Contents/MacOS/swu-labels`.
+
+The app adds a live label preview that draws through the real renderer, a drag-to-reorder editor for how sheets are grouped and sorted, native 1:1 printing, and a printer registration sheet. It is proven to put the same content in the same label cell as this TypeScript generator — run `cd app && make gate` to check that yourself. The TypeScript pipeline remains the reference implementation and half of that gate; nothing here has been deleted or rewritten for the port.
+
 ## Quick start
 
 - `npm install` — installs dependencies.
