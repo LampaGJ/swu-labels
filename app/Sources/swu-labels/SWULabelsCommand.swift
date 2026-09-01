@@ -46,6 +46,15 @@ struct ContentOptions: ParsableArguments {
     )
     var sets: String?
 
+    @Flag(
+        inversion: .prefixedNo,
+        help: """
+        Print a divider label before each run, naming the set. \
+        Defaults to the layout's own setting: on for --groups set, off elsewhere.
+        """
+    )
+    var dividers: Bool?
+
     @Option(
         name: .customLong("content-root"),
         help: "Directory holding assets/ and data/. Resolved automatically when omitted."
@@ -111,7 +120,7 @@ struct Generate: AsyncParsableCommand {
                     .appendingPathComponent(content.snapshot, isDirectory: true)
             )
             let plan = try LabelPipeline(store: store)
-                .plan(mode: mode, setsFilter: content.setsFilter)
+                .plan(mode: mode, setsFilter: content.setsFilter, dividers: content.dividers)
             let renderer = SheetRenderer(plan: plan, icons: icons)
             let pdf = try renderer.renderPDF()
 
@@ -155,7 +164,7 @@ struct Plan: AsyncParsableCommand {
                     .appendingPathComponent(content.snapshot, isDirectory: true)
             )
             let plan = try LabelPipeline(store: store)
-                .plan(mode: mode, setsFilter: content.setsFilter)
+                .plan(mode: mode, setsFilter: content.setsFilter, dividers: content.dividers)
             let name = LabelPipeline.outputBasename(
                 snapshotTag: content.snapshot,
                 mode: mode,

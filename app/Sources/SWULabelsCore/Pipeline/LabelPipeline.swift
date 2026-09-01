@@ -84,10 +84,32 @@ public struct LabelPipeline: Sendable {
     }
 
     /// The whole path: load, filter, group, verify accounting, plan.
-    public func plan(mode: LayoutMode, setsFilter: [String]? = nil) throws -> SheetPlan {
+    ///
+    /// - Parameter dividers: when non-nil, overrides whether the layout prints
+    ///   divider labels, and routes grouping through the general sort engine to
+    ///   apply it. Left nil, the shipped fixed layout functions run untouched —
+    ///   which is deliberate, because those are what the plan-parity gate
+    ///   compares against the reference generator.
+    public func plan(
+        mode: LayoutMode,
+        setsFilter: [String]? = nil,
+        dividers: Bool? = nil
+    ) throws -> SheetPlan {
         let pool = try loadPool(for: mode)
         let cards = try pool.filtered(toSets: setsFilter)
-        let sections = try sections(for: mode, cards: cards)
+        let sections = if let dividers {
+            try Transform.layout(
+                cards,
+                order: {
+                    var order = SheetOrder.preset(for: mode)
+                    order.showsDividers = dividers
+                    return order
+                }(),
+                precedence: mode.precedence
+            )
+        } else {
+            try sections(for: mode, cards: cards)
+        }
 
         // Every card the pool handed over must appear exactly once on the sheet.
         // A grouping that quietly drops one produces a plausible-looking sheet
