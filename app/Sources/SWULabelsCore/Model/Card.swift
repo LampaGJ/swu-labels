@@ -12,7 +12,7 @@ import Foundation
 /// upstream. The synthesized decoder collapses "key absent" and "key present but
 /// null" to the same `nil`, which is what the TypeScript
 /// `.nullable().optional()` chain does.
-public struct Card: Codable, Hashable, Sendable {
+public struct Card: Codable, Hashable, Sendable, Identifiable {
     public var title: String
     public var subtitle: String?
     public var cost: Int?
@@ -72,5 +72,15 @@ public struct Card: Codable, Hashable, Sendable {
     /// The sheet section this card belongs to in the aspect-grouped layouts.
     public var aspectGroup: AspectGroup {
         AspectGroup(firstAspect: aspects.first)
+    }
+
+    /// A stable identity for list selection.
+    ///
+    /// Computed, never stored, so it is absent from the encoded form and the
+    /// fidelity gate's JSON comparison is unaffected. Title, subtitle and set
+    /// together identify one printing: the first two alone collide across a
+    /// reprint, which would make two rows of the browser share an identity.
+    public var id: String {
+        "\(title)|\(subtitle ?? "")|\(expansionCode)"
     }
 }

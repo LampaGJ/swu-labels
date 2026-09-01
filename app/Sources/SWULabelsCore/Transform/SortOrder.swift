@@ -79,6 +79,10 @@ public struct SortCriterion: Codable, Equatable, Sendable, Identifiable {
         public var symbolName: String {
             self == .ascending ? "arrow.up" : "arrow.down"
         }
+
+        public var opposite: Direction {
+            self == .ascending ? .descending : .ascending
+        }
     }
 
     public var key: SortKey
