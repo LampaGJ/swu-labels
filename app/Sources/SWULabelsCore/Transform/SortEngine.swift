@@ -71,11 +71,13 @@ extension Transform {
 
         func flush() {
             guard let runValue, !run.isEmpty else { return }
-            slots.append(.divider(DividerLines(
-                setCode: key,
-                fullName: SetCatalog.fullNames[key] ?? key,
-                breakdown: "(\(runValue)) \(run.count)/\(cards.count) cards"
-            )))
+            slots.append(dividerLines(
+                sectionKey: key,
+                dividerKey: dividerKey,
+                runValue: runValue,
+                run: run,
+                sectionTotal: cards.count
+            ))
             slots.append(contentsOf: run.map(LabelSlot.card))
         }
 
@@ -90,6 +92,48 @@ extension Transform {
         }
         flush()
         return LabelSection(key: key, slots: slots)
+    }
+
+    /// Builds one divider label.
+    ///
+    /// **The divider leads with the set whenever it can.** A divider exists so
+    /// someone holding printed sheets can see where one group ends and the next
+    /// begins, and in a card binder the set is what identifies a sheet. That
+    /// holds in both directions: in the by-set layout the set is the section, and
+    /// in an aspect-then-set layout the set is the run *inside* the section — but
+    /// it is the headline either way.
+    ///
+    /// The set is read from the run's own cards rather than from the section key,
+    /// which is what makes one rule cover both cases. When a run genuinely spans
+    /// several sets — grouping by rarity and ordering by cost, say — there is no
+    /// single set to name, so the label falls back to leading with the section.
+    static func dividerLines(
+        sectionKey: String,
+        dividerKey: SortKey,
+        runValue: String,
+        run: [Card],
+        sectionTotal: Int
+    ) -> LabelSlot {
+        let counts = "\(run.count)/\(sectionTotal) cards"
+        let setsInRun = Set(run.map(\.expansionCode))
+
+        guard setsInRun.count == 1, let setCode = setsInRun.first else {
+            // No single set to name. Lead with the section and describe the run.
+            return .divider(DividerLines(
+                setCode: sectionKey,
+                fullName: SetCatalog.fullNames[sectionKey] ?? sectionKey,
+                breakdown: "(\(runValue)) \(counts)"
+            ))
+        }
+
+        // The breakdown names whichever characteristic is *not* the set, so the
+        // two lines never repeat each other.
+        let qualifier = dividerKey == .set ? sectionKey : runValue
+        return .divider(DividerLines(
+            setCode: setCode,
+            fullName: SetCatalog.fullNames[setCode] ?? setCode,
+            breakdown: "(\(qualifier)) \(counts)"
+        ))
     }
 
     /// The section label a card falls under.
