@@ -18,26 +18,70 @@ import { AVERY_5167_GEOMETRY } from './transform.ts'
  */
 export const SHEET_PLAN_SCHEMA_VERSION = 1
 
-/** One resolved run, exactly as {@link resolveLine} produced it. */
+/**
+ * @displayName Plan Run
+ * @strategicPurpose One resolved run inside a label paragraph — the smallest unit
+ *   the fidelity gate compares. Aliasing {@link TemplateRunSpec} rather than
+ *   redeclaring it means the plan cannot describe a run the renderer could not
+ *   build, which is what keeps the comparison honest.
+ * @tacticalObjective Alias of TemplateRunSpec; `{kind:'text', text, style?, size?}`
+ *   or `{kind:'image'}`. Undefined properties are dropped by JSON.stringify,
+ *   matching the Swift port's `encodeIfPresent`.
+ */
 export type PlanRun = TemplateRunSpec
 
-/** One paragraph inside a label cell. */
+/**
+ * @displayName Plan Paragraph
+ * @strategicPurpose One line of a label, carrying the docx paragraph style id it
+ *   renders under. A line whose variables all collapsed empty is absent rather
+ *   than present-and-empty, which is how a subtitle-less card loses its subtitle
+ *   line — so the count of paragraphs is itself meaningful to the gate.
+ * @tacticalObjective `{style, runs}`; produced by {@link buildPlanCell}.
+ */
 export type PlanParagraph = { style: string; runs: PlanRun[] }
 
-/** One label cell's resolved content. */
+/**
+ * @displayName Plan Cell
+ * @strategicPurpose One position in the 4-column label grid, resolved to exactly
+ *   what prints there. `empty` is a real case rather than an omission, so a
+ *   short final row still states which positions are blank instead of leaving
+ *   the gate to infer it from an array length.
+ * @tacticalObjective `{kind, rarity?, paragraphs}`; `rarity` is present only on
+ *   card cells and tells the renderer which icon an image run draws.
+ */
 export type PlanCell = {
 	kind: 'card' | 'divider' | 'empty'
 	rarity?: Card['rarity']
 	paragraphs: PlanParagraph[]
 }
 
-/** One grid row: always exactly one cell per label column. */
+/**
+ * @displayName Plan Row
+ * @strategicPurpose One row of the label grid, always full width. Padding short
+ *   rows with empty cells here rather than at draw time keeps cell assignment
+ *   inside the artifact the gate compares.
+ * @tacticalObjective `{cells}`, with one entry per label column (four on Avery 5167).
+ */
 export type PlanRow = { cells: PlanCell[] }
 
-/** One printed section. Every section starts a fresh sheet. */
+/**
+ * @displayName Plan Section
+ * @strategicPurpose One printed section, which always begins a fresh sheet. That
+ *   is what lets a finished stack be split by aspect or set without cutting a
+ *   page, so the section boundary is load-bearing rather than cosmetic.
+ * @tacticalObjective `{key, rows}`; `key` is the grouping value the section was
+ *   cut on, opaque to the renderer.
+ */
 export type PlanSection = { key: string; rows: PlanRow[] }
 
-/** The sheet geometry a plan was laid out against. */
+/**
+ * @displayName Plan Geometry
+ * @strategicPurpose The sheet dimensions a plan was laid out against, carried in
+ *   the plan itself so it is self-describing. A geometry change then shows up as
+ *   a plan diff rather than as a silently misaligned reprint.
+ * @tacticalObjective Flat twips-suffixed projection of AVERY_5167_GEOMETRY,
+ *   matching the Swift `PlanGeometry` field for field.
+ */
 export type PlanGeometry = {
 	pageWidthTwips: number
 	pageHeightTwips: number

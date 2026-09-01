@@ -118,6 +118,14 @@
 		},
 		{
 			"file": "src/index.ts",
+			"exportName": "parseEmitPlanArg",
+			"displayName": "Parse Emit-Plan CLI Arg",
+			"strategicPurpose": "The Swift port's fidelity gate needs this generator's own\nanswer to \"what goes in every cell\", captured before docx serialization.\nEmitting it is opt-in so no existing invocation changes behavior or output:\nwithout the flag, every byte this generator writes is what it always wrote.",
+			"tacticalObjective": "True when `--emit-plan` appears in argv. A run with the\nflag writes an additional `<basename>.plan.json` beside the DOCX.",
+			"kind": "function"
+		},
+		{
+			"file": "src/index.ts",
 			"exportName": "parseGroupsArg",
 			"displayName": "Parse Groups CLI Arg",
 			"strategicPurpose": "`npm run generate -- --groups set,aspect` must select which of\nthe five (or all five, including the legacy combined layout) sheet layouts to\nemit in one run, without a code change.",
@@ -202,6 +210,86 @@
 			"displayName": "Sort Cards Stably",
 			"strategicPurpose": "Per-set files must be byte-identical across runs when the\nupstream data is unchanged, regardless of the order pages happened to arrive\nin under concurrent fetch. Fixed sort key eliminates fetch-order as a source of\nnondeterminism.",
 			"tacticalObjective": "Primary key: card number ascending (absent card numbers sort\nlast via `Number.POSITIVE_INFINITY`). Ties break on raw title, then raw\nsubtitle, both compared by codepoint (`<`/`>`) — never `.localeCompare()`.",
+			"kind": "function"
+		},
+		{
+			"file": "src/plan.ts",
+			"exportName": "PlanCell",
+			"displayName": "Plan Cell",
+			"strategicPurpose": "One position in the 4-column label grid, resolved to exactly\nwhat prints there. `empty` is a real case rather than an omission, so a\nshort final row still states which positions are blank instead of leaving\nthe gate to infer it from an array length.",
+			"tacticalObjective": "`{kind, rarity?, paragraphs}`; `rarity` is present only on\ncard cells and tells the renderer which icon an image run draws.",
+			"kind": "type"
+		},
+		{
+			"file": "src/plan.ts",
+			"exportName": "PlanGeometry",
+			"displayName": "Plan Geometry",
+			"strategicPurpose": "The sheet dimensions a plan was laid out against, carried in\nthe plan itself so it is self-describing. A geometry change then shows up as\na plan diff rather than as a silently misaligned reprint.",
+			"tacticalObjective": "Flat twips-suffixed projection of AVERY_5167_GEOMETRY,\nmatching the Swift `PlanGeometry` field for field.",
+			"kind": "type"
+		},
+		{
+			"file": "src/plan.ts",
+			"exportName": "PlanParagraph",
+			"displayName": "Plan Paragraph",
+			"strategicPurpose": "One line of a label, carrying the docx paragraph style id it\nrenders under. A line whose variables all collapsed empty is absent rather\nthan present-and-empty, which is how a subtitle-less card loses its subtitle\nline — so the count of paragraphs is itself meaningful to the gate.",
+			"tacticalObjective": "`{style, runs}`; produced by {@link buildPlanCell}.",
+			"kind": "type"
+		},
+		{
+			"file": "src/plan.ts",
+			"exportName": "PlanRow",
+			"displayName": "Plan Row",
+			"strategicPurpose": "One row of the label grid, always full width. Padding short\nrows with empty cells here rather than at draw time keeps cell assignment\ninside the artifact the gate compares.",
+			"tacticalObjective": "`{cells}`, with one entry per label column (four on Avery 5167).",
+			"kind": "type"
+		},
+		{
+			"file": "src/plan.ts",
+			"exportName": "PlanRun",
+			"displayName": "Plan Run",
+			"strategicPurpose": "One resolved run inside a label paragraph — the smallest unit\nthe fidelity gate compares. Aliasing {@link TemplateRunSpec} rather than\nredeclaring it means the plan cannot describe a run the renderer could not\nbuild, which is what keeps the comparison honest.",
+			"tacticalObjective": "Alias of TemplateRunSpec; `{kind:'text', text, style?, size?}`\nor `{kind:'image'}`. Undefined properties are dropped by JSON.stringify,\nmatching the Swift port's `encodeIfPresent`.",
+			"kind": "type"
+		},
+		{
+			"file": "src/plan.ts",
+			"exportName": "PlanSection",
+			"displayName": "Plan Section",
+			"strategicPurpose": "One printed section, which always begins a fresh sheet. That\nis what lets a finished stack be split by aspect or set without cutting a\npage, so the section boundary is load-bearing rather than cosmetic.",
+			"tacticalObjective": "`{key, rows}`; `key` is the grouping value the section was\ncut on, opaque to the renderer.",
+			"kind": "type"
+		},
+		{
+			"file": "src/plan.ts",
+			"exportName": "SHEET_PLAN_SCHEMA_VERSION",
+			"displayName": "Sheet Plan Schema Version",
+			"strategicPurpose": "A plan compared against a plan emitted by a different shape\nwould produce a meaningless diff or, worse, a false match. Bumping this\nmakes a shape change a loud failure at compare time rather than a quiet one.",
+			"tacticalObjective": "Must equal `SheetPlan.currentSchemaVersion` in the Swift\nport (app/Sources/SWULabelsCore/Plan/SheetPlan.swift).",
+			"kind": "const"
+		},
+		{
+			"file": "src/plan.ts",
+			"exportName": "SheetPlan",
+			"displayName": "Sheet Plan",
+			"strategicPurpose": "The fidelity-gate artifact. This is what goes in every cell\nof the sheet, captured immediately before render.ts turns it into docx\nobjects — the last point at which the two implementations can be compared\nwithout one of them having to reproduce the other's serialization format.\nThe Swift port emits the identical document, so structural equality of the\ntwo plans proves the port puts the same content in the same cell as the\nDOCX that was validated on paper.",
+			"tacticalObjective": "Produced by {@link buildSheetPlan}; consumed by the Swift\nparity test (app/Tests/SWULabelsCoreTests/PlanParityTests.swift).",
+			"kind": "type"
+		},
+		{
+			"file": "src/plan.ts",
+			"exportName": "buildSheetPlan",
+			"displayName": "Build Sheet Plan",
+			"strategicPurpose": "Emits the fidelity-gate artifact from exactly the inputs\nrender.ts receives, so the plan and the DOCX cannot disagree about what a\ncell contains.",
+			"tacticalObjective": "Chunks each section's slots into rows of\n{@link COLUMNS_PER_ROW}, padding the final row with empty cells, and\nresolves every cell through the once-parsed template.",
+			"kind": "function"
+		},
+		{
+			"file": "src/plan.ts",
+			"exportName": "canonicalJSONStringify",
+			"displayName": "Canonical JSON Stringify",
+			"strategicPurpose": "The gate compares two documents produced by two languages.\nKey insertion order is an implementation detail of whichever engine built\nthe object, so it must not be able to fail a comparison. Sorting every\nobject's keys removes that variable entirely.",
+			"tacticalObjective": "Recursively sorts object keys, then stringifies with\ntwo-space indentation. Arrays keep their order — theirs is meaningful.\n`undefined` properties are dropped by JSON.stringify, matching Swift's\n`encodeIfPresent`.",
 			"kind": "function"
 		},
 		{
@@ -460,7 +548,7 @@
 			"exportName": "ROTATION_FILE_SET_PRECEDENCE",
 			"displayName": "Rotation Per-Set File Precedence",
 			"strategicPurpose": "The 'by set' label layout means \"every set that has ever been\npart of Premier rotation\" (SOR/SHD/TWI included, even though they have since\nrotated out), not just the six currently-legal sets {@link PREMIER_FILE_SET_PRECEDENCE}covers — a card originally released in a rotated-out set and later reprinted to\nsurvive rotation (e.g. into JTL) should land under its *original* set on this\nlayout, which is exactly what dedupe's keep-first-in-precedence-order rule gives\nfor free once the original set is earlier in this list than the reprint's set.",
-			"tacticalObjective": "Full chronological release order: SOR, SHD, TWI, JTL, LOF, SEC,\nLAW, ASH, IBH. Passed as the `setPrecedence` override to {@link groupBySet} and\n{@link groupBySetWithDividers} (and as the caller's own dedupe precedence) —\nnever consulted by {@link orderCardsWithinAspectBySet}/{@link groupByAspectThenSet},\nwhich stay scoped to the six currently-legal sets.",
+			"tacticalObjective": "Full chronological release order: SOR, SHD, TWI, JTL, LOF, SEC,\nLAW, ASH, IBH, HMW. HMW (Homeworlds) is previewing officially but is not yet\nin formats.json's premier.sets, so it appears in this rotation pool only —\nPREMIER_FILE_SET_PRECEDENCE stays unchanged until the set is actually legal\nand a snapshot carries its file, because assertPremierSetCoverage requires\nthe premier list and the files on disk to match exactly. Passed as the `setPrecedence` override to {@link groupBySet} and\n{@link groupBySetWithDividers} (and as the caller's own dedupe precedence) —\nnever consulted by {@link orderCardsWithinAspectBySet}/{@link groupByAspectThenSet},\nwhich stay scoped to the six currently-legal sets.",
 			"kind": "const"
 		},
 		{
@@ -617,8 +705,8 @@
 		}
 	],
 	"coverage": {
-		"annotatedExports": 73,
-		"totalExports": 73,
+		"annotatedExports": 84,
+		"totalExports": 84,
 		"coveragePct": 100,
 		"gaps": []
 	}

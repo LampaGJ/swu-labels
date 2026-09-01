@@ -44,7 +44,11 @@ export const PREMIER_FILE_SET_PRECEDENCE = ['JTL', 'LOF', 'SEC', 'LAW', 'ASH', '
  *   layout, which is exactly what dedupe's keep-first-in-precedence-order rule gives
  *   for free once the original set is earlier in this list than the reprint's set.
  * @tacticalObjective Full chronological release order: SOR, SHD, TWI, JTL, LOF, SEC,
- *   LAW, ASH, IBH. Passed as the `setPrecedence` override to {@link groupBySet} and
+ *   LAW, ASH, IBH, HMW. HMW (Homeworlds) is previewing officially but is not yet
+ *   in formats.json's premier.sets, so it appears in this rotation pool only —
+ *   PREMIER_FILE_SET_PRECEDENCE stays unchanged until the set is actually legal
+ *   and a snapshot carries its file, because assertPremierSetCoverage requires
+ *   the premier list and the files on disk to match exactly. Passed as the `setPrecedence` override to {@link groupBySet} and
  *   {@link groupBySetWithDividers} (and as the caller's own dedupe precedence) —
  *   never consulted by {@link orderCardsWithinAspectBySet}/{@link groupByAspectThenSet},
  *   which stay scoped to the six currently-legal sets.
@@ -59,6 +63,7 @@ export const ROTATION_FILE_SET_PRECEDENCE = [
 	'LAW',
 	'ASH',
 	'IBH',
+	'HMW',
 ] as const
 
 /**
@@ -619,6 +624,7 @@ export const PREMIER_SET_FULL_NAMES: Record<string, string> = {
 	LAW: 'A Lawless Time',
 	ASH: 'Ashes of the Empire',
 	IBH: 'Intro Battle: Hoth',
+	HMW: 'Homeworlds',
 }
 
 /**

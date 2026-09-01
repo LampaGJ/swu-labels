@@ -17,8 +17,15 @@ public enum SetCatalog {
     /// and because a card first printed in a rotated-out set and later reprinted
     /// to survive rotation should file under its *original* set — which the
     /// keep-first dedupe gives for free once the original precedes the reprint.
+    /// HMW (Homeworlds) is previewing officially but is absent from
+    /// `formats.json`'s premier set list, so it lives here and not in
+    /// ``premierPrecedence``. Moving it across needs two things: the upstream
+    /// manifest declaring it legal, and a snapshot carrying its per-set file —
+    /// ``Transform/assertPremierSetCoverage(premierSets:availableSetCodes:)``
+    /// requires the premier list and the files on disk to match exactly, so
+    /// adding it early would make every premier-pool run throw.
     public static let rotationPrecedence: [String] = [
-        "SOR", "SHD", "TWI", "JTL", "LOF", "SEC", "LAW", "ASH", "IBH",
+        "SOR", "SHD", "TWI", "JTL", "LOF", "SEC", "LAW", "ASH", "IBH", "HMW",
     ]
 
     /// Premier-legal codes that legitimately carry no standalone per-set file.
@@ -45,5 +52,6 @@ public enum SetCatalog {
         "LAW": "A Lawless Time",
         "ASH": "Ashes of the Empire",
         "IBH": "Intro Battle: Hoth",
+        "HMW": "Homeworlds",
     ]
 }
