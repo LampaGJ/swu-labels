@@ -290,7 +290,11 @@ async function main(): Promise<void> {
 	console.log(`Fetched ${allApiCards.length} cards`)
 
 	const canonical = allApiCards.filter(isCanonicalPrinting)
-	console.log(`Canonical (variantOf and reprintOf both null): ${canonical.length}`)
+	// The message states the rule the code actually applies. It previously said
+	// "variantOf and reprintOf both null", which is the narrower rule this
+	// pipeline deliberately does NOT use (see isCanonicalPrinting) — a reader
+	// checking the behaviour against the log would have been misled.
+	console.log(`Canonical (variantOf null; reprints kept): ${canonical.length}`)
 
 	const mapped = canonical.map(mapApiCardToSnapshotCard)
 	const tag = tagOverride ?? deriveTagFromUpdatedAt(mapped.map((m) => m.updatedAt))
