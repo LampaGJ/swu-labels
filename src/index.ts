@@ -9,6 +9,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { Packer } from 'docx'
 import { DEFAULT_CONFIG } from './config.ts'
+import { buildSheetPlan, canonicalJSONStringify } from './plan.ts'
 import { buildDocument, loadRarityAssets } from './render.ts'
 import { CardArraySchema, FormatsManifestSchema } from './schema.ts'
 import type { Card } from './schema.ts'
@@ -114,6 +115,19 @@ export function parseSetsArg(argv: readonly string[]): string[] | null {
 		return null
 	}
 	return (argv[flagIndex + 1] as string).split(',').map((s) => s.trim())
+}
+
+/**
+ * @displayName Parse Emit-Plan CLI Arg
+ * @strategicPurpose The Swift port's fidelity gate needs this generator's own
+ *   answer to "what goes in every cell", captured before docx serialization.
+ *   Emitting it is opt-in so no existing invocation changes behavior or output:
+ *   without the flag, every byte this generator writes is what it always wrote.
+ * @tacticalObjective True when `--emit-plan` appears in argv. A run with the
+ *   flag writes an additional `<basename>.plan.json` beside the DOCX.
+ */
+export function parseEmitPlanArg(argv: readonly string[]): boolean {
+	return argv.includes('--emit-plan')
 }
 
 /**
@@ -285,6 +299,7 @@ async function main(): Promise<void> {
 	const groupModes = parseGroupsArg(process.argv.slice(2))
 	const assetsMode = parseAssetsArg(process.argv.slice(2))
 	const setsFilter = parseSetsArg(process.argv.slice(2))
+	const emitPlan = parseEmitPlanArg(process.argv.slice(2))
 	const DATA_DIR = join(REPO_ROOT, 'data', 'snapshots', snapshotTag)
 	const ASSETS_DIR = join(REPO_ROOT, 'assets', ASSETS_DIR_NAME[assetsMode])
 
@@ -381,6 +396,17 @@ async function main(): Promise<void> {
 			'reports',
 			`premier-labels-avery5167-${snapshotTag}${suffix}.replay.json`,
 		)
+
+		if (emitPlan) {
+			const OUT_PLAN = join(
+				REPO_ROOT,
+				'reports',
+				`premier-labels-avery5167-${snapshotTag}${suffix}.plan.json`,
+			)
+			mkdirSync(dirname(OUT_PLAN), { recursive: true })
+			writeFileSync(OUT_PLAN, canonicalJSONStringify(buildSheetPlan(groups, DEFAULT_CONFIG)))
+			console.log(`Wrote ${OUT_PLAN}`)
+		}
 
 		const doc = buildDocument(groups, assets, DEFAULT_CONFIG)
 		const buffer = await Packer.toBuffer(doc)
