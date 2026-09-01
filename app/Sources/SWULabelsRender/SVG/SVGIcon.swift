@@ -1,0 +1,211 @@
+// CoreGraphics predates Swift concurrency and marks nothing `Sendable`. The
+// `CGPath` values held here are `.copy()` results and are never mutated after
+// construction, so they are safe to share; `@preconcurrency` states that without
+// the blanket unsafety of an `@unchecked Sendable` conformance.
+@preconcurrency import CoreGraphics
+import Foundation
+
+/// One drawable shape from an icon: its geometry plus its resolved paint.
+public struct SVGShape: Sendable {
+    public let path: CGPath
+    public let fill: SVGColor?
+    public let stroke: SVGColor?
+    public let strokeWidth: CGFloat
+}
+
+/// An opaque RGB colour parsed from a hex literal.
+public struct SVGColor: Equatable, Sendable {
+    public let red: CGFloat
+    public let green: CGFloat
+    public let blue: CGFloat
+
+    /// Parses `#rgb` and `#rrggbb`. Returns nil for `none` or anything else,
+    /// which the caller treats as "do not paint this channel".
+    public init?(hex: String) {
+        let text = hex.trimmingCharacters(in: .whitespaces)
+        guard text.hasPrefix("#") else { return nil }
+        let digits = String(text.dropFirst())
+        let expanded: String
+        switch digits.count {
+        case 3: expanded = digits.map { "\($0)\($0)" }.joined()
+        case 6: expanded = digits
+        default: return nil
+        }
+        guard let value = UInt32(expanded, radix: 16) else { return nil }
+        red = CGFloat((value >> 16) & 0xFF) / 255
+        green = CGFloat((value >> 8) & 0xFF) / 255
+        blue = CGFloat(value & 0xFF) / 255
+    }
+
+    public var components: [CGFloat] { [red, green, blue, 1] }
+}
+
+/// A parsed rarity icon: its coordinate system and its shapes, in draw order.
+///
+/// Deliberately not a general SVG renderer. It reads the exact subset the ten
+/// shipped icons use — a `viewBox`, one `<style>` block of flat class rules, and
+/// `<path>` elements carrying a class — and throws on anything else rather than
+/// rendering a partial glyph.
+public struct SVGIcon: Sendable {
+    public let viewBox: CGRect
+    public let shapes: [SVGShape]
+
+    /// The icon's aspect ratio, used to size it against a text baseline.
+    public var aspectRatio: CGFloat {
+        viewBox.height == 0 ? 1 : viewBox.width / viewBox.height
+    }
+
+    public static func parse(contentsOf url: URL) throws -> SVGIcon {
+        try parse(data: try Data(contentsOf: url), source: url.lastPathComponent)
+    }
+
+    public static func parse(data: Data, source: String) throws -> SVGIcon {
+        let delegate = SVGParserDelegate()
+        let parser = XMLParser(data: data)
+        parser.delegate = delegate
+        guard parser.parse() else {
+            throw SVGIconError.malformedXML(source: source, underlying: parser.parserError)
+        }
+        guard let viewBox = delegate.viewBox else {
+            throw SVGIconError.missingViewBox(source: source)
+        }
+
+        let rules = SVGStyleSheet(css: delegate.styleText)
+        let shapes = try delegate.paths.map { entry -> SVGShape in
+            let declarations = rules.declarations(forClass: entry.className)
+            return SVGShape(
+                path: try SVGPathParser.path(from: entry.data),
+                fill: declarations["fill"].flatMap(SVGColor.init(hex:)),
+                stroke: declarations["stroke"].flatMap(SVGColor.init(hex:)),
+                strokeWidth: declarations["stroke-width"].flatMap(parseLength) ?? 1
+            )
+        }
+        return SVGIcon(viewBox: viewBox, shapes: shapes)
+    }
+
+    /// Parses a CSS length, dropping a `px` suffix. Other units are not used by
+    /// these assets and would silently mis-scale a stroke, so they are rejected.
+    static func parseLength(_ text: String) -> CGFloat? {
+        let trimmed = text.trimmingCharacters(in: .whitespaces)
+        let numeric = trimmed.hasSuffix("px") ? String(trimmed.dropLast(2)) : trimmed
+        guard let value = Double(numeric) else { return nil }
+        return CGFloat(value)
+    }
+}
+
+public enum SVGIconError: Error, CustomStringConvertible {
+    case malformedXML(source: String, underlying: (any Error)?)
+    case missingViewBox(source: String)
+    case iconNotFound(rarity: String, directory: String)
+
+    public var description: String {
+        switch self {
+        case let .malformedXML(source, underlying):
+            return "\(source) is not well-formed XML: \(underlying.map(String.init(describing:)) ?? "unknown")"
+        case let .missingViewBox(source):
+            return "\(source) has no viewBox, so its coordinate system is unknown"
+        case let .iconNotFound(rarity, directory):
+            return "no icon for rarity \"\(rarity)\" in \(directory)"
+        }
+    }
+}
+
+/// The `<style>` block's class rules, flattened to a class-to-declarations map.
+struct SVGStyleSheet {
+    private var rules: [String: [String: String]] = [:]
+
+    /// Parses flat class rules, including grouped selectors like `.a, .b { … }`.
+    ///
+    /// No cascade, no specificity, no nesting: these stylesheets are generated by
+    /// a drawing tool and contain only flat class rules. Anything more would need
+    /// a real CSS engine, and pretending otherwise would resolve paint wrongly.
+    init(css: String) {
+        var remainder = Substring(css)
+        while let openBrace = remainder.firstIndex(of: "{") {
+            let selectorText = remainder[remainder.startIndex..<openBrace]
+            guard let closeBrace = remainder[openBrace...].firstIndex(of: "}") else { break }
+            let body = remainder[remainder.index(after: openBrace)..<closeBrace]
+
+            var declarations: [String: String] = [:]
+            for declaration in body.split(separator: ";") {
+                let parts = declaration.split(separator: ":", maxSplits: 1)
+                guard parts.count == 2 else { continue }
+                let property = parts[0].trimmingCharacters(in: .whitespacesAndNewlines)
+                let value = parts[1].trimmingCharacters(in: .whitespacesAndNewlines)
+                declarations[property] = value
+            }
+
+            for selector in selectorText.split(separator: ",") {
+                let name = selector.trimmingCharacters(in: .whitespacesAndNewlines)
+                guard name.hasPrefix(".") else { continue }
+                rules[String(name.dropFirst()), default: [:]].merge(declarations) { _, new in new }
+            }
+            remainder = remainder[remainder.index(after: closeBrace)...]
+        }
+    }
+
+    func declarations(forClass className: String?) -> [String: String] {
+        guard let className else { return [:] }
+        return rules[className] ?? [:]
+    }
+}
+
+/// Collects the viewBox, the stylesheet text, and every path in document order.
+final class SVGParserDelegate: NSObject, XMLParserDelegate {
+    struct PathEntry {
+        let data: String
+        let className: String?
+    }
+
+    var viewBox: CGRect?
+    var styleText = ""
+    var paths: [PathEntry] = []
+    private var isInsideStyle = false
+
+    func parser(
+        _ parser: XMLParser,
+        didStartElement elementName: String,
+        namespaceURI: String?,
+        qualifiedName: String?,
+        attributes: [String: String]
+    ) {
+        switch elementName {
+        case "svg":
+            viewBox = attributes["viewBox"].flatMap(Self.parseViewBox)
+        case "style":
+            isInsideStyle = true
+        case "path":
+            guard let data = attributes["d"] else { return }
+            paths.append(PathEntry(data: data, className: attributes["class"]))
+        default:
+            break
+        }
+    }
+
+    func parser(
+        _ parser: XMLParser,
+        didEndElement elementName: String,
+        namespaceURI: String?,
+        qualifiedName: String?
+    ) {
+        if elementName == "style" { isInsideStyle = false }
+    }
+
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        if isInsideStyle { styleText += string }
+    }
+
+    func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
+        if isInsideStyle, let text = String(data: CDATABlock, encoding: .utf8) {
+            styleText += text
+        }
+    }
+
+    static func parseViewBox(_ text: String) -> CGRect? {
+        let parts = text
+            .split(whereSeparator: { $0 == " " || $0 == "," })
+            .compactMap { Double($0) }
+        guard parts.count == 4 else { return nil }
+        return CGRect(x: parts[0], y: parts[1], width: parts[2], height: parts[3])
+    }
+}
