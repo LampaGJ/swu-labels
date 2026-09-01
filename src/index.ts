@@ -131,6 +131,21 @@ export function parseEmitPlanArg(argv: readonly string[]): boolean {
 }
 
 /**
+ * @displayName Parse Plan-Only CLI Arg
+ * @strategicPurpose The Swift port's fidelity gate needs only the plan, but a
+ *   plain `--emit-plan` run also rewrites every DOCX and replay record. Those are
+ *   tracked files, so running the gate left the working tree dirty with artifacts
+ *   whose content had not actually changed — noise that trains a reader to ignore
+ *   `git status`. With this flag the gate is side-effect-free on tracked files.
+ * @tacticalObjective True when `--plan-only` appears in argv. Meaningful only
+ *   alongside `--emit-plan`; it suppresses the DOCX and replay writes, leaving
+ *   every other behavior untouched.
+ */
+export function parsePlanOnlyArg(argv: readonly string[]): boolean {
+	return argv.includes('--plan-only')
+}
+
+/**
  * @displayName Label Sheet Group Mode
  * @strategicPurpose Five distinct organizational layouts a user may want printed
  *   ('aspect-set' is the original v2/v3 combined layout, kept as the default so
@@ -294,12 +309,27 @@ function loadCardPool(dataDir: string, setPrecedence: readonly string[]): CardPo
 	return { kept, parsedCount, droppedCount, inputHashes, setsToLoad }
 }
 
+/**
+ * @displayName Replay Totals
+ * @strategicPurpose A `--plan-only` run writes no replay record, but the parsed
+ *   and deduped counts are the fast sanity check an operator reads to confirm the
+ *   run covered what they expected. Printing them keeps that signal.
+ * @tacticalObjective `{parsed, deduped, dropped}` for one mode's card pool.
+ */
+function replayTotals(
+	pool: { parsedCount: number; droppedCount: number },
+	modeCards: readonly Card[],
+): { parsed: number; deduped: number; dropped: number } {
+	return { parsed: pool.parsedCount, deduped: modeCards.length, dropped: pool.droppedCount }
+}
+
 async function main(): Promise<void> {
 	const snapshotTag = parseSnapshotArg(process.argv.slice(2))
 	const groupModes = parseGroupsArg(process.argv.slice(2))
 	const assetsMode = parseAssetsArg(process.argv.slice(2))
 	const setsFilter = parseSetsArg(process.argv.slice(2))
 	const emitPlan = parseEmitPlanArg(process.argv.slice(2))
+	const planOnly = parsePlanOnlyArg(process.argv.slice(2))
 	const DATA_DIR = join(REPO_ROOT, 'data', 'snapshots', snapshotTag)
 	const ASSETS_DIR = join(REPO_ROOT, 'assets', ASSETS_DIR_NAME[assetsMode])
 
@@ -406,6 +436,11 @@ async function main(): Promise<void> {
 			mkdirSync(dirname(OUT_PLAN), { recursive: true })
 			writeFileSync(OUT_PLAN, canonicalJSONStringify(buildSheetPlan(groups, DEFAULT_CONFIG)))
 			console.log(`Wrote ${OUT_PLAN}`)
+		}
+
+		if (planOnly) {
+			console.log(JSON.stringify(replayTotals(pool, modeCards)))
+			continue
 		}
 
 		const doc = buildDocument(groups, assets, DEFAULT_CONFIG)

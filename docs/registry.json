@@ -134,6 +134,14 @@
 		},
 		{
 			"file": "src/index.ts",
+			"exportName": "parsePlanOnlyArg",
+			"displayName": "Parse Plan-Only CLI Arg",
+			"strategicPurpose": "The Swift port's fidelity gate needs only the plan, but a\nplain `--emit-plan` run also rewrites every DOCX and replay record. Those are\ntracked files, so running the gate left the working tree dirty with artifacts\nwhose content had not actually changed — noise that trains a reader to ignore\n`git status`. With this flag the gate is side-effect-free on tracked files.",
+			"tacticalObjective": "True when `--plan-only` appears in argv. Meaningful only\nalongside `--emit-plan`; it suppresses the DOCX and replay writes, leaving\nevery other behavior untouched.",
+			"kind": "function"
+		},
+		{
+			"file": "src/index.ts",
 			"exportName": "parseSetsArg",
 			"displayName": "Parse Sets CLI Arg",
 			"strategicPurpose": "A user may want a sheet scoped to a specific handful of sets\n(e.g. only the three rotated-out sets, or only two adjacent current sets)\nrather than every set the chosen `--groups` mode's pool covers, without a\ncode change or a one-off script per combination.",
@@ -705,8 +713,8 @@
 		}
 	],
 	"coverage": {
-		"annotatedExports": 84,
-		"totalExports": 84,
+		"annotatedExports": 85,
+		"totalExports": 85,
 		"coveragePct": 100,
 		"gaps": []
 	}

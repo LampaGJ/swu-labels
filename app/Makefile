@@ -152,11 +152,15 @@ test: deps
 # TypeScript generator. Those plans are large and deterministic, so they are
 # regenerated rather than committed — which means a fresh checkout runs this
 # target, not a bare `swift test`.
+#
+# `--plan-only` keeps this side-effect-free on tracked files: without it the
+# generator also rewrites every DOCX and replay record, leaving the tree dirty
+# with artifacts whose content had not changed.
 .PHONY: gate
 gate:
 	@echo "→ regenerating reference plans from the TypeScript generator"
-	cd .. && npx tsx src/index.ts --groups aspect-set,aspect,alphabetical --emit-plan >/dev/null
-	cd .. && npx tsx src/index.ts --groups set,rotation-aspect-set --snapshot v2026-08-14 --emit-plan >/dev/null
+	cd .. && npx tsx src/index.ts --groups aspect-set,aspect,alphabetical --emit-plan --plan-only >/dev/null
+	cd .. && npx tsx src/index.ts --groups set,rotation-aspect-set --snapshot v2026-08-14 --emit-plan --plan-only >/dev/null
 	@echo "→ running the fidelity gates"
 	swift test
 	@echo "✓ gates pass: the Swift port matches the reference generator cell for cell"
