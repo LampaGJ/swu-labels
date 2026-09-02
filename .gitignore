@@ -11,3 +11,8 @@ WORK-STATE.md
 # Not tracked: they are ~4MB each and derive deterministically from a pinned
 # snapshot plus committed code, so the inputs are the thing worth versioning.
 reports/*.plan.json
+
+# Downloaded card art for proxy printing.
+# Binary, large, and re-fetchable from the URLs in each snapshot's art.json —
+# the index is the thing worth versioning, not the pictures it points at.
+data/art-cache/
