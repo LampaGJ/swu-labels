@@ -26,14 +26,14 @@ SWULabels.app/Contents/
 
 The CLI ships **inside** the bundle so one code signature and one notarization ticket cover both binaries; shipped separately it would need its own of each. Both resolve content from `Contents/Resources` first, so a bundle copied to another machine still works. **Install Command Line Tool…** in the app menu shows the one-line `ln -s` that puts it on `PATH` — the app does not write to `/usr/local/bin` itself, because that needs privileges it should not ask for.
 
-CLI subcommands: `generate` (PDF), `plan` (the fidelity-gate artifact), `ingest`, `alignment-sheet`, `snapshots`, `install-cli`.
+CLI subcommands: `generate` (label PDF), `plan` (the fidelity-gate artifact), `ingest`, `art` and `proxy` (card proxies), `alignment-sheet`, `snapshots`, `install-cli`.
 
 ## Layering
 
 | Target | Depends on | Contains |
 |---|---|---|
 | `SWULabelsCore` | Foundation, CryptoKit | model, ingest, transform, template engine, planner |
-| `SWULabelsRender` | Core, CoreGraphics/CoreText/PDFKit | SVG icon parsing, typesetting, PDF output |
+| `SWULabelsRender` | Core, CoreGraphics/CoreText/PDFKit/ImageIO | SVG icon parsing, typesetting, art cache, PDF output |
 | `SWULabelsDocx` | Core | secondary DOCX export (not yet implemented) |
 | `SWULabelsUI` | Core, Render, SwiftUI | the entire interface |
 | `swu-labels` | Core, Render, Docx | CLI executable, macOS |
@@ -57,6 +57,8 @@ Three gates, each of which has been shown to fail on a deliberate defect.
 
 **Gate 2 — print geometry.** `GeometryGateTests` renders the PDF, reads it back, and asserts every label lands on an inch grid stated **independently** of the app's own constants. Asserting against the constants the renderer used would pass no matter where the grid sat.
 
+**Gate 4 — proxy card size.** `ProxyGeometryTests` asserts a proxy is exactly 63mm x 88mm against dimensions restated independently, checks the grid never overflows the paper and that cards never overlap, and pins the fact that the commonly quoted "2.5 x 3.5 inches" is a different, larger card.
+
 **Gate 3 — ingest byte-identity.** `SnapshotSerializerTests` re-serializes every committed per-set file and requires byte equality. A live ingest run also reproduced `data/snapshots/v2026-08-14` byte for byte, `meta.json` digests included.
 
 ## Two determinism traps this port had to avoid
@@ -65,6 +67,48 @@ Both are silent, and both would have produced a plausible sheet with cards in th
 
 - **Swift's `String` `<` is not JavaScript's.** Swift compares by Unicode canonical equivalence over grapheme clusters; JavaScript compares UTF-16 code units, and calls "é" and "e\u{301}" different where Swift calls them equal. Every ordering decision goes through `UTF16Order`. `String.count` versus `String.length` is the same trap in the font-shrink thresholds, which is why those measure `utf16.count`.
 - **Swift `Dictionary` iteration order is randomized per process.** Anywhere order reaches output, this port uses `OrderedBuckets` or a plain array. The TypeScript generator relies on `Map` insertion order in three places, every one of which is a conversion site.
+
+## Proxy cards
+
+`swu-labels proxy` prints card art at exact card size for playtesting.
+
+```
+swu-labels art --snapshot v2026-08-14        # once: index where the art lives
+swu-labels proxy --sets LAW --copies 3       # then print
+swu-labels proxy --deck mydeck.txt --page a4 # or from a deck list
+```
+
+In the app, switch the toolbar from **Labels** to **Proxies**; the card list and
+its filters are shared, so whatever the browser is showing is what prints.
+
+**Card size is 63mm x 88mm and is not a setting.** A proxy even a millimetre off
+will not sleeve alongside real cards, and a deck holding one odd-sized card is
+marked from the back. `ProxyGeometryTests` gates that against dimensions stated
+independently of the app's own constants, the same way the Avery grid is gated.
+
+Everything else is adjustable: paper (US Letter or A4), grid, gutter, page
+margin, cut guides, and copies per card. A grid larger than the paper holds is
+clamped rather than printed clipped, and the interface says when it clamped.
+
+Landscape cards — Leaders and Bases — are rotated into the same portrait slot as
+everything else, so the whole page cuts on one uniform grid. Turn the cut card to
+read it, exactly as with a real Leader.
+
+### Two things to know before a big run
+
+**Art resolution is two-tier.** The official CDN serves roughly 289 DPI art for
+the newest sets (LAW, ASH, P26, TS26) and roughly 121 DPI for everything older,
+against a 300 DPI print standard. Older sets will look visibly soft and no
+setting here changes that — the limit is the source image. Both the CLI and the
+app report the median resolution for the exact cards selected, rather than
+quoting one figure for the whole database.
+
+**Art is a separate download.** It lives in `data/snapshots/<tag>/art.json`
+(URLs, committed) with the images cached under `data/art-cache/` (gitignored;
+a full set is several hundred megabytes). It is deliberately not a field on
+`Card`: the per-set snapshot files are byte-exact artifacts whose digests are
+recorded in every replay record, so adding a field the label pipeline never
+reads would invalidate all of them.
 
 ## Before printing on real stock
 

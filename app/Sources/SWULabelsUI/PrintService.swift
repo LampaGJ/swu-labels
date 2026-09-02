@@ -45,6 +45,17 @@ public struct PrintService: Sendable {
         try present(pdf: data, jobName: jobName, pageSize: renderer.pageSize)
     }
 
+    /// Prints proxy cards at exact card size.
+    ///
+    /// Same unscaled path as everything else here. A proxy sheet is the one
+    /// output where scaling is most tempting and most damaging: a "fit to page"
+    /// shrink of a few percent produces cards that look right until they are
+    /// put in a sleeve next to a real one.
+    @MainActor
+    public func printProxies(renderer: ProxyRenderer, jobName: String) throws {
+        try present(pdf: try renderer.renderPDF(), jobName: jobName, pageSize: renderer.pageSize)
+    }
+
     /// Prints the registration sheet used to verify a printer before a real run.
     ///
     /// Goes through the same unscaled path as a label sheet on purpose: a

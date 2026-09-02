@@ -15,10 +15,22 @@ struct SheetSummaryLabel: View {
                 Text("Loading cards\u{2026}")
                     .foregroundStyle(.secondary)
             }
-        } else if model.plan != nil {
-            Text("^[\(model.labelCount) label](inflect: true) \u{00B7} ^[\(model.sheetCount) sheet](inflect: true)")
-                .monospacedDigit()
-                .foregroundStyle(.secondary)
+        } else {
+            switch model.outputMode {
+            case .labels:
+                if model.plan != nil {
+                    Text("^[\(model.labelCount) label](inflect: true) \u{00B7} ^[\(model.sheetCount) sheet](inflect: true)")
+                        .monospacedDigit()
+                        .foregroundStyle(.secondary)
+                }
+            case .proxies:
+                let plan = model.proxyPlan
+                if plan.totalCards > 0 {
+                    Text("^[\(plan.totalCards) card](inflect: true) \u{00B7} ^[\(plan.pages.count) sheet](inflect: true)")
+                        .monospacedDigit()
+                        .foregroundStyle(.secondary)
+                }
+            }
         }
     }
 }

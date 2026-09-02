@@ -1,5 +1,6 @@
 import SwiftUI
 import SWULabelsCore
+import SWULabelsRender
 
 /// The app's whole interface: sources on the left, cards in the middle, the
 /// label being designed on the right.
@@ -25,8 +26,13 @@ public struct RootView: View {
             CardBrowser(model: model)
                 .navigationSplitViewColumnWidth(min: 320, ideal: 420)
         } detail: {
-            LabelInspector(model: model)
-                .navigationSplitViewColumnWidth(min: 340, ideal: 400)
+            Group {
+                switch model.outputMode {
+                case .labels: LabelInspector(model: model)
+                case .proxies: ProxyInspector(model: model)
+                }
+            }
+            .navigationSplitViewColumnWidth(min: 340, ideal: 400)
         }
         .searchable(text: $model.searchText, prompt: "Search cards")
         .toolbar { toolbar }
@@ -46,18 +52,30 @@ public struct RootView: View {
             SheetSummaryLabel(model: model)
         }
         ToolbarItemGroup {
-            Picker("Rarity icons", selection: $model.assetsMode) {
-                ForEach(AssetsMode.allCases, id: \.self) { mode in
-                    Text(mode.displayName).tag(mode)
+            Picker("Output", selection: $model.outputMode) {
+                ForEach(OutputMode.allCases) { mode in
+                    Label(mode.title, systemImage: mode.symbolName).tag(mode)
                 }
             }
             .pickerStyle(.segmented)
-            .help("Colour icons read better on screen; monochrome prints better.")
+            .help("Print adhesive labels, or proxy cards at exact card size.")
 
-            Button("Print", systemImage: "printer", action: print)
-                .keyboardShortcut("p")
-                .disabled(model.renderer == nil)
-                .help("Print the current sheet at 100% scale")
+            if model.outputMode == .labels {
+                Picker("Rarity icons", selection: $model.assetsMode) {
+                    ForEach(AssetsMode.allCases, id: \.self) { mode in
+                        Text(mode.displayName).tag(mode)
+                    }
+                }
+                .pickerStyle(.segmented)
+                .help("Colour icons read better on screen; monochrome prints better.")
+            }
+
+            Button("Print", systemImage: "printer") {
+                Task { await print() }
+            }
+            .keyboardShortcut("p")
+            .disabled(isPrintDisabled)
+            .help("Print at 100% scale")
 
             Menu("More print options", systemImage: "ellipsis.circle") {
                 Button("Print Registration Sheet\u{2026}", action: printAlignmentSheet)
@@ -79,10 +97,30 @@ public struct RootView: View {
         }
     }
 
-    private func print() {
-        guard let renderer = model.renderer else { return }
+    private var isPrintDisabled: Bool {
+        switch model.outputMode {
+        case .labels: model.renderer == nil
+        case .proxies: model.proxyPlan.pages.isEmpty
+        }
+    }
+
+    private func print() async {
         do {
-            try PrintService.shared.print(renderer: renderer, jobName: model.printJobName)
+            switch model.outputMode {
+            case .labels:
+                guard let renderer = model.renderer else { return }
+                try PrintService.shared.print(renderer: renderer, jobName: model.printJobName)
+            case .proxies:
+                // Art is downloaded before the print panel opens. Presenting the
+                // panel first would leave someone waiting at a dialog while
+                // hundreds of images fetched behind it.
+                await model.prefetchProxyArt()
+                let images = try await model.proxyImages()
+                try PrintService.shared.printProxies(
+                    renderer: ProxyRenderer(plan: model.proxyPlan, images: images),
+                    jobName: "SWU proxies"
+                )
+            }
         } catch {
             // Surfaced rather than logged: a print that quietly does nothing is
             // indistinguishable from a printer that is merely slow.

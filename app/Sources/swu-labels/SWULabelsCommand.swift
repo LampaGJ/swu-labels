@@ -17,6 +17,7 @@ struct SWULabelsCommand: AsyncParsableCommand {
         version: "0.1.0",
         subcommands: [
             Generate.self, Plan.self, Ingest.self,
+            Art.self, Proxy.self,
             AlignmentTest.self, Snapshots.self, InstallCLI.self,
         ],
         defaultSubcommand: Generate.self

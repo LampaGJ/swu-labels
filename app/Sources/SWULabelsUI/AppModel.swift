@@ -1,3 +1,4 @@
+import CoreGraphics
 import Foundation
 import Observation
 import SWULabelsCore
@@ -82,7 +83,13 @@ public final class AppModel {
     public private(set) var availableSnapshots: [String] = []
 
     public var snapshotTag: String {
-        didSet { if snapshotTag != oldValue { reload() } }
+        didSet {
+            guard snapshotTag != oldValue else { return }
+            reload()
+            // The art sidecar is per-snapshot, so it must follow the snapshot or
+            // proxies would be built from another snapshot's art.
+            loadArtIndexIfPresent()
+        }
     }
 
     public var poolKind: PoolKind = .fullRotation {
@@ -125,6 +132,22 @@ public final class AppModel {
     /// The card the label preview shows.
     public var selectedCardID: Card.ID?
 
+    // MARK: - Proxies
+
+    /// Whether the app is producing labels or proxy cards.
+    var outputMode: OutputMode = .labels
+
+    /// Sheet settings for proxy printing.
+    var proxyConfig: ProxySheetConfig = .default
+
+    /// Card art locations for the current snapshot, when they have been fetched.
+    ///
+    /// Absent is a normal state, not an error: art is a separate, optional
+    /// download, and the label pipeline never needs it.
+    private(set) var artIndex: ArtIndex?
+    private(set) var artFetchProgress: (done: Int, total: Int)?
+    private(set) var artFailure: String?
+
     // MARK: - Derived state
 
     public private(set) var phase: Phase = .idle
@@ -165,6 +188,7 @@ public final class AppModel {
         ) ?? availableSnapshots.max() ?? ""
         reloadIcons()
         reload()
+        loadArtIndexIfPresent()
     }
 
     // MARK: - Snapshot discovery
@@ -369,6 +393,79 @@ public final class AppModel {
 
     public var printJobName: String {
         "SWU labels — \(matchingPreset?.displayName ?? "custom order")"
+    }
+
+    // MARK: - Proxies
+
+    /// Loads the art sidecar for the current snapshot, if one has been fetched.
+    func loadArtIndexIfPresent() {
+        artIndex = try? ArtIndex.load(snapshotRoot: snapshotStore.root)
+    }
+
+    /// The cards a proxy run would print: whatever the browser is showing.
+    ///
+    /// Reusing the visible selection rather than adding a second, parallel
+    /// selection mechanism — filter the list to what you want, then print it.
+    var proxyCards: [ProxyCard] {
+        guard let artIndex else { return [] }
+        let index = artIndex.byCardID
+        return visibleCards.compactMap { artIndex.proxyCard(for: $0, using: index) }
+    }
+
+    /// Visible cards whose art is not in the index, so the gap is stated rather
+    /// than silently shrinking the print run.
+    var proxyCardsMissingArt: Int {
+        guard let artIndex else { return 0 }
+        let index = artIndex.byCardID
+        return visibleCards.count { index[$0.id] == nil }
+    }
+
+    var proxyPlan: ProxyPlan {
+        ProxyPlanner.plan(cards: proxyCards, config: proxyConfig)
+    }
+
+    /// Median print resolution across the cards a run would print.
+    ///
+    /// Reported per selection rather than per snapshot because it varies by a
+    /// factor of more than two between sets: the two newest sets ship art near
+    /// 289 DPI, while everything older is about 121 DPI.
+    var proxyMedianDPI: Double? {
+        guard let artIndex else { return nil }
+        let index = artIndex.byCardID
+        let dpis = visibleCards.compactMap { index[$0.id]?.effectiveDPI }.sorted()
+        return dpis.isEmpty ? nil : dpis[dpis.count / 2]
+    }
+
+    var artCacheDirectory: URL {
+        ArtImageStore.defaultCacheDirectory(contentRoot: contentRoot)
+    }
+
+    /// Downloads any art the current selection needs.
+    func prefetchProxyArt() async {
+        let urls = Array(Set(proxyCards.map(\.artURL)))
+        guard !urls.isEmpty else { return }
+        artFailure = nil
+        artFetchProgress = (done: 0, total: urls.count)
+        let store = ArtImageStore(cacheDirectory: artCacheDirectory)
+        do {
+            try await store.prefetch(urls) { done, total in
+                Task { @MainActor in self.artFetchProgress = (done: done, total: total) }
+            }
+            artFetchProgress = nil
+        } catch {
+            artFetchProgress = nil
+            artFailure = error.localizedDescription
+        }
+    }
+
+    /// Decoded art for the current selection, for rendering or preview.
+    func proxyImages() async throws -> [String: CGImage] {
+        let store = ArtImageStore(cacheDirectory: artCacheDirectory)
+        var images: [String: CGImage] = [:]
+        for url in Set(proxyCards.map(\.artURL)) {
+            images[url] = try await store.image(for: url)
+        }
+        return images
     }
 
     // MARK: - Set filtering
