@@ -32,13 +32,24 @@ public struct CardListClient: Sendable {
         self.session = session
     }
 
+    /// Relations the proxy art index needs.
+    ///
+    /// A separate list because art is a much heavier payload and the label
+    /// pipeline must never pay for it. Only the fields identifying a card and
+    /// locating its art are requested.
+    static let artPopulateFields = ["expansion", "artFront"]
+
     public static func pageURL(page: Int) -> URL {
+        pageURL(page: page, populate: populateFields)
+    }
+
+    static func pageURL(page: Int, populate: [String]) -> URL {
         var components = URLComponents(string: baseURL)!
         var items = [
             URLQueryItem(name: "pagination[page]", value: String(page)),
             URLQueryItem(name: "pagination[pageSize]", value: String(pageSize)),
         ]
-        for (index, field) in populateFields.enumerated() {
+        for (index, field) in populate.enumerated() {
             items.append(URLQueryItem(name: "populate[\(index)]", value: field))
         }
         components.queryItems = items
@@ -51,10 +62,24 @@ public struct CardListClient: Sendable {
     /// way five times, and the useful signal is that the upstream shape changed,
     /// not that the network is flaky.
     func fetchPage(_ page: Int) async throws -> SWUAPI.PageResponse {
+        try await fetchPage(page, populate: Self.populateFields, as: SWUAPI.PageResponse.self)
+    }
+
+    /// Fetches one page of any shape this endpoint can return.
+    ///
+    /// Generic over the response so the art index reuses this retry and backoff
+    /// behaviour rather than growing a second, subtly different copy of it.
+    func fetchPage<Response: Decodable & Sendable>(
+        _ page: Int,
+        populate: [String],
+        as type: Response.Type
+    ) async throws -> Response {
         var attempt = 1
         while true {
             do {
-                let (data, response) = try await session.data(from: Self.pageURL(page: page))
+                let (data, response) = try await session.data(
+                    from: Self.pageURL(page: page, populate: populate)
+                )
                 let status = (response as? HTTPURLResponse)?.statusCode ?? 200
                 guard status == 200 else {
                     if status >= 500, attempt < Self.retryAttempts {
@@ -64,7 +89,7 @@ public struct CardListClient: Sendable {
                     }
                     throw IngestError.httpStatus(page: page, status: status)
                 }
-                return try JSONDecoder().decode(SWUAPI.PageResponse.self, from: data)
+                return try JSONDecoder().decode(Response.self, from: data)
             } catch let error as DecodingError {
                 throw IngestError.decodingFailed(page: page, underlying: "\(error)")
             } catch let error as IngestError {
