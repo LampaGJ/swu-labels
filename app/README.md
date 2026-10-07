@@ -73,7 +73,7 @@ Both are silent, and both would have produced a plausible sheet with cards in th
 `swu-labels proxy` prints card art at exact card size for playtesting.
 
 ```
-swu-labels art --snapshot v2026-08-14        # once: index where the art lives
+swu-labels art --snapshot v2026-10-01        # once: index where the art lives
 swu-labels proxy --sets LAW --copies 3       # then print
 swu-labels proxy --deck mydeck.txt --page a4 # or from a deck list
 ```

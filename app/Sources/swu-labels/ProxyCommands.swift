@@ -12,7 +12,7 @@ struct Art: AsyncParsableCommand {
     )
 
     @Option(name: .customLong("snapshot"), help: "Snapshot tag to index art for.")
-    var snapshot: String = "v2026-08-14"
+    var snapshot: String = "v2026-10-01"
 
     @Option(name: .customLong("content-root"), help: "Directory holding assets/ and data/.")
     var contentRoot: String?
@@ -65,7 +65,7 @@ struct Proxy: AsyncParsableCommand {
     )
 
     @Option(name: .customLong("snapshot"), help: "Snapshot tag to read.")
-    var snapshot: String = "v2026-08-14"
+    var snapshot: String = "v2026-10-01"
 
     @Option(name: .customLong("sets"), help: "Restrict to a comma-separated list of set codes.")
     var sets: String?
