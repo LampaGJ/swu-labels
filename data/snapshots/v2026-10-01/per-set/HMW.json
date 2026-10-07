@@ -1,0 +1,4555 @@
+[
+	{
+		"title": "Asajj Ventress",
+		"subtitle": "No Time For Regret",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Shield",
+		"subtitle": "",
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": []
+	},
+	{
+		"title": "Maz Kanata",
+		"subtitle": "Eclectic Pirate Queen",
+		"cost": 6,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Weakness",
+		"subtitle": "",
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": -1,
+		"upgrade_hp": -1,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": []
+	},
+	{
+		"title": "Beast",
+		"subtitle": "",
+		"cost": 0,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": []
+	},
+	{
+		"title": "Doctor Hemlock",
+		"subtitle": "Emotion Has No Place Here",
+		"cost": 6,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Beast",
+		"subtitle": "",
+		"cost": 0,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": []
+	},
+	{
+		"title": "Grand Moff Tarkin",
+		"subtitle": "Tyrant of the Outer Rim",
+		"cost": 9,
+		"power": 2,
+		"hp": 12,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Special",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Beast",
+		"subtitle": "",
+		"cost": 0,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": []
+	},
+	{
+		"title": "Jar Jar Binks",
+		"subtitle": "Bombad General",
+		"cost": 6,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Omega",
+		"subtitle": "Close Your Eyes and Focus",
+		"cost": 5,
+		"power": 2,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Darth Vader",
+		"subtitle": "Might of the Empire",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "General Grievous",
+		"subtitle": "Separatist Warlord",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Chewbacca",
+		"subtitle": "Relentless Rebel",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Special",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tarfful",
+		"subtitle": "Fighting from the Shadowlands",
+		"cost": 6,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Darth Sidious",
+		"subtitle": "There Is No Mercy",
+		"cost": 6,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Poggle the Lesser",
+		"subtitle": "Let the Executions Begin",
+		"cost": 5,
+		"power": 1,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Cham Syndulla",
+		"subtitle": "Hammer of Ryloth",
+		"cost": 6,
+		"power": 3,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Wicket",
+		"subtitle": "Few Greater Battles to Fight",
+		"cost": 4,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Bossk",
+		"subtitle": "Cruel Hunter",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Maul",
+		"subtitle": "Old Master",
+		"cost": 7,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Osha",
+		"subtitle": "Haunted By Her Past",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Warrior",
+		"subtitle": "Deft Duelist",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Dune Sea",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Great Grass Plains",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Kachirho",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Shield Generator Complex",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Bright Tree Village",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Origin Tree",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Theed Palace",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Tusken Camp",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Bioweapons Lab",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Jundland Wastes",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Dendroid Wilds",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Shadowlands",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Kyyyalstaad Swamp",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Mos Eisley",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Otoh Gunga",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Research Station 9",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Hunter",
+		"subtitle": "Everyone Get to Cover!",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Kelnacca",
+		"subtitle": "Solitary Master",
+		"cost": 4,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Bacta Tank",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Bestial Bond",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Mother Talzin",
+		"subtitle": "Pledged to the Sisterhood",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Talzin's Shuttle",
+		"subtitle": "Mysterious Arrival",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Keeper of Skara Nal",
+		"subtitle": "Awoken",
+		"cost": 6,
+		"power": 5,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Dooku",
+		"subtitle": "Corruption Must Be Eradicated",
+		"cost": 8,
+		"power": 8,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Darth Vader",
+		"subtitle": "Any Methods Necessary",
+		"cost": 9,
+		"power": 9,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Ima-Gun Di",
+		"subtitle": "Holding Out For Resupply",
+		"cost": 3,
+		"power": 5,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Logray",
+		"subtitle": "Bright Tree Shaman",
+		"cost": 2,
+		"power": 1,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Krrsantan",
+		"subtitle": "Santo",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Eravana",
+		"subtitle": "Hauling Rathtars",
+		"cost": 5,
+		"power": 1,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Vernestra Rwoh",
+		"subtitle": "We Should Handle This Ourselves",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Greater Sarlacc",
+		"subtitle": "",
+		"cost": 9,
+		"power": 9,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Low Altitude Combat",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Third Sister",
+		"subtitle": "Cycle of Vengeance",
+		"cost": 4,
+		"power": 6,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "A'Koba",
+		"subtitle": "Restless Raider",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Fett's Firespray",
+		"subtitle": "Settling the Score",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Seismic Detonation",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Mae",
+		"subtitle": "Kill the Dream",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Yoda",
+		"subtitle": "Trickster in Exile",
+		"cost": 3,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Boss Lyonie",
+		"subtitle": "Hypnotized",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Mysterious Disappearance",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Clone X Assassin",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Vice Admiral Rampart",
+		"subtitle": "A New Era of Safety",
+		"cost": 2,
+		"power": 1,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Director Krennic",
+		"subtitle": "The Work Has Stalled",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Nuvo Vindi",
+		"subtitle": "Blue Shadow Perfected",
+		"cost": 3,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Rho Medical Shuttle",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Scorch",
+		"subtitle": "Imperial Commando",
+		"cost": 3,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Clone of the Zillo Beast",
+		"subtitle": "Emperor's Experiment",
+		"cost": 4,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Carrion Spike",
+		"subtitle": "Harbinger of Tyranny",
+		"cost": 5,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Great Progenitor",
+		"subtitle": "First of the Drengir",
+		"cost": 5,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Imperial Commandos",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Imperial Venator",
+		"subtitle": "",
+		"cost": 7,
+		"power": 7,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Dark Sanctum",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Ravage",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Grand Army Marine",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Peppi Bow",
+		"subtitle": "Shaak Herder",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Yord Fandar",
+		"subtitle": "Devoutly Disciplined",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Wookiee Protector",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Yanna",
+		"subtitle": "Sanctuary Elder",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Boss Nass",
+		"subtitle": "Otoh Gunga Boss",
+		"cost": 4,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Qui-Gon Jinn",
+		"subtitle": "We'll Handle This",
+		"cost": 5,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Radiant VII",
+		"subtitle": "Negotiating for Naboo",
+		"cost": 6,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Fambaa Shield Team",
+		"subtitle": "",
+		"cost": 7,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Alliance Shield Generator",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Nala Se",
+		"subtitle": "Silent Survivor",
+		"cost": 2,
+		"power": 1,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Batcher",
+		"subtitle": "Loyal Hound",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Gunga City Guard",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Remote Scout",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "N-1 Patroller",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Venomous Wyyyshokk",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Numa",
+		"subtitle": "Still Fighting",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Territorial Mudhorn",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Opee Sea Killer",
+		"subtitle": "",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Pelta Relief Frigate",
+		"subtitle": "",
+		"cost": 5,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Starlit Purrgil",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Coastal Catamarans",
+		"subtitle": "",
+		"cost": 7,
+		"power": 8,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Sando Aqua Monster",
+		"subtitle": "",
+		"cost": 8,
+		"power": 5,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Carbonite Chamber",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Devotion",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Dire Prowess",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Resonate",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Always a Bigger Fish",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Torrent",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Trust Yourself",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Dragon's Might",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Disposable B1",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Garnac",
+		"subtitle": "Let the Hunt Begin!",
+		"cost": 1,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Nute Gunray",
+		"subtitle": "Perfectly Legal",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Secessionist Convert",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Stormtrooper Patrol",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The First Legion",
+		"subtitle": "Vader's Fist",
+		"cost": 4,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Tireless Magnaguard",
+		"subtitle": "",
+		"cost": 4,
+		"power": 5,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Emperor Palpatine",
+		"subtitle": "Consolidating Power",
+		"cost": 5,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Invasion Lander",
+		"subtitle": "",
+		"cost": 6,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Military Academy",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Sinister War Memorial",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Special",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Breach",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Leia Organa",
+		"subtitle": "These Are My Friends",
+		"cost": 1,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ewok Brigade",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Chewbacca",
+		"subtitle": "Resourceful Wookiee",
+		"cost": 3,
+		"power": 0,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ryyk Blademaster",
+		"subtitle": "",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Saw Gerrera",
+		"subtitle": "Shadowlands Insurgent",
+		"cost": 4,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Auzituck Avenger",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Hijacked AT-ST",
+		"subtitle": "",
+		"cost": 5,
+		"power": 7,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Boga",
+		"subtitle": "Loyal Varactyl",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "King Grakchawwaa",
+		"subtitle": "King of Kashyyyk",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Luminara Unduli",
+		"subtitle": "Besieged General",
+		"cost": 7,
+		"power": 7,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Marauder",
+		"subtitle": "A New Home",
+		"cost": 7,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Verdant Fortress",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Chewbacca's Bowcaster",
+		"subtitle": "Handcrafted Tradition",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 3,
+		"upgrade_hp": 1,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Special",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Mace Windu",
+		"subtitle": "Austere Centrist",
+		"cost": 3,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Child of Dathomir",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Emerie Karr",
+		"subtitle": "For Your Own Good",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Soaring Can-Cell",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Tibidee Mate",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Wroshyr Rebel",
+		"subtitle": "",
+		"cost": 2,
+		"power": 0,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Zam Wesell",
+		"subtitle": "Not What She Seems",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Arena Reek",
+		"subtitle": "Fixture of Ceremony",
+		"cost": 3,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Lifetree Caravan",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "V-19 Skirmisher",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Commander Gree",
+		"subtitle": "Of the 41st Elite Corps",
+		"cost": 4,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Flock of Mynocks",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Assault Frigate",
+		"subtitle": "",
+		"cost": 5,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Rex",
+		"subtitle": "Outserved His Purpose",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Wookiee Rangers",
+		"subtitle": "",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Banking Clan Warship",
+		"subtitle": "",
+		"cost": 6,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Howler Pack",
+		"subtitle": "",
+		"cost": 6,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Origin Tree Shyyyo",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Outer Rim Garrison",
+		"subtitle": "",
+		"cost": 7,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Beast Lair",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Local Support",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 3,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Log Trap",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Migrate",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Overgrowth",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Babwa Venomor",
+		"subtitle": "Burning Kashyyyk",
+		"cost": 2,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Poacher's Starfighter",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Dooku's Solar Sailer",
+		"subtitle": "Droid Army Portent",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Filthy Dianoga",
+		"subtitle": "",
+		"cost": 4,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Arena Acklay",
+		"subtitle": "Screaming Predator",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Corpo Thugs",
+		"subtitle": "",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Battle-Scarred Destroyer",
+		"subtitle": "",
+		"cost": 6,
+		"power": 7,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "General Grievous",
+		"subtitle": "Scourge of Dathomir",
+		"cost": 7,
+		"power": 8,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Noxious Refinery",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Raze to Ruin",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Teebo",
+		"subtitle": "Striped Hunter",
+		"cost": 1,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Champions of Endor",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Chief Chirpa",
+		"subtitle": "Defiant Elder",
+		"cost": 2,
+		"power": 1,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Commandeered Tour Shuttle",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Gungi",
+		"subtitle": "Fighting for Kashyyyk",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Dune Sea Nomads",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ezra Bridger",
+		"subtitle": "What Are You Afraid Of?",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Crosshair",
+		"subtitle": "I've Changed",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Han Solo",
+		"subtitle": "My Team's Ready",
+		"cost": 5,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Trap Field",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Special",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Heavy Ion Cannon",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Rebel Operation",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Maul",
+		"subtitle": "Only Revenge Remains",
+		"cost": 4,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Fennec Shand",
+		"subtitle": "A Ship For A Life",
+		"cost": 1,
+		"power": 0,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Village Troublemaker",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Adamant Ewoks",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Desperate Nantex",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Feisty Blurrg",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Stormchaser",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Tusken Bantha Rider",
+		"subtitle": "",
+		"cost": 3,
+		"power": 0,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Arena Nexu",
+		"subtitle": "Starved for Prey",
+		"cost": 4,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Nightsister Prodigy",
+		"subtitle": "",
+		"cost": 4,
+		"power": 5,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Aggrocrab",
+		"subtitle": "",
+		"cost": 5,
+		"power": 6,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Ty Yorrick",
+		"subtitle": "Monster Hunter",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Mining Guild Trespasser",
+		"subtitle": "",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Dathomiri Rancor",
+		"subtitle": "",
+		"cost": 7,
+		"power": 9,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Giant Gorax",
+		"subtitle": "",
+		"cost": 7,
+		"power": 7,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Neebray Manta",
+		"subtitle": "",
+		"cost": 8,
+		"power": 7,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Enraged",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Hunter's Instinct",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Volley Fire",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Nightfall",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Run Amok",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Catch the Scent",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Qimir",
+		"subtitle": "Everyone Has a Weakness",
+		"cost": 1,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Cid Scaleback",
+		"subtitle": "Can't Be Trusted",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Treacherous Pyke",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Geonosian Picador",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Rish Loo",
+		"subtitle": "Traitorous Minister",
+		"cost": 4,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Sandtrooper Squad",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Inferno Squad",
+		"subtitle": "We Can Grieve Later",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Victor Squadron",
+		"subtitle": "In Attack Formation",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Nightbrother",
+		"subtitle": "Maul's Gauntlet",
+		"cost": 7,
+		"power": 6,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Intelligence Agency",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Tarkin Doctrine",
+		"subtitle": "Protect and Punish",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Special",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Maim",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Luke Skywalker",
+		"subtitle": "Dreaming Farmboy",
+		"cost": 1,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Corona Squadron X-Wing",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Sol",
+		"subtitle": "Compassionate Guardian",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tech",
+		"subtitle": "I Thought It Was Obvious",
+		"cost": 3,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Chieftain",
+		"subtitle": "Here Since the Oceans Dried",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tribubble Bongo Sub",
+		"subtitle": "",
+		"cost": 3,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Phee Genoa",
+		"subtitle": "Liberator of Ancient Wonders",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "L3-37",
+		"subtitle": "We're Programmed to Learn",
+		"cost": 6,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Insurgent Camp",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Don't Touch Anything",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "New Tactics",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Jaxxon",
+		"subtitle": "I Can Hear You Breathing!",
+		"cost": 1,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Clever Trapper",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Teeka",
+		"subtitle": "You're in Luck",
+		"cost": 1,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Sandcrawler Sales Team",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Therm Scissorpunch",
+		"subtitle": "Boastful Gambler",
+		"cost": 2,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Tusken Raider",
+		"subtitle": "",
+		"cost": 2,
+		"power": 0,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Boba Fett",
+		"subtitle": "Family Found",
+		"cost": 3,
+		"power": 1,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Gungan Battle Wagon",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Horizon Chaser",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Lakeside Shaaks",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Lurking Wampa",
+		"subtitle": "",
+		"cost": 5,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Raiding Party",
+		"subtitle": "",
+		"cost": 5,
+		"power": 0,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Dragonboat Freighter",
+		"subtitle": "",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Mon Cal Cruiser",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Awakened Exogorth",
+		"subtitle": "",
+		"cost": 7,
+		"power": 7,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Ritual Dragon",
+		"subtitle": "",
+		"cost": 8,
+		"power": 6,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Gaderffii Stick",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Booma Ball",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Easy Prey",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Exploit Confidence",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Pounce",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Sandstorm",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Howl",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Occupation Officer",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Sun Fac",
+		"subtitle": "Poggle's Second",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Separatist Harbinger",
+		"subtitle": "",
+		"cost": 3,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Trandoshan Collaborator",
+		"subtitle": "",
+		"cost": 3,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Pyke Sarisa",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Surveillance Cruiser",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Defoliator Tank",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Frenzied Tri-Fighters",
+		"subtitle": "",
+		"cost": 5,
+		"power": 5,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Imperial Cavalry",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Blockade Ship",
+		"subtitle": "",
+		"cost": 8,
+		"power": 5,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Villainous Ambition",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Forced Pacification",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Captain Tarpals",
+		"subtitle": "Grand Army Captain",
+		"cost": 1,
+		"power": 0,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "C-3PO",
+		"subtitle": "Captivating Storyteller",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Jedi Interceptor",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ewok Archers",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ryloth Revolutionary Rider",
+		"subtitle": "",
+		"cost": 3,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Pack Guardian",
+		"subtitle": "",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Queen Amidala",
+		"subtitle": "Retaking Theed",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ben Kenobi",
+		"subtitle": "Don't Be Afraid",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Mylaya Rider",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Wrecker",
+		"subtitle": "Wrecking the Empire",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Heroic Bravery",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Twi'lek Kalikori",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Familiar Strategem",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Renew",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Offworld Jawa",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": []
+	},
+	{
+		"title": "Friendly Eopie",
+		"subtitle": "",
+		"cost": 2,
+		"power": 0,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": []
+	},
+	{
+		"title": "Wild Space Wanderer",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "HMW",
+		"aspects": []
+	},
+	{
+		"title": "Landing Pad",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": []
+	},
+	{
+		"title": "Growth",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "HMW",
+		"aspects": []
+	}
+]

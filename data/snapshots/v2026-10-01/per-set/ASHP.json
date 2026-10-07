@@ -1,0 +1,337 @@
+[
+	{
+		"title": "Enoch",
+		"subtitle": "Solemn Servant",
+		"cost": 4,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Scorpenek Annihilator Droid",
+		"subtitle": "",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Wicket",
+		"subtitle": "Yub Nub!",
+		"cost": 1,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Command",
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Barriss Offee",
+		"subtitle": "Redeeming Herself",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Vigilance",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Reanimated Night Trooper",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Morgan Elsbeth",
+		"subtitle": "Life Abandoned",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Armorer",
+		"subtitle": "Secrecy is Our Survival",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Get Lost",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Palace Chef Droid",
+		"subtitle": "",
+		"cost": 2,
+		"power": 0,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "T-6 Shuttle 1974",
+		"subtitle": "With a Mentor's Dedication",
+		"cost": 4,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Greef Karga",
+		"subtitle": "Introductions are in Order",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Blurrg",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Dinosaur Turtle",
+		"subtitle": "",
+		"cost": 6,
+		"power": 7,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "The Darksaber",
+		"subtitle": "Icon of Leadership",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 4,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Legendary",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "The Cyborg Mech",
+		"subtitle": "Mysterious Threat",
+		"cost": 6,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Emperor's Messenger",
+		"subtitle": "",
+		"cost": 1,
+		"power": 0,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Fennec Shand",
+		"subtitle": "The Galaxy Is Dangerous",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Mando's N-1 Starfighter",
+		"subtitle": "Faster than a Fathier",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tatooine Sand Beast",
+		"subtitle": "",
+		"cost": 6,
+		"power": 8,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Mouse Droid",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASHP",
+		"aspects": [
+			"Villainy"
+		]
+	}
+]

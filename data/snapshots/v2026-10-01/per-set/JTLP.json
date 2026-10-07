@@ -1,0 +1,335 @@
+[
+	{
+		"title": "Director Krennic",
+		"subtitle": "On the Verge of Greatness",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Onyx Squadron Brute",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Hera Syndulla",
+		"subtitle": "We've Lost Enough",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Cassian Andor",
+		"subtitle": "Threading the Eye",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": 1,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Leia Organa",
+		"subtitle": "Pilots, To Your Stations",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Poe Dameron",
+		"subtitle": "One Hell of a Pilot",
+		"cost": 4,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Chewbacca",
+		"subtitle": "Faithful First Mate",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": 3,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "General Hux",
+		"subtitle": "No Terms, No Surrender",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "IG-88",
+		"subtitle": "Murderous Phlutdroid",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": 0,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "BB-8",
+		"subtitle": "Happy Beeps",
+		"cost": 1,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": 1,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Red Squadron Y-Wing",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Red Five",
+		"subtitle": "Running the Trench",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Captain Tarkin",
+		"subtitle": "Full Forward Assault",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Shoot Down",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Boba Fett",
+		"subtitle": "Feared Bounty Hunter",
+		"cost": 5,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Anakin Skywalker",
+		"subtitle": "I'll Try Spinning",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Han Solo",
+		"subtitle": "Has His Moments",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Fett's Firespray",
+		"subtitle": "Feared Silhouette",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Millennium Falcon",
+		"subtitle": "Get Out And Push",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "JTLP",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Swarming Vulture Droid",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTLP",
+		"aspects": []
+	}
+]

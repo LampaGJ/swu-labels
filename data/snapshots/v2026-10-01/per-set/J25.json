@@ -1,0 +1,322 @@
+[
+	{
+		"title": "The Ghost",
+		"subtitle": "Heart of the Family",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "J25",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ki-Adi-Mundi",
+		"subtitle": "Composed and Confident",
+		"cost": 5,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "J25",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Poggle the Lesser",
+		"subtitle": "Archduke of the Stalgasin Hive",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "J25",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Luke Skywalker",
+		"subtitle": "You Still With Me?",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": 3,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "J25",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Darth Maul",
+		"subtitle": "Revenge At Last",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "J25",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Darth Vader",
+		"subtitle": "Scourge of Squadrons",
+		"cost": 6,
+		"power": 7,
+		"hp": 7,
+		"upgrade_power": 3,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "J25",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Count Dooku",
+		"subtitle": "Fallen Jedi",
+		"cost": 8,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "J25",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Ahsoka Tano",
+		"subtitle": "Chasing Whispers",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "J25",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Enfys Nest",
+		"subtitle": "Champion of Justice",
+		"cost": 7,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "J25",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Oggdo Bogdo",
+		"subtitle": "Bogano Brute",
+		"cost": 3,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "J25",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Yoda",
+		"subtitle": "My Ally is the Force",
+		"cost": 8,
+		"power": 5,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "J25",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "HK-47",
+		"subtitle": "Exclamation: Die, Meatbag!",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "J25",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Rey",
+		"subtitle": "With Palpatine's Power",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "J25",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Luke Skywalker",
+		"subtitle": "A Hero's Beginning",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "J25",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Darth Sion",
+		"subtitle": "Lord of Pain",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "J25",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Queen Amidala",
+		"subtitle": "Championing Her People",
+		"cost": 5,
+		"power": 5,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "J25",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Karis Nemik",
+		"subtitle": "Freedom is a Pure Idea",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "J25",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "General Grievous",
+		"subtitle": "Scuttling to Safety",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "J25",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Mandalorian",
+		"subtitle": "Cleaning Up Nevarro",
+		"cost": 8,
+		"power": 6,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "J25",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	}
+]

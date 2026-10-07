@@ -1,0 +1,104 @@
+[
+	{
+		"title": "Count Dooku",
+		"subtitle": "Darth Tyranus",
+		"cost": 7,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "C24",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Darth Vader",
+		"subtitle": "Commanding the First Legion",
+		"cost": 7,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "C24",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Emperor Palpatine",
+		"subtitle": "Master of the Dark Side",
+		"cost": 8,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "C24",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Kylo Ren",
+		"subtitle": "Killing the Past",
+		"cost": 6,
+		"power": 6,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "C24",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Asajj Ventress",
+		"subtitle": "Count Dooku's Assassin",
+		"cost": 4,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "C24",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Darth Maul",
+		"subtitle": "Revenge At Last",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "C24",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	}
+]

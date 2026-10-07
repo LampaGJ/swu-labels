@@ -1,0 +1,2666 @@
+[
+	{
+		"title": "Darth Vader",
+		"subtitle": "Meet Your Destiny",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "P26",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Rio Durant",
+		"subtitle": "Beckett's Right Hands",
+		"cost": 4,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Maul",
+		"subtitle": "Master of the Shadow Collective",
+		"cost": 7,
+		"power": 6,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Benthic “Two Tubes”",
+		"subtitle": "The War Has Just Begun",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Chewbacca",
+		"subtitle": "Mighty Rescuer",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Hera Syndulla",
+		"subtitle": "Renegade General",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Grogu",
+		"subtitle": "Yes. Yes. Yes.",
+		"cost": 3,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Marrok",
+		"subtitle": "Mysterious Warrior",
+		"cost": 3,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Luke Skywalker",
+		"subtitle": "Answering the Call",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Mace Windu",
+		"subtitle": "Austere Centrist",
+		"cost": 3,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Emperor Palpatine",
+		"subtitle": "Consolidating Power",
+		"cost": 5,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Fett's Firespray",
+		"subtitle": "Settling the Score",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Qui-Gon Jinn",
+		"subtitle": "We'll Handle This",
+		"cost": 5,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Galen Erso",
+		"subtitle": "You'll Never Win",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Axe Woves",
+		"subtitle": "Accomplished Warrior",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Gungi",
+		"subtitle": "Finding Himself",
+		"cost": 2,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "HK-47",
+		"subtitle": "Exclamation: Die, Meatbag!",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Syril Karn",
+		"subtitle": "Where Is He?",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "IG-2000",
+		"subtitle": "Assassin's Aggressor",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Chopper",
+		"subtitle": "War Hero",
+		"cost": 2,
+		"power": 4,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Planetary Bombardment",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Aurra Sing",
+		"subtitle": "Patient and Deadly",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "General Grievous",
+		"subtitle": "Scuttling to Safety",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Vernestra Rwoh",
+		"subtitle": "Precocious Knight",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Grogu",
+		"subtitle": "Mysterious Child",
+		"cost": 3,
+		"power": 1,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Galen Erso",
+		"subtitle": "You'll Never Win",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Axe Woves",
+		"subtitle": "Accomplished Warrior",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Gungi",
+		"subtitle": "Finding Himself",
+		"cost": 2,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "HK-47",
+		"subtitle": "Exclamation: Die, Meatbag!",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Syril Karn",
+		"subtitle": "Where Is He?",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "IG-2000",
+		"subtitle": "Assassin's Aggressor",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Chopper",
+		"subtitle": "War Hero",
+		"cost": 2,
+		"power": 4,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Planetary Bombardment",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Aurra Sing",
+		"subtitle": "Patient and Deadly",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "General Grievous",
+		"subtitle": "Scuttling to Safety",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Vernestra Rwoh",
+		"subtitle": "Precocious Knight",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Grogu",
+		"subtitle": "Mysterious Child",
+		"cost": 3,
+		"power": 1,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Chancellor Palpatine",
+		"subtitle": "I Am the Senate",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Qui-Gon Jinn",
+		"subtitle": "The Negotiations Will Be Short",
+		"cost": 7,
+		"power": 7,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Karis",
+		"subtitle": "We Don't Like Strangers",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Darth Sion",
+		"subtitle": "Lord of Pain",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Darth Vader",
+		"subtitle": "Twilight of the Apprentice",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Always Two",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Shatterpoint",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Naboo Royal Starship",
+		"subtitle": "Fit For A Queen",
+		"cost": 4,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Black One",
+		"subtitle": "Straight At Them",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Karis Nemik",
+		"subtitle": "Freedom is a Pure Idea",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ahsoka Tano",
+		"subtitle": "Chasing Whispers",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Darth Nihilus",
+		"subtitle": "Lord of Hunger",
+		"cost": 7,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Cad Bane",
+		"subtitle": "Now It's My Turn",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Han Solo",
+		"subtitle": "Hibernation Sick",
+		"cost": 1,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Max Rebo",
+		"subtitle": "Encore!",
+		"cost": 4,
+		"power": 2,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Lawbringer",
+		"subtitle": "Shadow Over Lothal",
+		"cost": 8,
+		"power": 7,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Karis Nemik",
+		"subtitle": "Freedom is a Pure Idea",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Sabine's Masterpiece",
+		"subtitle": "Crazy Colorful",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Karis",
+		"subtitle": "We Don't Like Strangers",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Darth Sion",
+		"subtitle": "Lord of Pain",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Darth Vader",
+		"subtitle": "Twilight of the Apprentice",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Always Two",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Shatterpoint",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Naboo Royal Starship",
+		"subtitle": "Fit For A Queen",
+		"cost": 4,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Black One",
+		"subtitle": "Straight At Them",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Karis Nemik",
+		"subtitle": "Freedom is a Pure Idea",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ahsoka Tano",
+		"subtitle": "Chasing Whispers",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Darth Nihilus",
+		"subtitle": "Lord of Hunger",
+		"cost": 7,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Cad Bane",
+		"subtitle": "Now It's My Turn",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Han Solo",
+		"subtitle": "Hibernation Sick",
+		"cost": 1,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Max Rebo",
+		"subtitle": "Encore!",
+		"cost": 4,
+		"power": 2,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Lawbringer",
+		"subtitle": "Shadow Over Lothal",
+		"cost": 8,
+		"power": 7,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Karis Nemik",
+		"subtitle": "Freedom is a Pure Idea",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Sabine's Masterpiece",
+		"subtitle": "Crazy Colorful",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Leia Organa",
+		"subtitle": "Extraordinary",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Darth Traya",
+		"subtitle": "Lord of Betrayal",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Stranger",
+		"subtitle": "No Survivors",
+		"cost": 5,
+		"power": 1,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Luke Skywalker",
+		"subtitle": "Profit or Be Destroyed",
+		"cost": 7,
+		"power": 9,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Moff Gideon",
+		"subtitle": "Remnant Commander",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Mandalorian",
+		"subtitle": "Devoted Rescuer",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Boba Fett",
+		"subtitle": "For a Price",
+		"cost": 5,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Pre Vizsla",
+		"subtitle": "Strong-Willed Ruler",
+		"cost": 8,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Max Rebo Band",
+		"subtitle": "Jatz-Wailers",
+		"cost": 3,
+		"power": 1,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Huyang",
+		"subtitle": "Your Aptitude Falls Short",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Credit",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Credit Token",
+		"rarity": "Common",
+		"expansion_code": "P26",
+		"aspects": []
+	},
+	{
+		"title": "Mandalorian",
+		"subtitle": "",
+		"cost": 0,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Unit",
+		"rarity": "Common",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Spy",
+		"subtitle": "",
+		"cost": 0,
+		"power": 0,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Unit",
+		"rarity": "Common",
+		"expansion_code": "P26",
+		"aspects": []
+	},
+	{
+		"title": "Advantage",
+		"subtitle": "",
+		"cost": 0,
+		"power": 1,
+		"hp": 0,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "P26",
+		"aspects": []
+	},
+	{
+		"title": "Qui-Gon Jinn",
+		"subtitle": "Influencing Chance",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Daimyo's Palace",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 27,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Imperial Command Complex",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 27,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Stygeon Spire",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 27,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Canto Bight",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 27,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Count Dooku",
+		"subtitle": "Offering Aid",
+		"cost": 7,
+		"power": 6,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Anakin Skywalker",
+		"subtitle": "Protect Her At All Costs",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Maul",
+		"subtitle": "Collective Ambition",
+		"cost": 7,
+		"power": 5,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Padmé Amidala",
+		"subtitle": "Follow My Lead",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Savage Opress",
+		"subtitle": "You Must Have Your Revenge",
+		"cost": 6,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Rex",
+		"subtitle": "No Other Option",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Asajj Ventress",
+		"subtitle": "Ambitious Apprentice",
+		"cost": 5,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Ahsoka Tano",
+		"subtitle": "I Have an Idea",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Millennium Falcon",
+		"subtitle": "Dodging Patrols",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Morgan Elsbeth",
+		"subtitle": "Life Abandoned",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Lando Calrissian",
+		"subtitle": "Eyes Open",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Jyn Erso",
+		"subtitle": "Take the Next Chance",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Director Krennic",
+		"subtitle": "I Lose Nothing But Time",
+		"cost": 9,
+		"power": 8,
+		"hp": 10,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Syril Karn",
+		"subtitle": "Where Is He?",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Zeb Orellios",
+		"subtitle": "Spectre Four",
+		"cost": 5,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Cinta Kaz",
+		"subtitle": "The Struggle Comes First",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Obi-Wan Kenobi",
+		"subtitle": "Finding What Doesn't Exist",
+		"cost": 4,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Legacy Run",
+		"subtitle": "Doomed Debris",
+		"cost": 5,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Fett's Firespray",
+		"subtitle": "In Pursuit",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Anakin Skywalker",
+		"subtitle": "You Were Right About Me",
+		"cost": 5,
+		"power": 6,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "P26",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Marrok",
+		"subtitle": "Mysterious Warrior",
+		"cost": 3,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Wicket",
+		"subtitle": "Yub Nub!",
+		"cost": 1,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Cassian Andor",
+		"subtitle": "Lay Low",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Bo-Katan Kryze",
+		"subtitle": "For All of Mandalore",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Mon Mothma",
+		"subtitle": "Clinging to Hope",
+		"cost": 7,
+		"power": 5,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ninth Sister",
+		"subtitle": "Hulking Inquisitor",
+		"cost": 7,
+		"power": 8,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Boba Fett",
+		"subtitle": "For a Price",
+		"cost": 5,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Mandalorian",
+		"subtitle": "Cleaning Up Nevarro",
+		"cost": 8,
+		"power": 6,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ebon Hawk",
+		"subtitle": "Cause and Effect",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Single Reactor Ignition",
+		"subtitle": "",
+		"cost": 8,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Luke Skywalker",
+		"subtitle": "Answering the Call",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Chimaera",
+		"subtitle": "A Frightening Reality",
+		"cost": 7,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Paz Vizsla",
+		"subtitle": "For a Brighter Future",
+		"cost": 5,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Armorer",
+		"subtitle": "Secrecy is Our Survival",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Bo-Katan Kryze",
+		"subtitle": "Alone",
+		"cost": 9,
+		"power": 8,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Koska Reeves",
+		"subtitle": "Warrior of Mandalore",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "The Darksaber",
+		"subtitle": "Icon of Leadership",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 4,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Grogu",
+		"subtitle": "Yes. Yes. Yes.",
+		"cost": 3,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Razor Crest",
+		"subtitle": "Outfitted Armament",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Finn",
+		"subtitle": "Looking Closer",
+		"cost": 6,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Ben Solo",
+		"subtitle": "Facing the Light",
+		"cost": 9,
+		"power": 8,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Poe Dameron",
+		"subtitle": "I'll Come Back For You",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Rey",
+		"subtitle": "Skywalker",
+		"cost": 8,
+		"power": 9,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Grand Admiral Thrawn",
+		"subtitle": "Orchestrating His Return",
+		"cost": 7,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Yoda",
+		"subtitle": "Begun, the Clone War Has",
+		"cost": 5,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tear This Ship Apart",
+		"subtitle": "",
+		"cost": 7,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Anakin Skywalker",
+		"subtitle": "Prescient Podracer",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tribunal",
+		"subtitle": "Grave of the 332nd",
+		"cost": 10,
+		"power": 6,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Gar Saxon",
+		"subtitle": "Coveting Power",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Imperial Armored Commando",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Cobb Vanth",
+		"subtitle": "Let Me Handle This",
+		"cost": 4,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Bo-Katan's Gauntlet",
+		"subtitle": "Reinforce from Above",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "General Grievous",
+		"subtitle": "Crush Them!",
+		"cost": 5,
+		"power": 0,
+		"hp": 0,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Galactic Escalation",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Fennec Shand",
+		"subtitle": "The Galaxy Is Dangerous",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Eye of Sion",
+		"subtitle": "Delivered from Exile",
+		"cost": 7,
+		"power": 5,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Hera Syndulla",
+		"subtitle": "Renegade General",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Gallius Rax",
+		"subtitle": "Counselor to the Empire",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Stockpile",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "P26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Green Leader",
+		"subtitle": "Crynyd's Sacrifice",
+		"cost": 2,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Master Codebreaker",
+		"subtitle": "High Stakes",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Jod Na Nawood",
+		"subtitle": "Keeping Secrets",
+		"cost": 3,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Latts Razzi",
+		"subtitle": "Deadly Whipmaster",
+		"cost": 3,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Pre Vizsla",
+		"subtitle": "Strong-Willed Ruler",
+		"cost": 8,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Han Solo",
+		"subtitle": "It'll Work",
+		"cost": 4,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "P26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Executor",
+		"subtitle": "Final Destruction of the Alliance",
+		"cost": 8,
+		"power": 5,
+		"hp": 12,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "P26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Leia Organa",
+		"subtitle": "Vigilant for Danger",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "P26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Darth Vader",
+		"subtitle": "Meet Your Destiny",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "P26",
+		"aspects": [
+			"Villainy"
+		]
+	}
+]

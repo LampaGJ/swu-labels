@@ -1,0 +1,4398 @@
+[
+	{
+		"title": "Mandalorian",
+		"subtitle": "",
+		"cost": 0,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "The Armorer",
+		"subtitle": "Steel Shapes Us",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Advantage",
+		"subtitle": "",
+		"cost": 0,
+		"power": 1,
+		"hp": 0,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": []
+	},
+	{
+		"title": "Fennec Shand",
+		"subtitle": "Ready for War",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Baylan Skoll",
+		"subtitle": "Power Beyond Dream",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Shield",
+		"subtitle": "",
+		"cost": 0,
+		"power": 0,
+		"hp": 0,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": []
+	},
+	{
+		"title": "Grand Admiral Thrawn",
+		"subtitle": "Victory is Mine",
+		"cost": 8,
+		"power": 5,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Luke Skywalker",
+		"subtitle": "I Can Save Him",
+		"cost": 7,
+		"power": 6,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Special",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Sabine Wren",
+		"subtitle": "Bargaining on Belief",
+		"cost": 5,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Grand Admiral Sloane",
+		"subtitle": "Holding the Empire Together",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Moff Gideon",
+		"subtitle": "Indomitable Warlord",
+		"cost": 7,
+		"power": 5,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Ahsoka Tano",
+		"subtitle": "Trust in the Force",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Bo-Katan Kryze",
+		"subtitle": "Reclaiming Mandalore",
+		"cost": 10,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Cad Bane",
+		"subtitle": "Still Faster than You",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Vane",
+		"subtitle": "Quarrelsome Pirate",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Ezra Bridger",
+		"subtitle": "It's Now or Never",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Mandalorian",
+		"subtitle": "We Can't Keep Running",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Emperor Palpatine",
+		"subtitle": "According to My Design",
+		"cost": 7,
+		"power": 4,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Special",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Shin Hati",
+		"subtitle": "Eager Adversary",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Greef Karga",
+		"subtitle": "Gracious Magistrate",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Grogu",
+		"subtitle": "Charming Companion",
+		"cost": 4,
+		"power": 0,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Fortress of the Great Mothers",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Nevarro City, Restored",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Emperor's Throne Room",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Kryze Castle",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Ancient Henge",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Dragonsnake Bog",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Emperor's Observatory",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Freetown",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Enoch",
+		"subtitle": "Solemn Servant",
+		"cost": 4,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Paz Vizsla",
+		"subtitle": "For a Brighter Future",
+		"cost": 5,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Scorpenek Annihilator Droid",
+		"subtitle": "",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Marrok",
+		"subtitle": "Mysterious Warrior",
+		"cost": 3,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Hera Syndulla",
+		"subtitle": "Renegade General",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Rancor Keeper",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Grand Admiral Thrawn",
+		"subtitle": "Orchestrating His Return",
+		"cost": 7,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Wicket",
+		"subtitle": "Yub Nub!",
+		"cost": 1,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tatooine Repulsor Train",
+		"subtitle": "",
+		"cost": 7,
+		"power": 8,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Rukh",
+		"subtitle": "From the Shadows",
+		"cost": 3,
+		"power": 1,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Red Leader",
+		"subtitle": "Strike the Reactor",
+		"cost": 7,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Purrgil Ultra",
+		"subtitle": "",
+		"cost": 8,
+		"power": 6,
+		"hp": 10,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Baylan Skoll",
+		"subtitle": "Fallen Jedi",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Poe Dameron",
+		"subtitle": "I'll Come Back For You",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Outcast",
+		"subtitle": "Mercenary Starship",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Jabba the Hutt",
+		"subtitle": "Eminence of Tatooine",
+		"cost": 4,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Corona Four",
+		"subtitle": "Justice for Alderaan",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Barriss Offee",
+		"subtitle": "Redeeming Herself",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Reanimated Night Trooper",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Scion Shuttle",
+		"subtitle": "At Morgan's Bidding",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Gar Saxon",
+		"subtitle": "Coveting Power",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Imperial Armored Commando",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Shin Hati",
+		"subtitle": "Going Somewhere?",
+		"cost": 5,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Morgan Elsbeth",
+		"subtitle": "Life Abandoned",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Reinforcing Light Cruiser",
+		"subtitle": "",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Chimaera",
+		"subtitle": "A Frightening Reality",
+		"cost": 7,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Pre Vizsla",
+		"subtitle": "Strong-Willed Ruler",
+		"cost": 8,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Pointless to Resist",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Blade of Talzin",
+		"subtitle": "A Gift of Shadows",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 1,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Huyang",
+		"subtitle": "Your Aptitude Falls Short",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Lothal E-Wing",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Duchess's Protector",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Leia Organa",
+		"subtitle": "Vigilant for Danger",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Cobb Vanth",
+		"subtitle": "Let Me Handle This",
+		"cost": 4,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Strike Team Vanguard",
+		"subtitle": "",
+		"cost": 4,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Mandalorian",
+		"subtitle": "Devoted Rescuer",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Bo-Katan's Gauntlet",
+		"subtitle": "Reinforce from Above",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Armorer",
+		"subtitle": "Secrecy is Our Survival",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Home One",
+		"subtitle": "Heart of the Fleet",
+		"cost": 8,
+		"power": 7,
+		"hp": 10,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Luke's Jedi Lightsaber",
+		"subtitle": "Constructed by Hand",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 3,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Special",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Get Lost",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Domesticated Loth-Cat",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Noti Nomad",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "At Attin Safety Droid",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Battered Haulcraft",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Doctor Pershing",
+		"subtitle": "Dedicated to Research",
+		"cost": 2,
+		"power": 0,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Palace Chef Droid",
+		"subtitle": "",
+		"cost": 2,
+		"power": 0,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Mos Eisley Modifier",
+		"subtitle": "",
+		"cost": 3,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Pit Droid Team",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Remnant Official",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Ryder Azadi",
+		"subtitle": "Restored Governor",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "B-Wing Rearguard",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Koska Reeves",
+		"subtitle": "Warrior of Mandalore",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Covert Believers",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Nebulon-C Frigate",
+		"subtitle": "",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Trexler Armored Marauder",
+		"subtitle": "",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Summa-verminoth",
+		"subtitle": "",
+		"cost": 12,
+		"power": 15,
+		"hp": 15,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Arcana Star Map",
+		"subtitle": "Path to Peridea",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Grav Charge",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Durasteel Plating",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Cybernetic Enhancements",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "The Conflict Within",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Perseverance",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Reforge",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Buy Time",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Foundling Rescue",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Captain Pellaeon",
+		"subtitle": "Plotting from the Shadows",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Moff Jerjerrod",
+		"subtitle": "We Shall Redouble Our Efforts",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Remnant Interceptor",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Forest Patroller",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Moff Gideon",
+		"subtitle": "Remnant Commander",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "AT-ST Raider",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Gozanti Assault Carrier",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Gallius Rax",
+		"subtitle": "Counselor to the Empire",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Great Mothers",
+		"subtitle": "With Strange Magicks",
+		"cost": 7,
+		"power": 6,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Ravager",
+		"subtitle": "Final Imperial Command",
+		"cost": 9,
+		"power": 8,
+		"hp": 10,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Long Live the Empire",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Dathomiri Magicks",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Bo-Katan Kryze",
+		"subtitle": "For All of Mandalore",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Pathfinder Sergeant",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Clan Wren Loyalist",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Crix Madine",
+		"subtitle": "Strike Team Strategist",
+		"cost": 3,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "T-6 Shuttle 1974",
+		"subtitle": "With a Mentor's Dedication",
+		"cost": 4,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Admiral Ackbar",
+		"subtitle": "Assume Attack Coordinates",
+		"cost": 5,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Children of the Watch",
+		"subtitle": "",
+		"cost": 6,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Luke Skywalker",
+		"subtitle": "Answering the Call",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Mandalorian Flagship",
+		"subtitle": "Captured from the Empire",
+		"cost": 7,
+		"power": 4,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Sabine's Lightsaber",
+		"subtitle": "Not Alone",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Student Guides the Master",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ant Droid",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Outland Protector",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "8D8",
+		"subtitle": "Daimyo's Majordomo",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Greef Karga",
+		"subtitle": "Introductions are in Order",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Warrior of Clan Kryze",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Blurrg",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Consortium StarViper",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Lang",
+		"subtitle": "Arrogant Mercenary",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Protectorate Fighter",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Stolen Eta Shuttle",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Survivors' Langskib",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "The Twins",
+		"subtitle": "We Don't Want War",
+		"cost": 4,
+		"power": 2,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Bothan-5",
+		"subtitle": "New Republic Prison Ship",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Defenders of the Forest",
+		"subtitle": "",
+		"cost": 5,
+		"power": 5,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Fang Fighter Squadron",
+		"subtitle": "",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Dinosaur Turtle",
+		"subtitle": "",
+		"cost": 6,
+		"power": 7,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Queen Soruna",
+		"subtitle": "Willing to Fight",
+		"cost": 6,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Trask Walker",
+		"subtitle": "",
+		"cost": 8,
+		"power": 5,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Warrior's Legacy",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "The Darksaber",
+		"subtitle": "Icon of Leadership",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 4,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Display of Strength",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Wipe Them Out",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Turning the Tide",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Hold Them Off",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Stronger Together",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "TIE Striker",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Mortar Trooper",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Tempest Lieutenant",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Vane's Snub Fighter",
+		"subtitle": "Brash and Proud",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Praetorian Elite",
+		"subtitle": "",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Justifier",
+		"subtitle": "Relentless",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Cyborg Mech",
+		"subtitle": "Mysterious Threat",
+		"cost": 6,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Ninth Sister",
+		"subtitle": "Hulking Inquisitor",
+		"cost": 7,
+		"power": 8,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Eviscerator",
+		"subtitle": "Burn Them Away",
+		"cost": 8,
+		"power": 9,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Deadly Vulnerability",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Operation Cinder",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Inspired Recruit",
+		"subtitle": "",
+		"cost": 1,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Green Leader",
+		"subtitle": "Crynyd's Sacrifice",
+		"cost": 2,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Honorable Nite Owl",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Grogu",
+		"subtitle": "Yes. Yes. Yes.",
+		"cost": 3,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "R5-D4",
+		"subtitle": "Built for Adventure",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Danger Squadron Wingmen",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Han Solo",
+		"subtitle": "It'll Work",
+		"cost": 4,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Alphabet Squadron U-Wing",
+		"subtitle": "Quiet Devotion",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Kachirho Militia",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Zeb Orrelios",
+		"subtitle": "Fists Work Every Time",
+		"cost": 7,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Rash Action",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Reckless Sacrifice",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Alamite Hunter",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Clan Vizsla Soldier",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Ewok Warrior",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Flarestar Attack Shuttle",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Migs Mayfeld",
+		"subtitle": "How About a Toast?",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Axe Woves",
+		"subtitle": "Undaunted",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Desert Sharpshooter",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Pegasus Tri-Wing",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Razor Crest",
+		"subtitle": "Outfitted Armament",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Shydopp Pirate Skiff",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "StarFortress Heavy Bomber",
+		"subtitle": "",
+		"cost": 5,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Wookiee Chieftain",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Imposing Scout Walker",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Onyx Cinder",
+		"subtitle": "Adventure Awaits",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Knobby White Ice Spider",
+		"subtitle": "",
+		"cost": 7,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Boba Fett's Rancor",
+		"subtitle": "Emotionally Complex Creature",
+		"cost": 8,
+		"power": 8,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Bokken Saber",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Mark My Words",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Unfettered Ambition",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Whistling Birds",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Follow Me",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Intimidation",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Treacherous Minefield",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Reckoning",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Galvanized Leap",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Emperor's Messenger",
+		"subtitle": "",
+		"cost": 1,
+		"power": 0,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Peridea Bandit",
+		"subtitle": "",
+		"cost": 2,
+		"power": 4,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Shin Hati's Fiend Fighter",
+		"subtitle": "Compact and Agile",
+		"cost": 2,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Fennec Shand",
+		"subtitle": "The Galaxy Is Dangerous",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Emperor's Champion",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Snub Fighter Squadron",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Helgait",
+		"subtitle": "Dooku Was a Visionary",
+		"cost": 5,
+		"power": 6,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Gorian Shard's Corsair",
+		"subtitle": "Pirate Warship",
+		"cost": 6,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Executor",
+		"subtitle": "Final Destruction of the Alliance",
+		"cost": 8,
+		"power": 5,
+		"hp": 12,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Nowhere to Hide",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": -2,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "There Is No Conflict",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Special",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Rehabilitation",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Open Circle Ace",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Carson Teva",
+		"subtitle": "There's Something Going On",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Mando's N-1 Starfighter",
+		"subtitle": "Faster than a Fathier",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Blade Three",
+		"subtitle": "Bane of the Devastator",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Inspiring Veteran",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Kelleran Beq",
+		"subtitle": "Where are the Others?",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Heroic Purrgil",
+		"subtitle": "",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Sabine Wren",
+		"subtitle": "I Learned the Hard Way",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ezra Bridger",
+		"subtitle": "The Force is All I Need",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "DDC Defender",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Fateful Goodbye",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Peli Motto",
+		"subtitle": "You Bring the Cash?",
+		"cost": 1,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Womp Rat",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Amnesty Officer",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Flanking TIE Interceptor",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Mandalorian Scout",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Mayor's Majordomo",
+		"subtitle": "No Problem Groveling",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Ferry Droid",
+		"subtitle": "",
+		"cost": 3,
+		"power": 1,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Jod Na Nawood",
+		"subtitle": "Keeping Secrets",
+		"cost": 3,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Remnant Lookouts",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Helix Starfighter",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Unsanctioned Patrol",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Halo",
+		"subtitle": "Not According to Plan",
+		"cost": 5,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Elzar Mann",
+		"subtitle": "Haunted by a Vision",
+		"cost": 6,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Tatooine Sand Beast",
+		"subtitle": "",
+		"cost": 6,
+		"power": 8,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Qi'ra",
+		"subtitle": "Master of Teräs Käsi",
+		"cost": 7,
+		"power": 9,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Heightened Awareness",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Preparation",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Camtono",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Improvised Identity",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 3,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Diplomatic Pageantry",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Full of Surprises",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Keep Them Talking",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Masterstroke",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Sense Through the Force",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Far Far Away",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Mouse Droid",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Attendant Navigator",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Imperial Loyalist",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Mandalorian Super Commandos",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Marrok's Fiend Fighter",
+		"subtitle": "Formidable Pursuer",
+		"cost": 3,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Death Trooper Squad",
+		"subtitle": "",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Darth Vader",
+		"subtitle": "Meet Your Destiny",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Remnant Trooper Corps",
+		"subtitle": "",
+		"cost": 5,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Eye of Sion",
+		"subtitle": "Delivered from Exile",
+		"cost": 7,
+		"power": 5,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Exploit Advantage",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "One Must Destroy to Create",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Neel",
+		"subtitle": "The Cutest Boy",
+		"cost": 1,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Covert Veteran",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Imperial Defector",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Zealous Soldier",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "N5 Sentry Droid",
+		"subtitle": "",
+		"cost": 3,
+		"power": 4,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Yellow Aces Bomber",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Gallofree Transport",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Anakin Skywalker",
+		"subtitle": "You Were Right About Me",
+		"cost": 5,
+		"power": 6,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Rebel Infiltrators",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Choose Your Path",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Grassroots Resistance",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "LEP Ratcatcher",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": []
+	},
+	{
+		"title": "Mos Espa Watermonger",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": []
+	},
+	{
+		"title": "Noti Mobile Pod",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": []
+	},
+	{
+		"title": "Faith in the Empire",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": []
+	},
+	{
+		"title": "The Way of the Mand'alor",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": []
+	},
+	{
+		"title": "A New Order",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "ASH",
+		"aspects": []
+	}
+]

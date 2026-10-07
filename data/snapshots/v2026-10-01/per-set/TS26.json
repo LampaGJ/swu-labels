@@ -1,0 +1,1463 @@
+[
+	{
+		"title": "Battle Droid",
+		"subtitle": "",
+		"cost": 0,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Unit",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Count Dooku",
+		"subtitle": "Offering Aid",
+		"cost": 7,
+		"power": 6,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Anakin Skywalker",
+		"subtitle": "Protect Her At All Costs",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Clone Trooper",
+		"subtitle": "",
+		"cost": 0,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Unit",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Experience",
+		"subtitle": "",
+		"cost": 0,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": []
+	},
+	{
+		"title": "Maul",
+		"subtitle": "Collective Ambition",
+		"cost": 7,
+		"power": 5,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Padmé Amidala",
+		"subtitle": "Follow My Lead",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Shield",
+		"subtitle": "",
+		"cost": 0,
+		"power": 0,
+		"hp": 0,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": []
+	},
+	{
+		"title": "Savage Opress",
+		"subtitle": "You Must Have Your Revenge",
+		"cost": 6,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Rex",
+		"subtitle": "No Other Option",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Asajj Ventress",
+		"subtitle": "Ambitious Apprentice",
+		"cost": 5,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Ahsoka Tano",
+		"subtitle": "I Have an Idea",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "First Battle Memorial",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 27,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Dooku's Palace",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 27,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Executioner's Arena",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 27,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Sundari Palace",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 27,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Darth Sidious",
+		"subtitle": "Under a Cloak of Darkness",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Yoda",
+		"subtitle": "Begun, the Clone War Has",
+		"cost": 5,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "C-3P0",
+		"subtitle": "Die, Jedi Dogs!",
+		"cost": 2,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "King Katuunko",
+		"subtitle": "Great King of Toydaria",
+		"cost": 2,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Rush Clovis",
+		"subtitle": "Trapped by Authority",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Jendirian Valley",
+		"subtitle": "Refugee Freighter",
+		"cost": 4,
+		"power": 1,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Command"
+		]
+	},
+	{
+		"title": "Coleman Trebor",
+		"subtitle": "Jedi Rescuer",
+		"cost": 1,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "501st Veteran",
+		"subtitle": "",
+		"cost": 2,
+		"power": 0,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Gar Saxon",
+		"subtitle": "Sundari Pillager",
+		"cost": 3,
+		"power": 1,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Darksaber",
+		"subtitle": "Only the Strongest Shall Rule",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Assault Lander LAAT",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Sundari Gauntlet",
+		"subtitle": "",
+		"cost": 5,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Fiery Alliance",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Aggression"
+		]
+	},
+	{
+		"title": "Mother Talzin",
+		"subtitle": "Stealing the Spirit",
+		"cost": 5,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Fortune and Glory",
+		"subtitle": "Hondo's Luxury Yacht",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Prime Minister Almec",
+		"subtitle": "Scheming Populist",
+		"cost": 4,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Ziton Moj",
+		"subtitle": "Sowing Chaos",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression",
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Maul",
+		"subtitle": "One Last Lesson",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Chaotic Diversion",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Reckless Landing",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Kouhun Assassination",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning",
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Fives",
+		"subtitle": "I Have Proof!",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning",
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ahsoka's Lightsabers",
+		"subtitle": "Don't Hurt Them",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning",
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tribunal",
+		"subtitle": "Grave of the 332nd",
+		"cost": 10,
+		"power": 6,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Abandoned the Order",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning",
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Dooku's Solar Sailer",
+		"subtitle": "Beautiful and Expensive",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Captain Vaughn",
+		"subtitle": "Search the Tunnels",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Obi-Wan Kenobi",
+		"subtitle": "Steadfast Knight",
+		"cost": 3,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Twilight",
+		"subtitle": "Escaping Malevolence",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Relief Frigate",
+		"subtitle": "",
+		"cost": 5,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Wartime Refugee",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Arena Reek",
+		"subtitle": "Lumbering Beast",
+		"cost": 4,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Champion",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 4,
+		"upgrade_hp": 4,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Secret Marriage",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Take Cover",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Vanquish the Legion",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Separatist Council",
+		"subtitle": "Quarrelsome Holdouts",
+		"cost": 4,
+		"power": 2,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "General Grievous",
+		"subtitle": "Crush Them!",
+		"cost": 5,
+		"power": 0,
+		"hp": 0,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Lom Pyke",
+		"subtitle": "Making a Withdrawal",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Sith Traditions",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Coruscanti Spy",
+		"subtitle": "",
+		"cost": 1,
+		"power": 0,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Wartime Mercenaries",
+		"subtitle": "",
+		"cost": 4,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Jedi General",
+		"subtitle": "",
+		"cost": 5,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Galactic Escalation",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Mechanize",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Backed by the Pykes",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Brothers",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Take Charge",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Encircle",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "R2-D2",
+		"subtitle": "Getting His Chance",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Rex's DC-17s",
+		"subtitle": "This Ship is Going Down",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 3,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Urgent Mission",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Bo-Katan Kryze",
+		"subtitle": "The Lawless",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Wartime Pirate",
+		"subtitle": "",
+		"cost": 3,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Ruping Rider",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Arms Deal",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Remove the Chip",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Backed by Black Sun",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Take Action",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Fervor",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Moralo Eval",
+		"subtitle": "Infamous Murderer",
+		"cost": 3,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Pre Vizsla",
+		"subtitle": "For Mandalore!",
+		"cost": 3,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Jango Fett",
+		"subtitle": "Guarding the Count",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Wartime Profiteer",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Deployed Droideka",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Barriss Offee",
+		"subtitle": "It's Only a Matter of Time",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Underestimated",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Reveal Intentions",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Mislead",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Evade Arrest",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Take Aim",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Fearless Attack",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "TS26",
+		"aspects": [
+			"Heroism"
+		]
+	}
+]

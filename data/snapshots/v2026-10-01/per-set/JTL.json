@@ -1,0 +1,4356 @@
+[
+	{
+		"title": "Asajj Ventress",
+		"subtitle": "I Work Alone",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": 3,
+		"upgrade_hp": 4,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "TIE Fighter",
+		"subtitle": "",
+		"cost": 0,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Grand Admiral Thrawn",
+		"subtitle": "...How Unfortunate",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "X-Wing",
+		"subtitle": "",
+		"cost": 0,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Token Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Experience",
+		"subtitle": "",
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": []
+	},
+	{
+		"title": "Lando Calrissian",
+		"subtitle": "Buying Time",
+		"cost": 7,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": 5,
+		"upgrade_hp": 5,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Rose Tico",
+		"subtitle": "Saving What We Love",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Shield",
+		"subtitle": "",
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Token Upgrade",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": []
+	},
+	{
+		"title": "Admiral Piett",
+		"subtitle": "Commanding the Armada",
+		"cost": 5,
+		"power": 2,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Darth Vader",
+		"subtitle": "Victor Squadron Leader",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": 5,
+		"upgrade_hp": 5,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Admiral Holdo",
+		"subtitle": "We're Not Alone",
+		"cost": 6,
+		"power": 3,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Wedge Antilles",
+		"subtitle": "Leader of Red Squadron",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": 3,
+		"upgrade_hp": 4,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Boba Fett",
+		"subtitle": "Any Methods Necessary",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": 4,
+		"upgrade_hp": 4,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Special",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Captain Phasma",
+		"subtitle": "Chrome Dome",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Major Vonreg",
+		"subtitle": "Red Baron",
+		"cost": 4,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": 3,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Luke Skywalker",
+		"subtitle": "Hero of Yavin",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": 4,
+		"upgrade_hp": 5,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Poe Dameron",
+		"subtitle": "I Can Fly Anything",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": 2,
+		"upgrade_hp": 1,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Admiral Trench",
+		"subtitle": "Chk-chk-chk-chk",
+		"cost": 6,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Rio Durant",
+		"subtitle": "Wisecracking Wheelman",
+		"cost": 5,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": 3,
+		"upgrade_hp": 5,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Admiral Ackbar",
+		"subtitle": "It's A Trap!",
+		"cost": 6,
+		"power": 3,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Han Solo",
+		"subtitle": "Never Tell Me the Odds",
+		"cost": 5,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": 3,
+		"upgrade_hp": 4,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Special",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Kazuda Xiono",
+		"subtitle": "Best Pilot in the Galaxy",
+		"cost": 4,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": 3,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Leader",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "City in the Clouds",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Shield Generator Complex",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Colossus",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 35,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Resistance Headquarters",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Theed Palace",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Data Vault",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 33,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Thermal Oscillator",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 27,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Massassi Temple",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Nadiri Dockyards",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Nabat Village",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 27,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Chopper Base",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Mos Eisley",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 30,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Lake Country",
+		"subtitle": "",
+		"cost": null,
+		"power": null,
+		"hp": 34,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Base",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": []
+	},
+	{
+		"title": "Director Krennic",
+		"subtitle": "On the Verge of Greatness",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Onyx Squadron Brute",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Interceptor Ace",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Tam Ryvora",
+		"subtitle": "Searching For Purpose",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Iden Versio",
+		"subtitle": "Adapt or Die",
+		"cost": 4,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": 3,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Banshee",
+		"subtitle": "Crippling Command",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Corvus",
+		"subtitle": "Inferno Squadron Raider",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Chimaera",
+		"subtitle": "Reinforcing the Center",
+		"cost": 6,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Fleet Interdictor",
+		"subtitle": "",
+		"cost": 7,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Annihilator",
+		"subtitle": "Tagge's Flagship",
+		"cost": 11,
+		"power": 12,
+		"hp": 12,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Power from Pain",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "No Glory, Only Results",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Echo Base Engineer",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Hera Syndulla",
+		"subtitle": "We've Lost Enough",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Paige Tico",
+		"subtitle": "Dropping the Hammer",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Admiral Yularen",
+		"subtitle": "Fleet Coordinator",
+		"cost": 3,
+		"power": 1,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Cassian Andor",
+		"subtitle": "Threading the Eye",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": 1,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "L3-37",
+		"subtitle": "Get Out Of My Seat",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": 3,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Phantom II",
+		"subtitle": "Modified to Dock",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Red Squadron X-Wing",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "D'Qar Cargo Frigate",
+		"subtitle": "",
+		"cost": 5,
+		"power": 6,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Ghost",
+		"subtitle": "Heart of the Family",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Gold Leader",
+		"subtitle": "Fastest Ship in the Fleet",
+		"cost": 6,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "You're All Clear, Kid",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Hondo Ohnaka",
+		"subtitle": "Superfluous Swindler",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Astromech Pilot",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": 1,
+		"upgrade_hp": 3,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Academy Graduate",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 2,
+		"upgrade_power": 1,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Corporate Defense Shuttle",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Desperate Commando",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Royal Security Fighter",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Silver Angel",
+		"subtitle": "Trace's Hope",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Landing Shuttle",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Omicron Strike Craft",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Outer Rim Outlaws",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Trace Martez",
+		"subtitle": "Trusting Sister",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": 1,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Cloaked StarViper",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Perimeter AT-RT",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Munificent Frigate",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "U-Wing Lander",
+		"subtitle": "",
+		"cost": 5,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "CR90 Relief Runner",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Wing Guard Security Team",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Grim Valor",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Close the Shield Gate",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Repair",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Covering the Wing",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "In the Heat of Battle",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Direct Hit",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Out the Airlock",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Nebula Ignition",
+		"subtitle": "",
+		"cost": 9,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "First Order TIE Fighter",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Kijimi Patrollers",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Pantoran Starship Thief",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Wingman Victor Two",
+		"subtitle": "Mauler Mithel",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Victor Leader",
+		"subtitle": "Leading from the Front",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Wingman Victor Three",
+		"subtitle": "Backstabber",
+		"cost": 3,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "TIE Ambush Squadron",
+		"subtitle": "",
+		"cost": 4,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Captain Phasma",
+		"subtitle": "On My Command",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "The Invisible Hand",
+		"subtitle": "Crawling With Vultures",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Executor",
+		"subtitle": "Might of the Empire",
+		"cost": 11,
+		"power": 12,
+		"hp": 12,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Apology Accepted",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Scramble Fighters",
+		"subtitle": "",
+		"cost": 7,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Nien Nunb",
+		"subtitle": "Loyal Co-Pilot",
+		"cost": 1,
+		"power": 1,
+		"hp": 2,
+		"upgrade_power": 1,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Luke Skywalker",
+		"subtitle": "You Still With Me?",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": 3,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Phoenix Squadron A-Wing",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Blue Leader",
+		"subtitle": "Scarif Air Support",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Leia Organa",
+		"subtitle": "Pilots, To Your Stations",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Snap Wexley",
+		"subtitle": "Resistance Recon Flier",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Veteran Fleet Officer",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Poe Dameron",
+		"subtitle": "One Hell of a Pilot",
+		"cost": 4,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Red Leader",
+		"subtitle": "Form Up",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Resistance Blue Squadron",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Chewbacca",
+		"subtitle": "Faithful First Mate",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": 3,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Raddus",
+		"subtitle": "Holdo's Final Command",
+		"cost": 7,
+		"power": 8,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Starhawk",
+		"subtitle": "Prototype Battleship",
+		"cost": 9,
+		"power": 6,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Unity of Purpose",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Bunker Defender",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Clone Pilot",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Jarek Yeager",
+		"subtitle": "Coordinating With The Resistance",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Scouting Headhunter",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Seasoned Fleet Admiral",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Eager Escort Fighter",
+		"subtitle": "",
+		"cost": 3,
+		"power": 4,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Homestead Militia",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Adept ARC-170",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Clone Combat Squadron",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Dornean Gunship",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "General Draven",
+		"subtitle": "Doing What Must Be Done",
+		"cost": 5,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "MC30 Assault Frigate",
+		"subtitle": "",
+		"cost": 5,
+		"power": 5,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Resupply Carrier",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Dorsal Turret",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Salvage",
+		"subtitle": "",
+		"cost": 0,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "All Wings Report In",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Dogfight",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Tandem Assault",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Air Superiority",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Eject",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Lightspeed Assault",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Prepare for Takeoff",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Focus Fire",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Timely Reinforcements",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Turbolaser Salvo",
+		"subtitle": "",
+		"cost": 7,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "First Order Stormtrooper",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Allegiant General Pryde",
+		"subtitle": "Ruthless and Loyal",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "General Hux",
+		"subtitle": "No Terms, No Surrender",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Special Forces TIE Fighter",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Prototype TIE Advanced",
+		"subtitle": "",
+		"cost": 3,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Vonreg's TIE Interceptor",
+		"subtitle": "Ace of the First Order",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Decimator of Dissidents",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Dengar",
+		"subtitle": "Crude and Slovenly",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": 1,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "IG-2000",
+		"subtitle": "Assassin's Aggressor",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "IG-88",
+		"subtitle": "Murderous Phlutdroid",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": 0,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Darth Vader",
+		"subtitle": "Scourge of Squadrons",
+		"cost": 6,
+		"power": 7,
+		"hp": 7,
+		"upgrade_power": 3,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Devastator",
+		"subtitle": "Hunting the Rebellion",
+		"cost": 8,
+		"power": 9,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "No Disintegrations",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Special",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "BB-8",
+		"subtitle": "Happy Beeps",
+		"cost": 1,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": 1,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Massassi Tactical Officer",
+		"subtitle": "",
+		"cost": 1,
+		"power": 0,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Black One",
+		"subtitle": "Straight At Them",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Frisk",
+		"subtitle": "Vanguard Loudmouth",
+		"cost": 2,
+		"power": 3,
+		"hp": 2,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Red Squadron Y-Wing",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Biggs Darklighter",
+		"subtitle": "They'll Never Stop Us",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": 2,
+		"upgrade_hp": 1,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Red Five",
+		"subtitle": "Running the Trench",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tactical Heavy Bomber",
+		"subtitle": "",
+		"cost": 5,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Rebellious Hammerhead",
+		"subtitle": "",
+		"cost": 6,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Profundity",
+		"subtitle": "We Fight!",
+		"cost": 9,
+		"power": 8,
+		"hp": 9,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "They Hate That Ship",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Trench Run",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Relentless Firespray",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Crackshot V-Wing",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Determined Recruit",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": 3,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Supporting Eta-2",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Captain Tarkin",
+		"subtitle": "Full Forward Assault",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Droid Missile Platform",
+		"subtitle": "",
+		"cost": 3,
+		"power": 4,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "AT-DP Occupier",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Cham Syndulla",
+		"subtitle": "Rallying Ryloth",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Hunting Aggressor",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Orbiting K-Wing",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Occupier Siege Tank",
+		"subtitle": "",
+		"cost": 5,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Insurgent Saboteurs",
+		"subtitle": "",
+		"cost": 6,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Shadow Caster",
+		"subtitle": "Just Business",
+		"cost": 6,
+		"power": 4,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "War Juggernaut",
+		"subtitle": "",
+		"cost": 6,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Targeting Computer",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Twin Laser Turret",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Fight Fire With Fire",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Hotshot Maneuver",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "System Shock",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Shoot Down",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Stay on Target",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Face Off",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Koiogran Turn",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Piercing Shot",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Planetary Bombardment",
+		"subtitle": "",
+		"cost": 6,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Rampart",
+		"subtitle": "Enjoy the Exit",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Zygerrian Starhopper",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Contracted Jumpmaster",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Hound's Tooth",
+		"subtitle": "Reliable and Deadly",
+		"cost": 3,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Mist Hunter",
+		"subtitle": "The Findsman's Pursuit",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Bossk",
+		"subtitle": "Hunt By Instinct",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": 2,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Moff Gideon",
+		"subtitle": "I Know Everything",
+		"cost": 4,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Boba Fett",
+		"subtitle": "Feared Bounty Hunter",
+		"cost": 5,
+		"power": 5,
+		"hp": 4,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Techno Union Transport",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Invincible",
+		"subtitle": "Naval Adversary",
+		"cost": 6,
+		"power": 6,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "In Debt to Crimson Dawn",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "I Have You Now",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Heartless Tactics",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Cat and Mouse",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Dagger Squadron Pilot",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": 2,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Anakin Skywalker",
+		"subtitle": "I'll Try Spinning",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Fireball",
+		"subtitle": "An Explosion With Wings",
+		"cost": 2,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Blade Squadron B-Wing",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Shuttle Tydirium",
+		"subtitle": "Fly Casual",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Ahsoka Tano",
+		"subtitle": "Chasing Whispers",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Black Squadron Scout Wing",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Han Solo",
+		"subtitle": "Has His Moments",
+		"cost": 5,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": 2,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Home One",
+		"subtitle": "On My Mark",
+		"cost": 9,
+		"power": 7,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Commence Patrol",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Fly Casual",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Jam Communications",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Never Tell Me the Odds",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Special",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "It's a Trap",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "The Mandalorian",
+		"subtitle": "Weathered Pilot",
+		"cost": 5,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": 3,
+		"upgrade_hp": 1,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Independent Smuggler",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Republic Y-Wing",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Sidon Ithano",
+		"subtitle": "The Crimson Corsair",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": -2,
+		"upgrade_hp": -2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "X-34 Landspeeder",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "BoShek",
+		"subtitle": "Charismatic Smuggler",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": 1,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Contracted Hunter",
+		"subtitle": "",
+		"cost": 3,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Death Space Skirmisher",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Guerilla Soldier",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Rafa Martez",
+		"subtitle": "Shrewd Sister",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Skyway Cloud Car",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Stolen AT-Hauler",
+		"subtitle": "",
+		"cost": 3,
+		"power": 4,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Kimogila Heavy Fighter",
+		"subtitle": "",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Razor Crest",
+		"subtitle": "Ride For Hire",
+		"cost": 4,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Shadowed Hover Tank",
+		"subtitle": "",
+		"cost": 4,
+		"power": 5,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Corporate Light Cruiser",
+		"subtitle": "",
+		"cost": 6,
+		"power": 4,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Radiant VII",
+		"subtitle": "Ambassadors' Arrival",
+		"cost": 7,
+		"power": 5,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Superheavy Ion Cannon",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 3,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Barrel Roll",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Diversion",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Electromagnetic Pulse",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Punch It",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Jump to Lightspeed",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Sweep the Area",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Torpedo Barrage",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Commandeer",
+		"subtitle": "",
+		"cost": 5,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Cunning"
+		]
+	},
+	{
+		"title": "Indoctrinated Conscript",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 2,
+		"upgrade_power": 1,
+		"upgrade_hp": 2,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "TIE Bomber",
+		"subtitle": "",
+		"cost": 2,
+		"power": 0,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Sith Trooper",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "TIE Dagger Vanguard",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Fett's Firespray",
+		"subtitle": "Feared Silhouette",
+		"cost": 4,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Rogue-class Starfighter",
+		"subtitle": "",
+		"cost": 4,
+		"power": 4,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Shuttle ST-149",
+		"subtitle": "Under Krennic's Authority",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "Quasar TIE Carrier",
+		"subtitle": "",
+		"cost": 6,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "There Is No Escape",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Villainy"
+		]
+	},
+	{
+		"title": "R2-D2",
+		"subtitle": "Artooooooooo!",
+		"cost": 1,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Hopeful Volunteer",
+		"subtitle": "",
+		"cost": 2,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": 1,
+		"upgrade_hp": 3,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Resistance X-Wing",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Dilapidated Ski Speeder",
+		"subtitle": "",
+		"cost": 3,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Millennium Falcon",
+		"subtitle": "Get Out And Push",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Sabine's Masterpiece",
+		"subtitle": "Crazy Colorful",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Jedi Light Cruiser",
+		"subtitle": "",
+		"cost": 6,
+		"power": 6,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Tantive IV",
+		"subtitle": "Fleeing the Empire",
+		"cost": 7,
+		"power": 5,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Coordinated Front",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Dedicated Wingmen",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "Sullustan Spacer",
+		"subtitle": "",
+		"cost": 1,
+		"power": 1,
+		"hp": 1,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": []
+	},
+	{
+		"title": "Swarming Vulture Droid",
+		"subtitle": "",
+		"cost": 2,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": []
+	},
+	{
+		"title": "Flanking Fang Fighter",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": []
+	},
+	{
+		"title": "Corellian Freighter",
+		"subtitle": "",
+		"cost": 5,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": []
+	},
+	{
+		"title": "Retrofitted Airspeeder",
+		"subtitle": "",
+		"cost": 5,
+		"power": 3,
+		"hp": 6,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "JTL",
+		"aspects": []
+	},
+	{
+		"title": "Death Star Plans",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": 0,
+		"upgrade_hp": 0,
+		"unique": false,
+		"type_name": "Upgrade",
+		"rarity": "Legendary",
+		"expansion_code": "JTL",
+		"aspects": []
+	},
+	{
+		"title": "Attack Run",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": []
+	},
+	{
+		"title": "Evasive Maneuver",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "JTL",
+		"aspects": []
+	}
+]

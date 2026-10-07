@@ -1,0 +1,103 @@
+[
+	{
+		"title": "L3-37",
+		"subtitle": "Get Out Of My Seat",
+		"cost": 3,
+		"power": 3,
+		"hp": 3,
+		"upgrade_power": 3,
+		"upgrade_hp": 3,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "C25",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "BB-8",
+		"subtitle": "Happy Beeps",
+		"cost": 1,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": 1,
+		"upgrade_hp": 2,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "C25",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "R2-D2",
+		"subtitle": "Artooooooooo!",
+		"cost": 1,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": 1,
+		"upgrade_hp": 1,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "C25",
+		"aspects": [
+			"Heroism"
+		]
+	},
+	{
+		"title": "BD-1",
+		"subtitle": "Beep Boo Boo Bweep",
+		"cost": 1,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "C25",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "C-3PO",
+		"subtitle": "Anything I Might Do?",
+		"cost": 1,
+		"power": 1,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "C25",
+		"aspects": [
+			"Command",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Chopper",
+		"subtitle": "War Hero",
+		"cost": 2,
+		"power": 4,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "C25",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	}
+]

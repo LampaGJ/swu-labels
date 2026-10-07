@@ -1,0 +1,345 @@
+[
+	{
+		"title": "Hound's Tooth",
+		"subtitle": "Hunters' Approach",
+		"cost": 7,
+		"power": 4,
+		"hp": 8,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Vigilance",
+			"Command",
+			"Villainy"
+		]
+	},
+	{
+		"title": "IG-88",
+		"subtitle": "Programmed to Kill",
+		"cost": 4,
+		"power": 6,
+		"hp": 3,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Vigilance",
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Zeb Orellios",
+		"subtitle": "Spectre Four",
+		"cost": 5,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Vigilance",
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Chopper",
+		"subtitle": "Spectre Three",
+		"cost": 2,
+		"power": 1,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Command",
+			"Aggression",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Millennium Falcon",
+		"subtitle": "Dodging Patrols",
+		"cost": 3,
+		"power": 2,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Command",
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Maz Kanata",
+		"subtitle": "Where's My Boyfriend?",
+		"cost": 5,
+		"power": 4,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Legendary",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Command",
+			"Cunning"
+		]
+	},
+	{
+		"title": "Interrogation Droid",
+		"subtitle": "",
+		"cost": 2,
+		"power": 3,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Aggression",
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "K-2SO",
+		"subtitle": "Locking the Vault",
+		"cost": 5,
+		"power": 3,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Rare",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Aggression",
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Jango Fett",
+		"subtitle": "Wily Mercenary",
+		"cost": 6,
+		"power": 6,
+		"hp": 5,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Vigilance",
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Kanan Jarrus",
+		"subtitle": "Spectre One",
+		"cost": 4,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Vigilance",
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Droid Laser Turret",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 1,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "Incapacitate",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Vigilance"
+		]
+	},
+	{
+		"title": "C-3PO",
+		"subtitle": "Translation Protocol",
+		"cost": 2,
+		"power": 1,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Haymaker",
+		"subtitle": "",
+		"cost": 4,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Command"
+		]
+	},
+	{
+		"title": "Storm Raider",
+		"subtitle": "",
+		"cost": 1,
+		"power": 2,
+		"hp": 2,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Aggression",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Daring Delve",
+		"subtitle": "",
+		"cost": 1,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Aggression"
+		]
+	},
+	{
+		"title": "Jabba's Rancor",
+		"subtitle": "Snack Time!",
+		"cost": 7,
+		"power": 7,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": true,
+		"type_name": "Unit",
+		"rarity": "Uncommon",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Cunning",
+			"Villainy"
+		]
+	},
+	{
+		"title": "Wookiee Guerilla",
+		"subtitle": "",
+		"cost": 3,
+		"power": 2,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Common",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Secret Battle of Pretend",
+		"subtitle": "",
+		"cost": 2,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Uncommon",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Cunning",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Backed by the Hutts",
+		"subtitle": "",
+		"cost": 3,
+		"power": null,
+		"hp": null,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Event",
+		"rarity": "Common",
+		"expansion_code": "LAWP",
+		"aspects": [
+			"Cunning"
+		]
+	}
+]

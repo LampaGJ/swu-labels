@@ -1,0 +1,36 @@
+[
+	{
+		"title": "Leia Organa",
+		"subtitle": "Vigilant for Danger",
+		"cost": 3,
+		"power": 3,
+		"hp": 4,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "CST",
+		"aspects": [
+			"Vigilance",
+			"Heroism"
+		]
+	},
+	{
+		"title": "Han Solo",
+		"subtitle": "It'll Work",
+		"cost": 4,
+		"power": 3,
+		"hp": 7,
+		"upgrade_power": null,
+		"upgrade_hp": null,
+		"unique": false,
+		"type_name": "Unit",
+		"rarity": "Special",
+		"expansion_code": "CST",
+		"aspects": [
+			"Aggression",
+			"Heroism"
+		]
+	}
+]
